@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="w-full py-8">
+      <div
+        class="w-full max-w-[1440px] flex justify-between m-auto items-center"
+      >
+        <div>
+          <a href="/" aria-label="Home">
+            <img
+              src="./assets/imgs/header-logo.svg"
+              alt="Logotipo da empresa"
+            />
+          </a>
+        </div>
+        <nav aria-label="Main navigation">
+          <ul class="flex gap-x-8">
+            <li><a href="#">Assinatura verde</a></li>
+            <li><a href="#">Créditos de carbono</a></li>
+            <li><a href="#">Selo verde</a></li>
+          </ul>
+        </nav>
+        <div class="flex gap-x-6">
+          <button
+            type="button"
+            aria-label="Entrar"
+            class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
+          >
+            Entrar
+          </button>
+          <button
+            type="button"
+            aria-label="Quero fazer parte"
+            class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
+          >
+            Quero fazer parte
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="w-full py-16">
+        <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+          <h1
+            class="max-w-[1055px] flex flex-col text-center text-[80px] font-medium leading-[125%] tracking-[-3.2px] text-[#24231E]"
+          >
+            A primeira plataforma <span>de benefícios sustentáveis</span>
+          </h1>
+          <button
+            type="button"
+            aria-label="Quero fazer parte"
+            class="px-7 py-[15px] mt-[58px] rounded-[28px] bg-[#FFB728] text-neutral-950"
+          >
+            Quero fazer parte
+          </button>
+          <div class="flex gap-x-8 mt-20">
+            <div
+              class="w-[384px] h-[460px] bg-[url('./assets/imgs/assinatura-verde-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
+            >
+              <div
+                class="w-[102px] h-[150px] rounded-[99px] bg-[url('./assets/imgs/blur-01.png')] absolute top-[60px] left-10 flex items-center justify-center"
+              >
+                <img src="./assets/icons/assinatura-verde-icon.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="w-[384px] h-[460px] bg-[url('./assets/imgs/credito-de-carbono-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
+            >
+              <div
+                class="w-[102px] h-[150px] rounded-[99px] bg-[url('./assets/imgs/blur-02.2.png')] bg-left bg-cover absolute top-[60px] left-10 flex items-center justify-center"
+              >
+                <img src="./assets/icons/credito-de-carbono-icon.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="w-[384px] h-[460px] bg-[url('./assets/imgs/selo-verde-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
+            >
+              <div
+                class="w-[102px] h-[150px] rounded-[99px] bg-[url('./assets/imgs/blur-03.png')] absolute top-[60px] left-10 flex items-center justify-center"
+              >
+                <!-- <img src="./assets/icons/selo-verde-icon.svg" alt="" /> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-16">
+        <div class="w-full max-w-[1440px] m-auto flex flex-col">
+          <h2
+            class="flex flex-col text-center text-[64px] font-medium leading-[125%] tracking-[-2.56px] text-[#24231E]"
+          >
+            Veja nosso jeito de fazer acontecer
+          </h2>
+          <p
+            class="max-w-[780px] text-center m-auto text-2xl leading-[150%] text-[#504F43] mt-10"
+          >
+            Na Prospera, acreditamos na sustentabilidade e no impacto positivo
+            que podemos gerar no mundo.
+          </p>
+          <div class="mt-[100px]">
+            <div class="w-full flex justify-center">
+              <button
+                id="usinas-button"
+                class="border-b-2 border-black px-10 pb-12 w-[381px] font-medium text-2xl leading-[130%] text-[#24231E]"
+              >
+                Nossas Usinas de Energia
+              </button>
+              <button
+                id="credito-carbono-button"
+                class="border-b-2 border-[#878681] px-10 pb-12 w-[381px] font-medium text-2xl leading-[130%] text-[#878681]"
+              >
+                Crédito de Carbono
+              </button>
+            </div>
+            <div id="usinas" class="mt-[100px] px-28 flex">
+              <div class="pr-8">
+                <div
+                  class="w-[150px] h-[102px] flex items-center justify-center bg-[#FFF6EB] rounded-[99px]"
+                >
+                  <img src="./assets/icons/usinas-de-energia-icon.svg" alt="" />
+                </div>
+                <h2
+                  class="text-[56px] text-[#24231E] font-medium leading-[125%] mt-10"
+                >
+                  Usinas de Energia
+                </h2>
+                <p
+                  class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]"
+                >
+                  Oferecemos créditos de carbono para ajudar empresas e
+                  indivíduos a compensarem suas emissões de carbono. Saiba mais
+                  sobre como podemos ajudar você a reduzir sua pegada ambiental.
+                </p>
+                <button
+                  type="button"
+                  aria-label="Quero fazer parte"
+                  class="px-7 py-[15px] mt-10 rounded-[28px] text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
+                >
+                  Quero fazer parte
+                  <img
+                    class="mt-[2px]"
+                    src="./assets/icons/arrow-rigth-icon.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="mt-11 flex items-center gap-x-6">
+                  <span class="block max-w-[280px] text-lg text-[#878681]">
+                    Clique nos estados marcados para ver fotos das nossas
+                    usinas.
+                  </span>
+                  <img src="./assets/icons/curve-arrow-icon.svg" alt="" />
+                </div>
+              </div>
+              <div
+                class="w-[696px] h-[661px] bg-[#FFE5C7] rounded-[99px] flex justify-center items-center"
+              >
+                <img src="./assets/imgs/brasilian-map.png" alt="" />
+              </div>
+            </div>
+            <div id="credito-carbono" class="mt-[100px] pl-28 hidden">
+              <div class="pr-8">
+                <div
+                  class="w-[150px] h-[102px] flex items-center justify-center bg-[#EEF6F1] rounded-[99px]"
+                >
+                  <img src="./assets/icons/credito-carbono-icon.svg" alt="" />
+                </div>
+                <h2
+                  class="text-[56px] text-[#24231E] font-medium leading-[125%] mt-10"
+                >
+                  Crédito de Carbono
+                </h2>
+                <p
+                  class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]"
+                >
+                  Oferecemos créditos de carbono para ajudar empresas e
+                  indivíduos a compensarem suas emissões de carbono. Saiba mais
+                  sobre como podemos ajudar você a reduzir sua pegada ambiental.
+                </p>
+                <button
+                  type="button"
+                  aria-label="Quero fazer parte"
+                  class="px-7 py-[15px] mt-10 text-white rounded-[28px] text-lg flex bg-[#2CAB66] items-center gap-x-1"
+                >
+                  Quero fazer parte
+                </button>
+              </div>
+              <div
+                class="w-[696px] h-[661px] flex justify-start items-start relative"
+              >
+                <div class="w-[384px] h-[450px] rounded-[99px] relative">
+                  <img
+                    class="w-[384px] h-[450px] rounded-[99px]"
+                    src="./assets/imgs/planting-tree.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-[264px] h-[273px] rounded-[99px] absolute top-[42px] -right-[200px]"
+                    src="./assets/imgs/happy-man.png"
+                    alt=""
+                  />
+                  <img
+                    class="absolute -bottom-[140px] -right-[100px] z-0"
+                    src="./assets/imgs/apui.png"
+                    alt=""
+                  />
+                  <img
+                    class="z-10 absolute -bottom-[170px] right-14"
+                    src="./assets/imgs/apui-am.png"
+                    alt=""
+                  />
+                </div>
+                <img
+                  class="absolute bottom-14 left-28"
+                  src="./assets/icons/green-arrow-icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full mt-[130px]">
+        <div class="w-full max-w-[1440px] m-auto flex flex-col px-28">
+          <div class="w-full flex gap-x-36">
+            <h2
+              class="text-[50px] text-[#24231E] font-medium leading-[125% tracking-[-2.24px]]"
+            >
+              No que acreditamos
+            </h2>
+            <p class="max-w-[560px] text-lg leading-[150%] text-[#504F43]">
+              Na Prospera, acreditamos na sustentabilidade e no impacto positivo
+              que podemos gerar no mundo. Nossos valores são baseados na
+              transparência, responsabilidade e inovação.
+            </p>
+          </div>
+          <div class="mt-[200px] flex gap-x-[30px] relative">
+            <div
+              class="w-[592px] h-[446px] rounded-[99px] bg-[#F3F3F3] pt-16 pl-16 pb-[86px] z-10 relative"
+            >
+              <div
+                class="w-[453px] h-[273px] bg-[url('./assets/imgs/assinatura-verde-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] absolute -bottom-[308px] -left-[151px]"
+              ></div>
+              <img
+                class="absolute w-[264px] h-[273px] rounded-[99px] z-10 -bottom-[308px] right-0"
+                src="./assets/imgs/woking-man.png"
+                alt=""
+              />
+              <div
+                class="w-[151px] h-[102px] rounded-[99px] px-10 py-5 bg-[#FAFAF9] mb-[46px]"
+              >
+                <img src="./assets/icons/mission-icon.svg" alt="" />
+              </div>
+              <span class="font-bold text-[32px] leading-[130%] text-[#24231E]"
+                >Missão</span
+              >
+              <p
+                class="max-w-[419px] mt-[18px] text-xl leading-[150%] text-[#504F43]"
+              >
+                A Prospera se compromete a agir de forma transparente e
+                responsável em todas as suas operações.
+              </p>
+            </div>
+            <img
+              class="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
+              src="./assets/imgs/circle.png"
+              alt=""
+            />
+            <div
+              class="w-[592px] h-[446px] rounded-[99px] bg-[#F3F3F3] pt-16 pl-16 pb-[86px] mt-[108px] z-10 relative"
+            >
+              <img
+                class="block absolute w-[264px] h-[273px] rounded-[99px] -right-[132px] -top-[136px]"
+                src="./assets/imgs/happy-woman.png"
+                alt=""
+              />
+              <div
+                class="w-[151px] h-[102px] rounded-[99px] px-10 py-5 bg-[#FAFAF9] mb-[46px]"
+              >
+                <img src="./assets/icons/values-and-vision-icon.svg" alt="" />
+              </div>
+              <span class="font-bold text-[32px] leading-[130%] text-[#24231E]"
+                >Valores & Visão</span
+              >
+              <p
+                class="max-w-[419px] mt-[18px] text-xl leading-[150%] text-[#504F43]"
+              >
+                A Prospera se compromete a agir de forma transparente e
+                responsável em todas as suas operações.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-10">
+        <div
+          class="w-full max-w-[1440px] mt-[325px] m-auto flex flex-col px-28"
+        >
+          <h2
+            class="text-[56px] text-[#24231E] font-medium leading-[125%] tracking-[-2.24px] mb-6"
+          >
+            Prospera na mídia
+          </h2>
+          <span class="text-lg text-[#504F43] block mb-16"
+            >Saiba mais sobre o Pacto Global da ONU e ESG</span
+          >
+          <div class="w-full flex items-center justify-center gap-x-[32px]">
+            <div>
+              <img
+                class="mb-7"
+                src="./assets/imgs/first-media-img.png"
+                alt=""
+              />
+              <p class="font-bold text-2xl leading-[150%] mb-4 text-[#24231E]">
+                Prospera e Greener anunciam fusão para transformar mercado de
+                benefícios sustentáveis
+              </p>
+              <spam class="text-base leading-[150%] text-[#48473C]"
+                >Descubra como o Pacto Global da ONU e ESG estão relacionados à
+                urgência climática</spam
+              >
+              <a
+                href="#"
+                class="flex gap-x-2 items-center mt-7 text-base text-[#A17419]"
+                >Leia mais <span>></span></a
+              >
+            </div>
+            <div>
+              <img
+                class="mb-7"
+                src="./assets/imgs/second-media-img.png"
+                alt=""
+              />
+              <p class="font-bold text-2xl leading-[150%] mb-4 text-[#24231E]">
+                Prospera e Greener anunciam fusão para transformar mercado de
+                benefícios sustentáveis
+              </p>
+              <spam class="text-base leading-[150%] text-[#48473C]"
+                >Descubra como o Pacto Global da ONU e ESG estão relacionados à
+                urgência climática</spam
+              >
+              <a
+                href="#"
+                class="flex gap-x-2 items-center mt-7 text-base text-[#A17419]"
+                >Leia mais <span>></span></a
+              >
+            </div>
+            <div>
+              <img
+                class="mb-7"
+                src="./assets/imgs/third-media-img.png"
+                alt=""
+              />
+              <p class="font-bold text-2xl leading-[150%] mb-4 text-[#24231E]">
+                Prospera e Greener anunciam fusão para transformar mercado de
+                benefícios sustentáveis
+              </p>
+              <spam class="text-base leading-[150%] text-[#48473C]"
+                >Descubra como o Pacto Global da ONU e ESG estão relacionados à
+                urgência climática</spam
+              >
+              <a
+                href="#"
+                class="flex gap-x-2 items-center mt-7 text-base text-[#A17419]"
+                >Leia mais <span>></span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1F1E1C] mt-[260px]">
+      <div
+        class="container flex flex-col items-center justify-between py-16 px-10"
+      >
+        footer
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
