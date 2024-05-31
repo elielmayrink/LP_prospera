@@ -1,11 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .accordion-content {
+        display: none;
+      }
+      .accordion-content.open {
+      display: block;
+      }
+    </style>
   </head>
   <body>
-    credito-carbono
+    <header class="w-full py-8">
+      <div
+        class="w-full max-w-[1440px] flex justify-between m-auto items-center"
+      >
+        <div>
+          <a href="/" aria-label="Home">
+            <img
+              src="./assets/imgs/header-logo.svg"
+              alt="Logotipo da empresa"
+            />
+          </a>
+        </div>
+        <nav aria-label="Main navigation">
+          <ul class="flex gap-x-8">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="./assinatura-verde.html">Assinatura verde</a></li>
+            <li><a href="./credito-de-carbono.html">Créditos de carbono</a></li>
+            <li><a href="#">Selo verde</a></li>
+          </ul>
+        </nav>
+        <div class="flex gap-x-6">
+          <button
+            type="button"
+            aria-label="Entrar"
+            class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
+          >
+            Entrar
+          </button>
+          <button
+            type="button"
+            aria-label="Quero fazer parte"
+            class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
+          >
+            Quero fazer parte
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="w-full">
+        <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+          <div
+            class="w-full flex flex-col items-center pt-[95px] pb-[140px] bg-[url('./assets/imgs/credito-carbonao-hero-banner.png')] bg-no-repeat bg-center bg-cover rounded-[99px]"
+          >
+            <img
+              class="w-[124px]"
+              src="./assets/icons/credito-de-carbono-icon.svg"
+              alt=""
+            />
+            <h1
+              class="font-medium flex flex-col max-w-[590px] text-[#FAFAF9] leading-[125%] tracking-[-2.56px] text-center text-[64px]"
+            >
+              O poder dos <span>Créditos de Carbono</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="w-full">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
+        >
+          <div class="flex">
+            <div>
+              <h2
+                class="w-[592px] text-[#24231E] text-[56px] mb-[38px] font-medium font-['Satoshi'] leading-[70px]"
+              >
+                Invista na sustentabilidade com Créditos de Carbono
+              </h2>
+              <div class="w-[592px]">
+                <span
+                  class="text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
+                  >Nosso crédito de carbono, em parceria com a </span
+                ><span
+                  class="text-[#3E3D34] text-lg font-bold font-['Open Sans'] leading-[27px]"
+                  >GREENER</span
+                ><span
+                  class="text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
+                  >, vem da conservação de 145.198 hectares de floresta na
+                  Fazenda Floresta Amazônica, em Apuí, Amazonas. Este projeto
+                  desempenha um papel crucial na preservação da biodiversidade
+                  da Amazônia.</span
+                >
+              </div>
+              <p
+                class="w-[557px] mt-[50px] text-[#504F43] text-sm font-normal font-['Open Sans'] leading-[21px]"
+              >
+                Desenvolvido com a metodologia da UNESP de “Levantamento de
+                Serviços Ambientais” e validado pela KPMG, este projeto visa
+                manter o estoque de carbono da floresta. Ao reduzir as emissões
+                do desmatamento, contribuímos para mitigaros efeitos das
+                mudanças climáticas.
+              </p>
+              <button class="w-[186px] mt-[38px] h-14 px-7 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex">
+                <span class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]">Eu quero agora</span>
+              </button>
+            </div>
+            <div>
+              <div
+                class="w-[592px] h-[446px] pl-[57px] pt-[17px] pb-[18px] bg-[#2CAB66] rounded-[99px] justify-end items-center inline-flex relative mt-[82px]"
+              >
+                <img
+                  class="absolute left-0 -top-[38px]"
+                  src="./assets/imgs/tree.png"
+                />
+                <img
+                  class="absolute w-[832px] h-[411px] -right-[200px]"
+                  src="./assets/imgs/letter-paper.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="w-full bg-[url('./assets/imgs/bg-section-credito.png')] bg-no-repeat bg-center"
+      >
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
+        >
+          <div class="flex items-center gap-x-20">
+            <div class="w-full max-w-[382px] rounded-[99px]">
+              <img
+                class="rounded-[99px]"
+                src="./assets/imgs/homem-de-avental.png"
+              />
+            </div>
+            <div class="w-full">
+              <h2
+                class="max-w-[696px] mb-10 flex flex-col text-[#24231E] text-5xl font-medium font-['Satoshi'] leading-[60px]"
+              >
+                Como funciona <span>o Crédito de Carbono?</span>
+              </h2>
+              <p
+                class="max-w-[596px] text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
+              >
+                O projeto visa à proteção da fauna, flora e dos corpos hídricos
+                que atravessam a área. Ao fazê-lo, contribuirá
+                significativamente para a proteção da biodiversidade, em uma
+                região que enfrenta grande pressão de uso da terra no Estado do
+                Amazonas. A riqueza da biodiversidade na Fazenda Floresta
+                Amazônica é notável, com mais de 60 espécies arbóreas e uma
+                fauna silvestre diversificada.
+              </p>
+              <p
+                class="max-w-[596px] text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px] mt-4"
+              >
+                Além disso, a área apresenta um importante estoque de carbono,
+                com mais de 1.100 toneladas estocadas por hectare, tanto no solo
+                quanto na biomassa vegetal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
+        >
+          <div
+            class="w-[1209px] h-[999px] bg-[#2CAB66] rounded-[99px] relative"
+          >
+            <div
+              class="w-[800px] h-64 left-[205px] top-[86px] absolute flex-col justify-start items-center gap-6 inline-flex"
+            >
+              <h2
+                class="w-[902px] text-center text-stone-50 text-5xl font-medium font-['Satoshi'] leading-[60px]"
+              >
+                Empoderamento e sustentabilidade para Comunidades Ribeirinhas
+              </h2>
+              <p
+                class="w-[803px] text-center text-stone-50 text-xl font-medium font-['Satoshi'] leading-7"
+              >
+                Nosso projeto beneficia sete vilas ribeirinhas, melhorando a
+                qualidade de vida de mais de 140 pessoas. Com ações de educação
+                ambiental, saúde, infraestrutura e capacitação, em parceria com
+                entidades públicas e privadas, promovemos a participação ativa
+                das comunidades e asseguramos a sustentabilidade a longo prazo.
+              </p>
+            </div>
+            <div class="absolute bottom-0">
+              <img src="./assets/imgs/green-map.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col px-28 items-center mt-[90px]"
+        >
+          <div class="flex items-center w-full justify-between">
+            <div class="w-full">
+              <h2
+                class="max-w-[588px] text-[#24231E] mb-16 text-5xl font-medium font-['Satoshi'] leading-[60px]"
+              >
+                Calculadora de Emissões: Seu primeiro passo para a
+                sustentabilidade
+              </h2>
+              <div class="relative max-w-[382px]">
+                <img
+                  class="rounded-[99px]"
+                  src="./assets/imgs/mulher-calculando.png"
+                  alt=""
+                />
+                <div
+                  class="w-[215px] h-[268px] pl-12 pr-[47px] py-[74px] bg-[#EEF6F1] rounded-[99px] flex-col justify-center items-center inline-flex absolute -right-[150px] bottom-[76px]"
+                >
+                  <img src="./assets/icons/Leaves.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <p
+                class="w-[590px] text-[#3E3D34] mb-8 text-xl font-normal font-['Satoshi'] leading-7"
+              >
+                Com o objetivo de auxiliar nesta etapa e seguindo as rígidas
+                diretrizes do protocolo GHG, a Greener elaborou uma calculadora
+                de emissões automatizada em parceria com a Compensa.eco, empresa
+                especializada em consultoria para cálculo de emissões e
+                inventários de gases de efeito estufa (GEE).
+              </p>
+              <p
+                class="w-[590px] text-[#3E3D34] mb-8 text-xl font-normal font-['Satoshi'] leading-7"
+              >
+                Nossa calculadora é o primeiro passo para as empresas que buscam
+                iniciar a sua jornada de redução e compensação das emissões rumo
+                a sustentabilidade.
+              </p>
+              <p
+                class="w-[590px] text-[#3E3D34] mb-8 text-xl font-normal font-['Satoshi'] leading-7"
+              >
+                De forma simples, prática e rápida, nossa calculadora permite
+                obter um resultado na hora e o inventário das emissões de GEE
+                dos escopos 1 e 2 de empresas e eventos, possibilitando que
+                sejam compensadas as emissões geradas.
+              </p>
+              <p
+                class="w-[590px] text-[#3E3D34] text-xl font-normal font-['Satoshi'] leading-7"
+              >
+                Para realização de cálculos mais complexos e incluindo o escopo
+                3, recomendamos a consultoria personalizada, onde indicamos
+                empresas parcerias e confiáveis para a realização da consultoria
+                especializada com base na demanda de cada cliente.
+              </p>
+              <button
+                class="w-[200px] h-14 px-7 mt-12 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex"
+              >
+                <span
+                  class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]"
+                  >Usar calculadora</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[240px] px-28"
+        >
+          <div class="flex gap-x-[140px]">
+            <div>
+              <h2
+                class="w-[385px] text-stone-800 text-[56px] font-medium font-['Satoshi'] leading-[70px]"
+              >
+                Impacto socioambiental
+              </h2>
+            </div>
+            <div>
+              <img
+                class="mb-8"
+                src="./assets/imgs/onubrasil-color-horiz.png"
+                alt=""
+              />
+              <p
+                class="w-[588px] text-stone-700 text-xl font-normal font-['Open Sans'] leading-[30px]"
+              >
+                A Assinatura Verde contribui para acelerar compromissos
+                assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
+                e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
+                a preservar uma área de mais de 160 mil hectares de floresta
+                nativa na Amazônia, impactando positivamente suas ODS (Objetivos
+                de Desenvolvimento Sustentável):
+              </p>
+            </div>
+          </div>
+          <div
+            class="py-[180px] px-14 flex items-center gap-x-3 mt-[92px] rounded-[99px] bg-[#F3F3F3]"
+          >
+            <img src="./assets/imgs/SDG-7.png" alt="" /><img
+              src="./assets/imgs/SDG-9.png"
+              alt=""
+            /><img src="./assets/imgs/SDG-10.png" alt="" /><img
+              src="./assets/imgs/SDG-12.png"
+              alt=""
+            /><img src="./assets/imgs/SDG-13.png" alt="" />
+          </div>
+      </section>
+      <section class="w-full">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[240px] px-28"
+        >
+          <h2 class="w-[768px] text-center text-gray-900 text-[32px] font-bold font-['Satoshi'] leading-[43.20px]">
+            Perguntas frequentes
+          </h2>
+          <div id="accordion-container" class="mt-10 flex flex-col items-center">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1F1E1C] mt-[260px] w-full py-20">
+      <div
+        class="w-full max-w-[1440px] m-auto flex flex-col items-center px-28"
+      >
+        <div class="w-full flex items-center justify-between">
+          <div>
+            <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+            <div class="flex flex-col mb-6">
+              <span
+                class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
+                >Endereço</span
+              >
+              <span class="text-[#FAFAF9] font-base leading-[150%]"
+                >Alameda Madeira, 162 - Sala 1104 A</span
+              >
+              <span class="text-[#FAFAF9] font-base leading-[150%]"
+                >Alphaville Centro Industrial</span
+              >
+              <span class="text-[#FAFAF9] font-base leading-[150%]"
+                >CEP: 06454-010</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="./assets/icons/Facebook.png" alt="" />
+              <img src="./assets/icons/Instagram.png" alt="" />
+              <img src="./assets/icons/X.png" alt="" />
+              <img src="./assets/icons/LinkedIn.png" alt="" />
+              <img src="./assets/icons/Youtube.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <span
+              class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block"
+            >
+              Acesse agora nossos aplicativos
+            </span>
+            <div class="flex gap-x-10">
+              <button>
+                <img src="./assets/imgs/Apple.png" alt="" />
+              </button>
+              <button>
+                <img src="./assets/imgs/Google.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+        <div class="w-full flex justify-between items-center mt-8">
+          <div>
+            <span class="text-[#FAFAF9]"
+              >© 2024 Prospera. Todos os direitos reservados.</span
+            >
+          </div>
+          <div>
+            <ul class="flex gap-6 text-[#FAFAF9]">
+              <li>Política de Privacidade</li>
+              <li>Termos de Serviço</li>
+              <li>Configurações de Cookies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const faqs = [
+      {
+        title: "O que é o mercado de carbono?",
+        content: "O mercado de carbono é um sistema onde são comercializados créditos de carbono, que representam uma tonelada de dióxido de carbono (CO2) ou equivalente que foi removida ou evitada da atmosfera. Empresas e governos utilizam esses créditos para compensar suas emissões de gases de efeito estufa, promovendo ações sustentáveis e ajudando a combater as mudanças climáticas."
+    },
+    {
+        title: "Como funciona o mercado de carbono?",
+        content: "O mercado de carbono opera através de um sistema de comércio de emissões onde entidades que emitem gases de efeito estufa acima de seus limites podem comprar créditos de carbono de entidades que emitem abaixo de seus limites ou que implementaram projetos de redução de emissões. Existem dois tipos principais de mercados de carbono: os mercados regulamentados, estabelecidos por políticas governamentais, e os mercados voluntários, onde empresas e indivíduos compram créditos para atingir metas próprias de sustentabilidade."
+    },
+    {
+        title: "Quem pode participar do mercado de carbono?",
+        content: "Qualquer empresa, governo ou indivíduo pode participar do mercado de carbono. No mercado regulamentado, a participação é obrigatória para determinadas indústrias e setores que precisam cumprir metas de emissão estabelecidas por leis e regulamentos. No mercado voluntário, qualquer entidade pode adquirir créditos de carbono para compensar suas emissões por razões de responsabilidade ambiental ou para melhorar sua imagem perante os consumidores."
+    },
+    {
+        title: "Qual é a importância da regulamentação no mercado de carbono?",
+        content: "A regulamentação é crucial para garantir a integridade, transparência e eficácia do mercado de carbono. Leis e regulamentos estabelecem as regras para a quantificação, monitoramento, verificação e comercialização dos créditos de carbono. A regulamentação também ajuda a evitar fraudes e garantir que os créditos representem reduções reais e verificáveis de emissões. Exemplo de regulamentações incluem o Protocolo de Quioto e o Acordo de Paris, além de legislações específicas de cada país."
+    },
+    {
+        title: "Quais são os benefícios do mercado de carbono?",
+        content: "Redução das emissões de gases de efeito estufa: Incentiva empresas e governos a adotarem práticas mais sustentáveis.\nInovação tecnológica: Estimula o desenvolvimento de novas tecnologias para redução de emissões.\nBenefícios econômicos: Cria novas oportunidades de negócios e empregos no setor de sustentabilidade.\nPreservação ambiental: Contribui para a proteção de florestas e outros ecossistemas.\nResponsabilidade social: Ajuda empresas a atenderem expectativas de consumidores conscientes e cumprirem metas de sustentabilidade corporativa."
+    }
+      ];
+  
+      const accordionContainer = document.getElementById('accordion-container');
+  
+      faqs.forEach((faq, index) => {
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'w-[768px] h-auto flex-col justify-start items-center inline-flex my-2';
+        
+        accordionItem.innerHTML = `
+          <div class="self-stretch h-auto pt-6 flex-col justify-start items-center gap-2 flex">
+            <div class="self-stretch justify-start items-center gap-6 inline-flex cursor-pointer" onclick="toggleAccordion(${index})">
+              <span class="grow shrink basis-0 text-[#33322A] text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.title}</span>
+              <div class="w-6 justify-center items-center flex rotate-180">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 15.9619L12.5 8.96191L19.5 15.9619" stroke="#504F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+              </div>
+            </div>
+            <div class="self-stretch pr-12 justify-start items-start inline-flex accordion-content" id="content-${index}">
+              <p class="grow shrink basis-0 text-[#504F43] text-base font-normal font-['Open Sans'] leading-normal">${faq.content}</p>
+            </div>
+          </div>
+        `;
+        
+        accordionContainer.appendChild(accordionItem);
+      });
+  
+      function toggleAccordion(index) {
+        const content = document.getElementById(`content-${index}`);
+        content.classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
