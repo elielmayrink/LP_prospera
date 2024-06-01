@@ -1,3 +1,19 @@
+let hamburgerMenu = document.getElementById("hamburger-menu-button");
+let closeMenu = document.getElementById("close-button");
+
+let responsiveMenu = document.getElementById("responsive-menu");
+
+hamburgerMenu.addEventListener("click", function () {
+  responsiveMenu.style.display = "flex";
+  closeMenu.style.display = "block";
+  hamburgerMenu.style.display = "none";
+});
+closeMenu.addEventListener("click", () => {
+  responsiveMenu.style.display = "none";
+  closeMenu.style.display = "none";
+  hamburgerMenu.style.display = "block";
+});
+
 let usinas = document.getElementById("usinas");
 
 let creditoCarbono = document.getElementById("credito-carbono");

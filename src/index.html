@@ -20,9 +20,56 @@
     </style>
   </head>
   <body>
-    <header class="w-full py-8">
+    <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+      <div id="hamburger-menu" class="w-full justify-between md:hidden flex">
+        <img src="./assets/imgs/header-logo.svg" alt="" />
+        <button class="block" id="hamburger-menu-button">
+          <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+        </button>
+        <button id="close-button" class="hidden">
+          <img
+            class="w-[40px] h-[40px]"
+            src="./assets/icons/close-icon.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+        <nav class="mt-[84px]" aria-label="Main navigation">
+          <ul class="flex flex-col gap-y-5">
+            <li class="text-xl text-[#504F43] leading-[30px]">
+              <a href="./">Inicio</a>
+            </li>
+            <li class="text-xl text-[#504F43] leading-[30px]">
+              <a href="./assinatura-verde.html">Assinatura verde</a>
+            </li>
+            <li class="text-xl text-[#504F43] leading-[30px]">
+              <a href="./credito-de-carbono.html">Créditos de carbono</a>
+            </li>
+            <li class="text-xl text-[#504F43] leading-[30px]">
+              <a href="#">Selo verde</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex flex-col mt-9 gap-y-4">
+          <button
+            type="button"
+            aria-label="Entrar"
+            class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
+          >
+            Entrar
+          </button>
+          <button
+            type="button"
+            aria-label="Quero fazer parte"
+            class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
+          >
+            Quero fazer parte
+          </button>
+        </div>
+      </div>
       <div
-        class="w-full max-w-[1440px] flex justify-between m-auto items-center"
+        class="w-full max-w-[1440px] justify-between m-auto items-center hidden md:flex"
       >
         <div>
           <a href="/" aria-label="Home">
@@ -33,14 +80,14 @@
           </a>
         </div>
         <nav aria-label="Main navigation">
-          <ul class="flex gap-x-8 items-center">
-            <li><a href="/">Inicio</a></li>
+          <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+            <li><a href="./">Inicio</a></li>
             <li><a href="./assinatura-verde.html">Assinatura verde</a></li>
             <li><a href="./credito-de-carbono.html">Créditos de carbono</a></li>
             <li><a href="#">Selo verde</a></li>
           </ul>
         </nav>
-        <div class="flex gap-x-6">
+        <div class="flex xl:gap-x-6 lg:gap-x-3">
           <button
             type="button"
             aria-label="Entrar"

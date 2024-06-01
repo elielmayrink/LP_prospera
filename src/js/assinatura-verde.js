@@ -1,19 +1,3 @@
-let hamburgerMenu = document.getElementById("hamburger-menu-button");
-let closeMenu = document.getElementById("close-button");
-
-let responsiveMenu = document.getElementById("responsive-menu");
-
-hamburgerMenu.addEventListener("click", function () {
-  responsiveMenu.style.display = "flex";
-  closeMenu.style.display = "block";
-  hamburgerMenu.style.display = "none";
-});
-closeMenu.addEventListener("click", () => {
-  responsiveMenu.style.display = "none";
-  closeMenu.style.display = "none";
-  hamburgerMenu.style.display = "block";
-});
-
 const faqs = [
   {
     titulo: "Será necessário realizar alguma obra nas minhas instalações?",
@@ -54,20 +38,20 @@ const accordionContainer = document.getElementById("accordion-container");
 faqs.forEach((faq, index) => {
   const accordionItem = document.createElement("div");
   accordionItem.className =
-    "w-[768px] h-auto flex-col justify-start items-center inline-flex my-2";
+    "w-full h-auto flex-col justify-start items-center inline-flex my-2";
 
   accordionItem.innerHTML = `
-    <div class="self-stretch h-auto pt-6 flex-col justify-start items-center gap-2 flex">
-      <div class="self-stretch justify-start items-center gap-6 inline-flex cursor-pointer" onclick="toggleAccordion(${index})">
-        <span class="grow shrink basis-0 text-[#33322A] text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.titulo}</span>
-        <div class="w-6 justify-center items-center flex rotate-180">
+    <div class="w-full h-auto pt-6 flex-col justify-start items-center gap-2 flex">
+      <div class="justify-between w-full items-center gap-6 flex cursor-pointer" onclick="toggleAccordion(${index})">
+        <span class="text-[#33322A] text-start text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.titulo}</span>
+        <div id="svg-${index}" class="justify-center items-center flex rotate-180">
           <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 15.9619L12.5 8.96191L19.5 15.9619" stroke="#504F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg> 
         </div>
       </div>
-      <div class="self-stretch pr-12 justify-start items-start inline-flex accordion-content" id="content-${index}">
-        <p class="grow shrink basis-0 text-[#504F43] text-base font-normal font-['Open Sans'] leading-normal">${faq.subtitulo}</p>
+      <div class="pr-12 justify-start items-startflex accordion-content" id="content-${index}">
+        <p class="text-[#504F43] text-base font-normal font-['Open Sans'] leading-normal">${faq.subtitulo}</p>
       </div>
     </div>
   `;
@@ -76,6 +60,14 @@ faqs.forEach((faq, index) => {
 });
 
 function toggleAccordion(index) {
+  const svgElement = document.getElementById(`svg-${index}`);
   const content = document.getElementById(`content-${index}`);
   content.classList.toggle("open");
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+    svgElement.style.transform = "rotate(0deg)";
+  } else {
+    content.style.display = "none";
+    svgElement.style.transform = "rotate(180deg)";
+  }
 }
