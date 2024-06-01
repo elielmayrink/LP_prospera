@@ -22,3 +22,10 @@ creditoCarbonoButton.addEventListener("click", function () {
   creditoCarbonoButton.style.borderBottom = "2px solid #24231E";
   creditoCarbonoButton.style.color = "#24231E";
 });
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  menuBtn.classList.toggle("open");
+});
