@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
-      <div id="hamburger-menu" class="w-full justify-between md:hidden flex">
+      <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
         <img src="./assets/imgs/header-logo.svg" alt="" />
         <button class="block" id="hamburger-menu-button">
           <img src="./assets/icons/Hamburger-menu.svg" alt="" />
@@ -37,17 +37,17 @@
       <div id="responsive-menu" class="w-full h-screen flex-col hidden">
         <nav class="mt-[84px]" aria-label="Main navigation">
           <ul class="flex flex-col gap-y-5">
-            <li class="text-xl text-[#504F43] leading-[30px]">
+            <li class="text-[#504F43] text-lg leading-7">
               <a href="./">Inicio</a>
             </li>
-            <li class="text-xl text-[#504F43] leading-[30px]">
+            <li class="text-[#504F43] text-lg leading-7">
               <a href="./assinatura-verde.html">Assinatura verde</a>
             </li>
-            <li class="text-xl text-[#504F43] leading-[30px]">
+            <li class="text-[#504F43] text-lg leading-7">
               <a href="./credito-de-carbono.html">Créditos de carbono</a>
             </li>
-            <li class="text-xl text-[#504F43] leading-[30px]">
-              <a href="#">Selo verde</a>
+            <li class="text-lg leading-7">
+              <a href="./selo-verde.html">Selo verde</a>
             </li>
           </ul>
         </nav>
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div
-        class="w-full max-w-[1440px] justify-between m-auto items-center hidden md:flex"
+        class="w-full max-w-[1440px] justify-between m-auto items-center hidden lg:flex"
       >
         <div>
           <a href="/" aria-label="Home">
@@ -81,10 +81,18 @@
         </div>
         <nav aria-label="Main navigation">
           <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
-            <li><a href="./">Inicio</a></li>
-            <li><a href="./assinatura-verde.html">Assinatura verde</a></li>
-            <li><a href="./credito-de-carbono.html">Créditos de carbono</a></li>
-            <li><a href="#">Selo verde</a></li>
+            <li class="text-[#504F43] text-lg leading-7">
+              <a href="./">Inicio</a>
+            </li>
+            <li class="text-[#504F43] text-lg leading-7">
+              <a href="./assinatura-verde.html">Assinatura verde</a>
+            </li>
+            <li class="text-[#504F43] text-lg leading-7">
+              <a href="./credito-de-carbono.html">Créditos de carbono</a>
+            </li>
+            <li class="text-[#24231E] font-medium text-lg leading-7">
+              <a href="./selo-verde.html">Selo verde</a>
+            </li>
           </ul>
         </nav>
         <div class="flex xl:gap-x-6 lg:gap-x-3">
@@ -106,7 +114,7 @@
       </div>
     </header>
     <main>
-      <section class="w-full py-16">
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
           <h1
             class="max-w-[1055px] flex flex-col text-center text-[80px] font-medium leading-[125%] tracking-[-3.2px] text-[#24231E]"
@@ -223,7 +231,42 @@
           </div>
         </div>
       </section>
-      <section class="w-full py-16">
+      <section
+        class="w-full xl:px-28 lg:px-12 px-[22px] bg-[url(./assets/imgs/bg-section-home.png)] bg-no-repeat bg-bottom"
+      >
+        <div class="w-full max-w-[1440px] m-auto flex flex-col mt-[200px]">
+          <div class="w-full h-[140px] justify-center items-center gap-6 flex">
+            <h2
+              class="max-w-[592px] text-[#24231E] text-[56px] font-medium font-['Satoshi'] leading-[70px]"
+            >
+              Nosso jeito de fazer acontecer
+            </h2>
+            <p
+              class="max-w-[592px] text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
+            >
+              Pessoas, marcas e empresas se conectam no Clube Prospera, nossa
+              plataforma de negócios sustentáveis. O Clube promove educação
+              socioambiental e oferece produtos que geram descontos na conta de
+              luz, descarbonizam compras e fidelizam clientes.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-full h-[811px] flex justify-center items-center relative"
+            >
+              <img class="" src="./assets/imgs/phone-first-img.png" alt="" />
+            </div>
+            <button
+              type="button"
+              aria-label="Quero fazer parte"
+              class="px-7 py-[15px] mt-32 rounded-[28px] text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
+            >
+              Quero fazer parte
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div class="w-full max-w-[1440px] m-auto flex flex-col">
           <h2
             class="flex flex-col text-center text-[64px] font-medium leading-[125%] tracking-[-2.56px] text-[#24231E]"
@@ -381,7 +424,7 @@
           </div>
         </div>
       </section>
-      <section class="w-full mt-[130px]">
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div class="w-full max-w-[1440px] m-auto flex flex-col px-28">
           <div class="w-full flex flex-col items-center">
             <h2
@@ -464,7 +507,7 @@
           </div>
         </div>
       </section>
-      <section class="w-full py-10">
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div
           class="w-full max-w-[1440px] mt-[325px] m-auto flex flex-col px-28"
         >
@@ -510,7 +553,7 @@
           </div>
         </div>
       </section>
-      <section class="w-full">
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div
           class="w-full max-w-[1440px] mt-[175px] m-auto flex px-28 justify-between"
         >
@@ -548,6 +591,77 @@
               engaja a ampliar suas escolhas conscientes através de mecânicas de
               coleção, sorteio de prêmios e promoções.
             </p>
+          </div>
+        </div>
+      </section>
+      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+        <div
+          class="w-full max-w-[1440px] mt-[175px] m-auto flex px-28 justify-between"
+        >
+          <div
+            class="w-full flex-col justify-start items-start gap-6 inline-flex"
+          >
+            <h2
+              class="text-stone-800 text-5xl font-medium font-['Satoshi'] leading-[60px]"
+            >
+              Prospera na mídia
+            </h2>
+            <span
+              class="max-w-[584px] text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
+            >
+              Fique por dentro das últimas novidades
+            </span>
+            <div class="h-auto">
+              <div class="w-full justify-start items-start gap-8 inline-flex">
+                <div
+                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                >
+                  <img
+                    class="self-stretch h-[300px] rounded-2xl"
+                    src="./assets/imgs/midia/media-img-01.png"
+                  />
+                  <div>
+                    <span>
+                      Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
+                    </span>
+                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <a href="#">Leia mais</a>
+                  </div>
+                </div>
+                <div
+                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                >
+                  <img
+                    class="self-stretch h-[300px] rounded-2xl"
+                    src="./assets/imgs/midia/media-img-02.png"
+                  />
+                  <div>
+                    <span>
+                      Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
+                    </span>
+                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <a href="#">Leia mais</a>
+                  </div>
+                  
+                </div>
+                <div
+                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                >
+                  <img
+                    class="self-stretch h-[300px] rounded-2xl"
+                    src="./assets/imgs/midia/media-img-03.png"
+                  />
+                  <div>
+                    <span>
+                      Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
+                    </span>
+                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <a href="#">Leia mais</a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
