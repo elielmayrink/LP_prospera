@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .accordion-content {
+        display: none;
+      }
+      .accordion-content.open {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="w-[589px] h-[717px] px-[43px] py-12 bg-stone-50 rounded-[32px] border border-stone-300 justify-start items-start gap-2.5 inline-flex"
+    >
+      <div
+        class="grow shrink basis-0 flex-col justify-start items-start gap-10 inline-flex"
+      >
+        <div class="text-stone-800 text-2xl font-semibold font-['Open Sans']">
+          Formulário Crédito de Carbono
+        </div>
+        <div
+          class="self-stretch h-[548px] flex-col justify-start items-start gap-11 flex"
+        >
+          <div
+            class="self-stretch h-[380px] flex-col justify-start items-start gap-6 flex"
+          >
+            <div
+              class="self-stretch h-[52px] flex-col justify-start items-start gap-2 flex"
+            >
+              <div
+                class="self-stretch h-[52px] px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="self-stretch grow shrink basis-0 flex-col justify-between items-start flex"
+                >
+                  <div
+                    class="self-stretch text-neutral-500 text-base font-normal font-['Open Sans']"
+                  >
+                    Nome
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-[52px] flex-col justify-start items-start gap-2 flex">
+              <div
+                class="self-stretch h-[52px] px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="w-[343px] grow shrink basis-0 flex-col justify-between items-start flex"
+                >
+                  <div
+                    class="self-stretch text-neutral-500 text-base font-normal font-['Open Sans']"
+                  >
+                    Sobrenome
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-[52px] flex-col justify-start items-start gap-2 flex">
+              <div
+                class="self-stretch h-[52px] px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="w-[343px] grow shrink basis-0 flex-col justify-between items-start flex"
+                >
+                  <div
+                    class="self-stretch text-neutral-500 text-base font-normal font-['Open Sans']"
+                  >
+                    Email
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-[76px] flex-col justify-start items-start gap-1 flex">
+              <div
+                class="self-stretch h-[76px] flex-col justify-start items-start gap-2 flex"
+              >
+                <div
+                  class="self-stretch px-1 justify-start items-start gap-2.5 inline-flex"
+                >
+                  <div
+                    class="text-stone-600 text-xs font-normal font-['Open Sans']"
+                  >
+                    Telefone
+                  </div>
+                </div>
+                <div
+                  class="self-stretch h-[52px] justify-start items-start gap-1.5 inline-flex"
+                >
+                  <div
+                    class="w-[142px] self-stretch px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 inline-flex"
+                  >
+                    <div
+                      class="self-stretch grow shrink basis-0 justify-start items-center gap-2 inline-flex"
+                    >
+                      <div
+                        class="grow shrink basis-0 h-[42px] justify-start items-center gap-2 flex"
+                      >
+                        <img
+                          class="w-[35px] h-6"
+                          src="https://via.placeholder.com/35x24"
+                        />
+                        <div
+                          class="grow shrink basis-0 h-[42px] flex-col justify-between items-start inline-flex"
+                        >
+                          <div
+                            class="self-stretch text-neutral-500 text-base font-normal font-['Inter']"
+                          >
+                            +234
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-4 h-4 justify-center items-center flex">
+                        <div
+                          class="w-4 h-4 px-[3.33px] justify-center items-center inline-flex"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow shrink basis-0 self-stretch px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 inline-flex"
+                  >
+                    <div
+                      class="self-stretch grow shrink basis-0 justify-start items-center gap-4 inline-flex"
+                    >
+                      <div
+                        class="grow shrink basis-0 self-stretch flex-col justify-between items-start inline-flex"
+                      >
+                        <div
+                          class="self-stretch text-neutral-500 text-base font-normal font-['Inter']"
+                        >
+                          8023456789
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="self-stretch h-[52px] flex-col justify-center items-start flex"
+            >
+              <div
+                class="self-stretch px-1 justify-start items-start gap-2.5 inline-flex"
+              ></div>
+              <div
+                class="self-stretch h-[52px] px-4 py-2 bg-zinc-100 rounded-lg flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="self-stretch grow shrink basis-0 justify-start items-center gap-4 inline-flex"
+                >
+                  <div
+                    class="grow shrink basis-0 self-stretch flex-col justify-between items-start inline-flex"
+                  >
+                    <div
+                      class="self-stretch text-neutral-500 text-base font-normal font-['Open Sans']"
+                    >
+                      Nome da empresa
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="justify-start items-center gap-5 inline-flex">
+            <div
+              class="w-6 h-6 p-0.5 rounded-lg border border-green-800 justify-center items-center flex"
+            >
+              <div class="w-5 h-5 relative">
+                <div
+                  class="w-5 h-5 left-0 top-0 absolute bg-green-500 rounded-md"
+                ></div>
+                <div class="w-3 h-3 left-[4px] top-[4px] absolute"></div>
+              </div>
+            </div>
+            <div
+              class="text-right text-stone-700 text-sm font-normal font-['Open Sans']"
+            >
+              Eu aceito receber novidades Prospera
+            </div>
+          </div>
+          <div
+            class="w-[503px] h-14 px-7 py-[15.50px] bg-green-600 rounded-[28px] justify-center items-center gap-2 inline-flex"
+          >
+            <div
+              class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]"
+            >
+              Enviar formulário
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
