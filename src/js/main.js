@@ -22,7 +22,23 @@ let usinasButton = document.getElementById("usinas-button");
 
 let creditoCarbonoButton = document.getElementById("credito-carbono-button");
 
+// let productItemsDiv = document.getElementById("product-items");
+
+// let scrollProductRigth = document.getElementById("next-product");
+// let scrollProductLeft = document.getElementById("prev-product");
+// let scrollProduct03 = document.getElementById("scrool-product-03");
+
+// scrollProductRigth.addEventListener("click", () => {
+//   productItemsDiv.scrollLeft += 384;
+//   console.log("log");
+// });
+
+// scrollProductLeft.addEventListener("click", () => {
+//   productItemsDiv.scrollLeft -= 384;
+// });
+
 usinasButton.addEventListener("click", function () {
+  console.log("log");
   usinas.style.display = "flex";
   creditoCarbono.style.display = "none";
   usinasButton.style.color = "#24231E";
@@ -31,6 +47,7 @@ usinasButton.addEventListener("click", function () {
   creditoCarbonoButton.style.color = "#878681";
 });
 creditoCarbonoButton.addEventListener("click", function () {
+  console.log("aqui");
   usinas.style.display = "none";
   creditoCarbono.style.display = "flex";
   usinasButton.style.color = "#878681";

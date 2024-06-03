@@ -37,7 +37,7 @@
       <div id="responsive-menu" class="w-full h-screen flex-col hidden">
         <nav class="mt-[84px]" aria-label="Main navigation">
           <ul class="flex flex-col gap-y-5">
-            <li class="text-[#504F43] text-lg leading-7">
+            <li class="text-[#24231E] font-medium text-lg leading-7">
               <a href="./">Inicio</a>
             </li>
             <li class="text-[#504F43] text-lg leading-7">
@@ -81,7 +81,7 @@
         </div>
         <nav aria-label="Main navigation">
           <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
-            <li class="text-[#504F43] text-lg leading-7">
+            <li class="text-[#24231E] font-medium text-lg leading-7">
               <a href="./">Inicio</a>
             </li>
             <li class="text-[#504F43] text-lg leading-7">
@@ -90,7 +90,7 @@
             <li class="text-[#504F43] text-lg leading-7">
               <a href="./credito-de-carbono.html">Créditos de carbono</a>
             </li>
-            <li class="text-[#24231E] font-medium text-lg leading-7">
+            <li class="text-[#504F43] text-lg leading-7">
               <a href="./selo-verde.html">Selo verde</a>
             </li>
           </ul>
@@ -113,11 +113,13 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+    <main class="overflow-hidden">
+      <section class="w-full xl:px-28 lg:px-12 px-[18px] z-0">
+        <div
+          class="w-full max-w-[1440px] m-auto z-0 flex flex-col items-center mt-14 lg:mt-[74px]"
+        >
           <h1
-            class="max-w-[1055px] flex flex-col text-center text-[80px] font-medium leading-[125%] tracking-[-3.2px] text-[#24231E]"
+            class="max-w-[1055px] flex flex-col text-center lg:text-[80px] md:text-5xl text-[32px] font-medium leading-[125%] tracking-[-3.2px] text-[#24231E]"
           >
             A primeira plataforma <span>de benefícios sustentáveis</span>
           </h1>
@@ -128,104 +130,138 @@
           >
             Quero fazer parte
           </button>
-          <div class="flex gap-x-8 mt-20">
+          <div
+            class="w-full flex flex-col justify-center items-center relative px-4"
+          >
+            <!-- scroll-smooth overflow-x-auto snap-x snap-mandatory -->
             <div
-              class="w-[384px] h-[666px] flex flex-col px-[30px] bg-[url('./assets/imgs/assinatura-verde-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
+              id="product-items"
+              class="flex w-full gap-x-[2.3%] lg-1.5:max-w-none justify-center lg:flex-nowrap flex-wrap mt-20 z-10 relative gap-y-[20px]"
             >
-              <img
-                class="absolute top-[54px] left-[30px]"
-                src="./assets/icons/assinatura-verde-icon.svg"
-                alt=""
-              />
-              <h2
-                class="font-medium text-[#FAFAF9] text-5xl mt-[240px] leading-[125%] tracking-[-1.92px]"
-              >
-                Assinatura verde
-              </h2>
               <div
-                class="px-4 py-3 mt-[124px] border-2 border-[#ADACA9] rounded-[99px] max-w-[120px] flex items-center justify-center"
+                class="w-full brk-2.5:max-w-[384px] brk-5:max-w-[350px] lg:max-w-[316px] brk-6:max-w-[400px] max-w-none snap-start brk-2.5:h-[666px] brk-5:h-[600px] map-03:h-[534px] h-[325px] flex-none flex flex-col px-[30px] bg-[url('./assets/imgs/assinatura-verde-img.png')] bg-no-repeat bg-center bg-cover rounded-[48px] brk-5:rounded-[99px] relative"
               >
-                <span class="font-base text-white font-semibold"
-                  >Para você</span
+                <img
+                  class="absolute bottom-10 right-10"
+                  src="./assets/icons/rigth-arrow-02.svg"
+                  alt=""
+                />
+                <div
+                  class="absolute w-full h-full bg-black left-0 brk-5:rounded-[99px] rounded-[48px] bg-opacity-20"
+                ></div>
+                <img
+                  class="absolute top-[54px] left-[30px] map-03:block hidden"
+                  src="./assets/icons/assinatura-verde-icon.svg"
+                  alt=""
+                />
+                <h2
+                  class="font-medium text-[#FAFAF9] brk-5:text-5xl map-03:text-[40px] text-[32px] brk-2.5:mt-[240px] brk-5:mt-[174px] map-03:mt-[118px] mt-[40px] map-03:leading-[125%] leading-8 tracking-[-1.92px]"
                 >
+                  Assinatura <br />
+                  verde
+                </h2>
+                <div
+                  class="px-4 py-3 map-03:mt-[124px] mt-[90px] border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[120px] flex items-center justify-center"
+                >
+                  <span class="font-base text-white font-semibold"
+                    >Para você</span
+                  >
+                </div>
+                <div
+                  class="px-4 py-3 mt-2 border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[180px] flex items-center justify-center"
+                >
+                  <span class="font-base text-white font-semibold"
+                    >Para seu negócio</span
+                  >
+                </div>
               </div>
               <div
-                class="px-4 py-3 mt-2 border-2 border-[#ADACA9] rounded-[99px] max-w-[180px] flex items-center justify-center"
+                class="w-full brk-2.5:max-w-[384px] brk-5:max-w-[350px] lg:max-w-[316px] brk-6:max-w-[400px] max-w-none snap-start brk-2.5:h-[666px] brk-5:h-[600px] map-03:h-[534px] h-[325px] flex-none px-[30px] flex flex-col bg-[url('./assets/imgs/credito-de-carbono-img.png')] bg-no-repeat bg-center bg-cover rounded-[48px] brk-5:rounded-[99px] relative"
               >
-                <span class="font-base text-white font-semibold"
-                  >Para seu negócio</span
+                <img
+                  class="absolute bottom-10 right-10"
+                  src="./assets/icons/rigth-arrow-02.svg"
+                  alt=""
+                />
+                <div
+                  class="absolute w-full h-full bg-black left-0 brk-5:rounded-[99px] rounded-[48px] bg-opacity-20"
+                ></div>
+                <img
+                  class="absolute top-[54px] left-[30px] map-03:block hidden"
+                  src="./assets/icons/credito-de-carbono-icon.svg"
+                  alt=""
+                />
+                <h2
+                  class="font-medium text-[#FAFAF9] brk-5:text-5xl map-03:text-[40px] text-[32px] map-03:leading-[125%] leading-8 tracking-[-1.92px] brk-2.5:mt-[240px] brk-5:mt-[174px] map-03:mt-[118px] mt-[30px]"
                 >
-              </div>
-            </div>
-            <div
-              class="w-[384px] h-[666px] px-[30px] flex flex-col bg-[url('./assets/imgs/credito-de-carbono-img.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
-            >
-              <img
-                class="absolute top-[54px] left-[30px]"
-                src="./assets/icons/credito-de-carbono-icon.svg"
-                alt=""
-              />
-              <h2
-                class="font-medium text-[#FAFAF9] text-5xl leading-[125%] tracking-[-1.92px] mt-[240px]"
-              >
-                Crédito de Carbono
-              </h2>
-              <div
-                class="px-4 py-3 mt-[61px] border-2 border-[#ADACA9] rounded-[99px] max-w-[120px] flex items-center justify-center"
-              >
-                <span class="font-base text-white font-semibold"
-                  >Para você</span
+                  Crédito <br />
+                  de Carbono
+                </h2>
+                <div
+                  class="px-4 py-3 map-03:mt-[61px] mt-[45px] border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[120px] flex items-center justify-center"
                 >
-              </div>
-              <div
-                class="px-4 py-3 mt-2 border-2 border-[#ADACA9] rounded-[99px] max-w-[240px] flex items-center justify-center"
-              >
-                <span class="font-base text-white font-semibold"
-                  >Para sua marca e empresa</span
+                  <span class="font-base text-white font-semibold"
+                    >Para você</span
+                  >
+                </div>
+                <div
+                  class="px-4 py-3 mt-2 border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[240px] flex items-center justify-center"
                 >
-              </div>
-              <div
-                class="px-4 py-3 mt-2 border-2 border-[#ADACA9] rounded-[99px] max-w-[180px] flex items-center justify-center"
-              >
-                <span class="font-base text-white font-semibold"
-                  >Para seu negócio</span
+                  <span class="font-base text-white font-semibold"
+                    >Para sua marca e empresa</span
+                  >
+                </div>
+                <div
+                  class="px-4 py-3 mt-2 border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[180px] flex items-center justify-center"
                 >
-              </div>
-            </div>
-            <div
-              class="w-[384px] h-[666px] px-[30px] flex flex-col bg-[url('./assets/imgs/intelectual-man.png')] bg-no-repeat bg-center bg-cover rounded-[99px] relative"
-            >
-              <img
-                class="absolute top-[54px] left-[30px]"
-                src="./assets/icons/selo-verde-icon.svg"
-                alt=""
-              />
-              <h2
-                class="font-medium text-[#FAFAF9] mt-[240px] text-5xl leading-[125%] tracking-[-1.92px]"
-              >
-                Selo <br />
-                Verde
-              </h2>
-              <div
-                class="px-4 py-3 mt-[61px] border-2 border-[#ADACA9] rounded-[99px] max-w-[120px] flex items-center justify-center"
-              >
-                <span class="font-base text-white font-semibold"
-                  >Para você</span
-                >
+                  <span class="font-base text-white font-semibold"
+                    >Para seu negócio</span
+                  >
+                </div>
               </div>
               <div
-                class="px-4 py-3 mt-2 border-2 border-[#ADACA9] rounded-[99px] max-w-[240px] flex items-center justify-center"
+                class="w-full brk-2.5:max-w-[384px] brk-5:max-w-[350px] lg:max-w-[316px] brk-6:max-w-[825px] max-w-none snap-start brk-2.5:h-[666px] brk-5:h-[600px] map-03:h-[534px] h-[325px] flex-none px-[30px] flex flex-col bg-[url('./assets/imgs/make-coffee.png')] bg-no-repeat bg-center bg-cover rounded-[48px] brk-5:rounded-[99px] relative"
               >
-                <span class="font-base text-white font-semibold"
-                  >Para sua marca e empresa</span
+                <img
+                  class="absolute bottom-10 right-10"
+                  src="./assets/icons/rigth-arrow-02.svg"
+                  alt=""
+                />
+                <div
+                  class="absolute w-full h-full bg-black left-0 brk-5:rounded-[99px] rounded-[48px] bg-opacity-20"
+                ></div>
+                <img
+                  class="absolute top-[54px] left-[30px] map-03:block hidden"
+                  src="./assets/icons/selo-verde-icon.svg"
+                  alt=""
+                />
+                <h2
+                  class="font-medium text-[#FAFAF9] brk-5:text-5xl map-03:text-[40px] text-[32px] map-03:leading-[125%] tracking-[-1.92px] brk-2.5:mt-[240px] brk-5:mt-[174px] map-03:mt-[118px] mt-[30px] leading-8"
                 >
-              </div>
-              <div
-                class="px-4 py-3 mt-2 border-2 border-[#ADACA9] rounded-[99px] max-w-[180px] flex items-center justify-center"
-              >
-                <span class="font-base text-white font-semibold"
-                  >Para seu negócio</span
+                  Selo <br />
+                  Verde
+                </h2>
+                <div
+                  class="px-4 py-3 map-03:mt-[61px] mt-[36px] border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[120px] flex items-center justify-center"
                 >
+                  <span class="font-base text-white font-semibold"
+                    >Para você</span
+                  >
+                </div>
+                <div
+                  class="px-4 py-3 mt-2 border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[240px] flex items-center justify-center"
+                >
+                  <span class="font-base text-white font-semibold"
+                    >Para sua marca e empresa</span
+                  >
+                </div>
+                <div
+                  class="px-4 py-3 mt-2 border-2 border-[#ADACA9] map-03:rounded-[99px] rounded-[48px] max-w-[180px] flex items-center justify-center"
+                >
+                  <span class="font-base text-white font-semibold"
+                    >Para seu negócio</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -234,10 +270,12 @@
       <section
         class="w-full xl:px-28 lg:px-12 px-[22px] bg-[url(./assets/imgs/bg-section-home.png)] bg-no-repeat bg-bottom"
       >
-        <div class="w-full max-w-[1440px] m-auto flex flex-col mt-[200px]">
-          <div class="w-full h-[140px] justify-center items-center gap-6 flex">
+        <div class="w-full max-w-[1440px] m-auto flex flex-col mt-16 lg:mt-[200px]">
+          <div
+            class="w-full h-[140px] justify-center items-center gap-6 flex lg:flex-row flex-col"
+          >
             <h2
-              class="max-w-[592px] text-[#24231E] text-[56px] font-medium font-['Satoshi'] leading-[70px]"
+              class="max-w-[592px] text-[#24231E] lg:text-[56px] md:text-4xl text-3xl font-medium font-['Satoshi'] lg:leading-[70px]"
             >
               Nosso jeito de fazer acontecer
             </h2>
@@ -252,14 +290,14 @@
           </div>
           <div class="flex flex-col items-center">
             <div
-              class="w-full h-[811px] flex justify-center items-center relative"
+              class="w-full lg:h-[811px] h-[400px] flex justify-center items-center relative"
             >
               <img class="" src="./assets/imgs/phone-first-img.png" alt="" />
             </div>
             <button
               type="button"
               aria-label="Quero fazer parte"
-              class="px-7 py-[15px] mt-32 rounded-[28px] text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
+              class="px-7 py-[15px] lg:mt-32 mt-10 rounded-[28px] text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
             >
               Quero fazer parte
             </button>
@@ -267,34 +305,35 @@
         </div>
       </section>
       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div class="w-full max-w-[1440px] m-auto flex flex-col">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col lg:mt-[176px] justify-center mt-[76px]"
+        >
           <h2
-            class="flex flex-col text-center text-[64px] font-medium leading-[125%] tracking-[-2.56px] text-[#24231E]"
+            class="max-w-[780px] m-auto text-center text-[#24231E] lg:text-[48px] md:text-4xl text-3xl flex flex-col font-medium font-['Satoshi'] lg:leading-[70px]"
           >
-            Veja nosso jeito de fazer acontecer
+            A energia e o crédito de carbono
+            <span> são partes integrantes do nosso sistema </span>
           </h2>
-          <p
-            class="max-w-[780px] text-center m-auto text-2xl leading-[150%] text-[#504F43] mt-10"
-          >
-            Na Prospera, acreditamos na sustentabilidade e no impacto positivo
-            que podemos gerar no mundo.
-          </p>
-          <div class="mt-[100px]">
+
+          <div class="mt-[100px] w-full">
             <div class="w-full flex justify-center">
               <button
                 id="usinas-button"
-                class="border-b-2 border-black px-10 pb-12 w-[381px] font-medium text-2xl leading-[130%] text-[#24231E]"
+                class="border-b-2 border-black px-10 brk-4:pb-12 md:pb-10 pb-5 w-full text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#24231E]"
               >
                 Nossas Usinas de Energia
               </button>
               <button
                 id="credito-carbono-button"
-                class="border-b-2 border-[#878681] px-10 pb-12 w-[381px] font-medium text-2xl leading-[130%] text-[#878681]"
+                class="border-b-2 border-[#878681] px-10 brk-4:pb-12 md:pb-10 pb-5 w-full text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#878681]"
               >
                 Crédito de Carbono
               </button>
             </div>
-            <div id="usinas" class="mt-[100px] px-28 flex fade-in">
+            <div
+              id="usinas"
+              class="brk-4:mt-[100px] mt-10 fade-in flex brk-4:flex-row flex-col gap-y-6 items-center justify-center"
+            >
               <div class="pr-8">
                 <div
                   class="w-[150px] h-[102px] flex items-center justify-center bg-[#FFF6EB] rounded-[99px]"
@@ -302,7 +341,7 @@
                   <img src="./assets/icons/usinas-de-energia-icon.svg" alt="" />
                 </div>
                 <h2
-                  class="text-[56px] text-[#24231E] font-medium leading-[125%] mt-10"
+                  class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10"
                 >
                   Usinas de Energia
                 </h2>
@@ -316,7 +355,7 @@
                 <button
                   type="button"
                   aria-label="Quero fazer parte"
-                  class="px-7 py-[15px] mt-10 rounded-[28px] text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
+                  class="px-7 py-[15px] mt-10 rounded-[28px] text-lg brk-4:flex hidden bg-[#FFB728] items-center gap-x-1 text-neutral-950"
                 >
                   Quero fazer parte
                   <img
@@ -325,7 +364,7 @@
                     alt=""
                   />
                 </button>
-                <div class="mt-11 flex items-center gap-x-6">
+                <div class="mt-11 brk-4:flex hidden items-center gap-x-6">
                   <span class="block max-w-[280px] text-lg text-[#878681]">
                     Clique nos estados marcados para ver fotos das nossas
                     usinas.
@@ -334,7 +373,7 @@
                 </div>
               </div>
               <div
-                class="w-[696px] h-[661px] bg-[#FFE5C7] rounded-[99px] flex justify-center items-center relative"
+                class="w-full max-w-[696px] lg:h-[661px] py-4 bg-[#FFE5C7] rounded-[99px] px-2 flex justify-center items-center relative"
               >
                 <div
                   class="w-full h-full hidden absolute bottom-0 left-0 bg-black z-20 bg-opacity-30 rounded-[99px]"
@@ -343,26 +382,41 @@
                   <img src="./assets/imgs/Brazil.png" alt="" />
                   <button
                     id="ceara-button"
-                    class="absolute top-[130px] right-14 w-7 h-7 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
+                    class="absolute top-[22%] left-[85%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
                   >
                     <img src="./assets/icons/Pin.svg" alt="" />
                   </button>
                   <button
                     id="piaui-button"
-                    class="absolute top-[170px] right-24 w-7 h-7 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
+                    class="absolute top-[29%] left-[78%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
                   >
                     <img src="./assets/icons/Pin.svg" alt="" />
                   </button>
                   <button
                     id="piaui-button"
-                    class="absolute bottom-[180px] right-[190px] w-7 h-7 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
+                    class="absolute bottom-[30%] left-[62%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1"
                   >
                     <img src="./assets/icons/Pin.svg" alt="" />
                   </button>
                 </div>
               </div>
+              <button
+                type="button"
+                aria-label="Quero fazer parte"
+                class="px-7 py-[15px] mt-10 rounded-[28px] text-lg w-full max-w-[696px] flex brk-4:hidden bg-[#FFB728] items-center justify-center gap-x-1 text-neutral-950"
+              >
+                Quero fazer parte
+                <img
+                  class="mt-[2px]"
+                  src="./assets/icons/arrow-rigth-icon.svg"
+                  alt=""
+                />
+              </button>
             </div>
-            <div id="credito-carbono" class="mt-[100px] pl-28 fade-in hidden">
+            <div
+              id="credito-carbono"
+              class="brk-4:mt-[100px] mt-10 fade-in hidden brk-4:flex-row flex-col gap-y-6 items-center justify-center"
+            >
               <div class="pr-8">
                 <div
                   class="w-[150px] h-[102px] flex items-center justify-center bg-[#EEF6F1] rounded-[99px]"
@@ -370,7 +424,7 @@
                   <img src="./assets/icons/credito-carbono-icon.svg" alt="" />
                 </div>
                 <h2
-                  class="text-[56px] text-[#24231E] font-medium leading-[125%] mt-10"
+                  class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10"
                 >
                   Crédito de Carbono
                 </h2>
@@ -390,21 +444,23 @@
                 </button>
               </div>
               <div
-                class="w-[696px] h-[661px] flex justify-start items-start relative"
+                class="w-full max-w-[696px] h-[661px] flex justify-start items-start relative"
               >
-                <div class="w-[384px] h-[450px] rounded-[99px] relative">
+                <div
+                  class="w-full max-w-[384px] h-[450px] rounded-[99px] relative px-2"
+                >
                   <img
-                    class="w-[384px] h-[450px] rounded-[99px]"
+                    class="max-w-[384px] w-full h-[450px] rounded-[99px]"
                     src="./assets/imgs/planting-tree.png"
                     alt=""
                   />
                   <img
-                    class="w-[264px] h-[273px] rounded-[99px] absolute top-[42px] -right-[200px]"
+                    class="lg:max-w-[264px] max-w-[153px] w-full lg:h-[273px] h-[158px] lg:rounded-[99px] rounded-[48px] absolute top-[42px] lg:-right-[200px] -right-20"
                     src="./assets/imgs/happy-man.png"
                     alt=""
                   />
                   <img
-                    class="absolute -bottom-[140px] -right-[100px] z-0"
+                    class="absolute lg:-bottom-[140px] -bottom-20 lg:-right-[100px] right-10 z-0 w-[178px]"
                     src="./assets/imgs/apui.png"
                     alt=""
                   />
@@ -425,10 +481,12 @@
         </div>
       </section>
       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div class="w-full max-w-[1440px] m-auto flex flex-col px-28">
+        <div
+          class="w-full max-w-[1440px] m-auto flex flex-col lg:mt-[176px] mt-16"
+        >
           <div class="w-full flex flex-col items-center">
             <h2
-              class="text-[50px] text-[#24231E] font-medium leading-[125% tracking-[-2.24px]]"
+              class="lg:text-[50px] md:text-4xl text-3xl text-[#24231E] font-medium leading-[125%] tracking-[-2.24px]]"
             >
               Por que sustentabilidade é tão urgente?
             </h2>
@@ -439,31 +497,33 @@
               igualitária são temas urgentes que requerem o esforço de todos!
             </p>
           </div>
-          <div class="mt-[200px] flex flex-col items-center relative">
+          <div
+            class="map-02:mt-[200px] mt-[32px] flex flex-col items-center relative"
+          >
             <div
-              class="p-16 flex items-center justify-center gap-x-10 rounded-[99px] bg-[#F3F3F3] z-50 relative"
+              class="p-16 flex map-02:items-center items-start w-full map-02:flex-row flex-col max-w-[793px] justify-center gap-x-10 rounded-[99px] bg-[#F3F3F3] z-50 relative"
             >
               <!-- imagem homem trabalhando -->
               <img
-                class="w-[198px] h-[205px] absolute -right-[225px] rounded-[74.7px] top-10 z-10"
+                class="w-[198px] h-[205px] absolute brk-2.5:-right-[30%] -right-[20%] hidden map-01:block rounded-[74.7px] top-10 z-10"
                 src="./assets/imgs/woking-man.png"
                 alt=""
               />
               <!-- imagem mulher trabalhando -->
               <img
-                class="absolute -right-14 rounded-[51.7px] -top-20 z-10"
+                class="absolute -right-[10%] rounded-[51.7px] -top-20 z-10 hidden map-01:block"
                 src="./assets/imgs/working-woman.png"
                 alt=""
               />
               <!-- imagem do rio -->
               <div
-                class="w-[371px] h-[137px] bg-[url('./assets/imgs/river.png')] bg-no-repeat bg-center bg-cover rounded-[59px] absolute -top-[149px] -left-[100px] z-10"
+                class="w-[371px] h-[137px] bg-[url('./assets/imgs/river.png')] hidden map-01:block bg-no-repeat bg-center bg-cover rounded-[59px] absolute -top-[60%] -left-[15%] z-10"
               ></div>
               <!-- imagem da usina -->
               <img
                 src="./assets/imgs/usina.png"
                 alt=""
-                class="w-[339px] h-[196px] rounded-[59px] absolute -bottom-[125px] -left-[259px] z-0"
+                class="w-[339px] h-[196px] hidden brk-2.5:block rounded-[59px] absolute -bottom-[125px] -left-[259px] z-0"
               />
 
               <div
@@ -473,11 +533,11 @@
               </div>
               <!-- circulo cinza maior a esquerda -->
               <div
-                class="absolute -top-9 -z-10 -left-[242px] w-[334px] h-[334px] rounded-full border-2 border-[#F3F3F3]"
+                class="absolute -top-9 hidden map-02:block -z-10 -left-[242px] w-[334px] h-[334px] rounded-full border-2 border-[#F3F3F3]"
               ></div>
               <!-- circulo cinza menor a direita -->
               <div
-                class="absolute -top-9 z-0 -right-[100px] w-[191px] h-[191px] rounded-full border-2 border-[#F3F3F3]"
+                class="absolute -top-9 hidden map-01:block -z-10 -right-[100px] w-[191px] h-[191px] rounded-full border-2 border-[#F3F3F3]"
               ></div>
               <p
                 class="max-w-[419px] mt-[18px] text-sm leading-[150%] text-[#504F43]"
@@ -489,18 +549,18 @@
                 regulatórios, éticos e legais.
               </p>
               <img
-                class="absolute right-20 -bottom-[168px] w-[171px] h-[137px] rounded-[50px] z-10"
+                class="absolute right-20 -bottom-[168px] hidden map-01:block w-[171px] h-[137px] rounded-[50px] z-10"
                 src="./assets/imgs/bakery-woman.png"
                 alt=""
               />
               <!-- circulo cinza menor abaixo -->
               <div
-                class="absolute -bottom-28 z-0 right-10 w-[191px] h-[191px] rounded-full border-2 border-[#F3F3F3]"
+                class="absolute -bottom-28 z-0 right-10 w-[191px] hidden map-01:block h-[191px] rounded-full border-2 border-[#F3F3F3]"
               ></div>
             </div>
             <!-- circulo amarelado -->
             <img
-              class="absolute left-1/2 w-[508px] h-[508px] transform -translate-x-1/2 top-1/2 -translate-y-1/2"
+              class="absolute left-1/2 w-[508px] hidden map-02:block -z-10 h-[508px] transform -translate-x-1/2 top-1/2 -translate-y-1/2"
               src="./assets/imgs/circle.png"
               alt=""
             />
@@ -508,13 +568,13 @@
         </div>
       </section>
       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] mt-[325px] m-auto flex flex-col px-28"
-        >
-          <div class="flex items-center justify-center gap-x-[140px]">
-            <div>
+        <div class="w-full max-w-[1440px] lg:mt-[325px] mt-16 m-auto flex flex-col">
+          <div
+            class="w-full flex lg:flex-row gap-x-[3%] items-center justify-center flex-col"
+          >
+            <div class="max-w-[588px]">
               <h2
-                class="font-medium text-5xl leading-[125%] tracking-[-1.92px] min-w-[489px]"
+                class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-['Satoshi'] leading-[30px]"
               >
                 ODS, ou Objetivos de Desenvolvimento Sustentáveis
               </h2>
@@ -524,7 +584,7 @@
                 Pacto Global da ONU. A Prospera impacta positivamente 5 ODS:
               </p>
             </div>
-            <div>
+            <div class="max-w-[588px]">
               <img
                 src="./assets/imgs/onubrasil-color-horiz.png"
                 alt="Logo das nações unidas"
@@ -541,122 +601,156 @@
             </div>
           </div>
           <div
-            class="py-[180px] px-14 flex items-center gap-x-3 mt-[92px] rounded-[99px] bg-[#F3F3F3]"
+            class="map-02:py-[180px] map-02:px-14 py-[60px] px-[32px] flex items-center justify-center gap-y-3 gap-x-2 mt-[92px] map-02:rounded-[99px] rounded-[48px] bg-[#F3F3F3] flex-wrap"
           >
-            <img src="./assets/imgs/SDG-7.png" alt="" /><img
+            <img
+              class="map-02:w-[207px] w-[90px] h-[90px] map-02:h-[207px]"
+              src="./assets/imgs/SDG-7.png"
+              alt=""
+            />
+            <img
+              class="map-02:w-[207px] w-[90px] h-[90px] map-02:h-[207px]"
               src="./assets/imgs/SDG-9.png"
               alt=""
-            /><img src="./assets/imgs/SDG-10.png" alt="" /><img
+            />
+            <img
+              class="map-02:w-[207px] w-[90px] h-[90px] map-02:h-[207px]"
+              src="./assets/imgs/SDG-10.png"
+              alt=""
+            />
+            <img
+              class="map-02:w-[207px] w-[90px] h-[90px] map-02:h-[207px]"
               src="./assets/imgs/SDG-12.png"
               alt=""
-            /><img src="./assets/imgs/SDG-13.png" alt="" />
+            />
+            <img
+              class="map-02:w-[207px] w-[90px] h-[90px] map-02:h-[207px]"
+              src="./assets/imgs/SDG-13.png"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div
-          class="w-full max-w-[1440px] mt-[175px] m-auto flex px-28 justify-between"
+          class="w-full max-w-[1440px] brk-3:mt-[175px] mt-16 m-auto flex justify-between"
         >
-          <div>
-            <h2
-              class="text-5xl font-medium leading-[150%] tracking-[-1.92px] max-w-[488px] mb-16"
-            >
-              E qual é nossa essência e nosso propósito?
-            </h2>
-            <div class="relative w-[382px]">
-              <img src="./assets/imgs/happy-man-02.png" alt="" />
-              <img
-                class="absolute -right-[180px] top-60"
-                src="./assets/imgs/club-prospera.svg"
-                alt=""
-              />
+          <div
+            class="w-full flex brk-3:flex-row flex-col map-03:items-center items-start brk-3:items-start"
+          >
+            <div class="flex flex-col items-center">
+              <h2
+                class="max-w-[588px] text-[#24231E] brk-3:mb-16 mb-6 brk-2:text-5xl md:text-4xl text-2xl md:text-center text-start brk-3:text-start font-medium font-['Satoshi'] brk-2:leading-[60px] md:leading-[50px]"
+              >
+                E qual é nossa essência e nosso propósito?
+              </h2>
+              <div class="relative brk-2:max-w-[382px] map-03:max-w-[300px]">
+                <img src="./assets/imgs/happy-man-02.png" alt="" />
+                <img
+                  class="absolute brk-01:-right-[150px] brk-2:-right-[110px] -right-[70px] top-60"
+                  src="./assets/imgs/club-prospera.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mt-[72px] max-w-[590px]">
+              <p class="text-xl leading-[140%] text-[#3E3D34] mb-5">
+                Zerar a conta de energia e reduzir a pegada de carbono de todas
+                as pessoas do planeta!
+              </p>
+              <p class="text-xl leading-[140%] text-[#3E3D34] mb-5">
+                Pessoas, marcas e empresas se conectam no Clube Prospera de
+                Benefícios Sustentáveis, nossa plataforma de negócios e
+                relacionamento. O Clube Prospera promove a educação e
+                conscientização socioambiental, e apresenta produtos e soluções
+                que geram descontos na conta de luz dos nossos sócios, ao mesmo
+                tempo que descarbonizam a jornada de compra e fidelizam clientes
+                e consumidores das marcas e empresas.
+              </p>
+              <p class="text-xl leading-[140%] text-[#3E3D34] mb-3">
+                Nossos sócios participam ainda da Jornada da Prosperidade, que
+                os engaja a ampliar suas escolhas conscientes através de
+                mecânicas de coleção, sorteio de prêmios e promoções.
+              </p>
             </div>
           </div>
-          <div class="mt-[72px] max-w-[590px]">
-            <p class="text-xl leading-[140%] text-[#3E3D34] mb-5">
-              Zerar a conta de energia e reduzir a pegada de carbono de todas as
-              pessoas do planeta!
-            </p>
-            <p class="text-xl leading-[140%] text-[#3E3D34] mb-5">
-              Pessoas, marcas e empresas se conectam no Clube Prospera de
-              Benefícios Sustentáveis, nossa plataforma de negócios e
-              relacionamento. O Clube Prospera promove a educação e
-              conscientização socioambiental, e apresenta produtos e soluções
-              que geram descontos na conta de luz dos nossos sócios, ao mesmo
-              tempo que descarbonizam a jornada de compra e fidelizam clientes e
-              consumidores das marcas e empresas.
-            </p>
-            <p class="text-xl leading-[140%] text-[#3E3D34] mb-3">
-              Nossos sócios participam ainda da Jornada da Prosperidade, que os
-              engaja a ampliar suas escolhas conscientes através de mecânicas de
-              coleção, sorteio de prêmios e promoções.
-            </p>
-          </div>
         </div>
       </section>
       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
         <div
-          class="w-full max-w-[1440px] mt-[175px] m-auto flex px-28 justify-between"
+          class="w-full max-w-[1440px] lg:mt-[175px] mt-16 m-auto flex justify-between"
         >
           <div
             class="w-full flex-col justify-start items-start gap-6 inline-flex"
           >
-            <h2
-              class="text-stone-800 text-5xl font-medium font-['Satoshi'] leading-[60px]"
-            >
-              Prospera na mídia
-            </h2>
-            <span
-              class="max-w-[584px] text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
-            >
-              Fique por dentro das últimas novidades
-            </span>
-            <div class="h-auto">
-              <div class="w-full justify-start items-start gap-8 inline-flex">
+            <div class="w-full max-w-[1219px] m-auto ">
+              <h2
+                class="text-stone-800 text-5xl font-medium font-['Satoshi'] leading-[60px]"
+              >
+                Prospera na mídia
+              </h2>
+              <span
+                class="max-w-[584px] text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
+              >
+                Fique por dentro das últimas novidades
+              </span>
+            </div>
+            <div class="h-auto w-full flex justify-center">
+              <div class="w-full max-w-[1219px] justify-start items-start gap-8 flex scroll-smooth overflow-x-auto snap-x snap-mandatory">
                 <div
-                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                  class="w-[385px] snap-start flex-none flex-col justify-start items-start gap-7 inline-flex"
                 >
                   <img
                     class="self-stretch h-[300px] rounded-2xl"
                     src="./assets/imgs/midia/media-img-01.png"
                   />
                   <div>
-                    <span>
+                    <span class="w-[385px] text-[#24231E] text-2xl font-bold font-['Satoshi'] leading-[33.60px]">
                       Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
                     </span>
-                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
-                    <a href="#">Leia mais</a>
+                    <p class="max-w-[385px] text-[#48473C] text-lg font-normal font-['Open Sans'] leading-[27px]">As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <div class=" max-w-[109px] h-6 justify-center items-center gap-2 inline-flex mt-7">
+                      <a href="#" class="text-[#A17419] text-base font-normal font-['Roboto'] leading-normal">Leia mais</a>
+                      <span class="w-6 h-6 relative text-[#A17419]">></span>
+                    </div>
                   </div>
                 </div>
                 <div
-                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                  class="w-[385px] snap-start flex-none flex-col justify-start items-start gap-7 inline-flex"
                 >
                   <img
                     class="self-stretch h-[300px] rounded-2xl"
                     src="./assets/imgs/midia/media-img-02.png"
                   />
                   <div>
-                    <span>
+                    <span class="
+                    max-w-[385px] text-[#24231E] text-2xl font-bold font-['Satoshi'] leading-[33.60px]">
                       Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
                     </span>
-                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
-                    <a href="#">Leia mais</a>
+                    <p class="max-w-[385px] text-[#48473C] text-lg font-normal font-['Open Sans'] leading-[27px]">As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <div class=" max-w-[109px] h-6 justify-center items-center gap-2 inline-flex mt-7">
+                      <a href="#" class="text-[#A17419] text-base font-normal font-['Roboto'] leading-normal">Leia mais</a>
+                      <span class="w-6 h-6 relative text-[#A17419]">></span>
+                    </div>
                   </div>
                   
                 </div>
                 <div
-                  class="w-[385px] flex-col justify-start items-start gap-7 inline-flex"
+                  class="w-[385px] snap-start flex-none flex-col justify-start items-start gap-7 inline-flex"
                 >
                   <img
                     class="self-stretch h-[300px] rounded-2xl"
                     src="./assets/imgs/midia/media-img-03.png"
                   />
                   <div>
-                    <span>
+                    <span class="max-w-[385px] text-[#24231E] text-2xl font-bold font-['Satoshi'] leading-[33.60px]">
                       Prospera e Greener anunciam fusão para transformar mercado de benefícios sustentáveis
                     </span>
-                    <p>As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
-                    <a href="#">Leia mais</a>
+                    <p class="max-w-[385px] text-[#48473C] text-lg font-normal font-['Open Sans'] leading-[27px]">As startups Prospera e Greener juntaram as forças para criar uma nova potência no cenário nacional de benefícios sustentáveis</p>
+                    <div class=" max-w-[109px] h-6 justify-center items-center gap-2 inline-flex mt-7">
+                      <a href="#" class="text-[#A17419] text-base font-normal font-['Roboto'] leading-normal">Leia mais</a>
+                      <span class="w-6 h-6 relative text-[#A17419]">></span>
+                    </div>
                   </div>
                   </div>
                 </div>
@@ -665,17 +759,18 @@
           </div>
         </div>
       </section>
-      <section>
+      </section>
+       <section class="bg-[url('./assets/imgs/frame-elipse.png')] bg-no-repeat bg-center w-full xl:px-28 lg:px-12 px-[22px] ">
         <div
-          class="w-full max-w-[1440px] mt-[175px] m-auto flex flex-col items-center px-28"
+          class="w-full max-w-[1440px] lg:mt-[175px] mt-16 m-auto flex flex-col items-center px-28"
         >
           <h2
-            class="font-medium text-5xl leading-[125%] tracking-[-1.92px] max-w-[550px] mb-10 text-center"
+            class="font-medium lg:text-5xl md:text-4xl text-2xl leading-[125%] tracking-[-1.92px] max-w-[550px] mb-10 text-center"
           >
             Baixe nosso app e comece a economizar já!
           </h2>
 
-          <div class="flex gap-[32px]">
+          <div class="lg:flex gap-[32px] hidden">
             <button>
               <img src="./assets/imgs/Apple.png" alt="" />
             </button>
@@ -685,33 +780,60 @@
           </div>
         </div>
         <div
-          class="w-full flex items-center justify-center bg-[url('./assets/imgs/frame-elipse.png')] bg-no-repeat bg-center"
+          class="w-full flex items-center justify-center"
         >
           <img src="./assets/imgs/phones.png" alt="" />
         </div>
       </section>
     </main>
-    <footer class="bg-[#1F1E1C] mt-[260px] w-full py-20">
-      <div
-        class="w-full max-w-[1440px] m-auto flex flex-col items-center px-28"
-      >
-        <div class="w-full flex items-center justify-between">
+    <footer
+      class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10"
+    >
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+        <div
+          class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between"
+        >
           <div>
             <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
-            <div class="flex flex-col mb-6">
+            <div class="flex flex-col mb-8">
               <span
                 class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                >Endereço</span
+                >CNPJ</span
               >
               <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >Alameda Madeira, 162 - Sala 1104 A</span
+                >31.648.992/0001-91</span
               >
-              <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >Alphaville Centro Industrial</span
-              >
-              <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >CEP: 06454-010</span
-              >
+            </div>
+            <div
+              class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start"
+            >
+              <div class="flex flex-col mb-6">
+                <span
+                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
+                  >Endereço</span
+                >
+                <span class="text-[#FAFAF9] font-base leading-[150%]"
+                  >Alameda Madeira, 162 - Sala 1104 A</span
+                >
+                <span class="text-[#FAFAF9] font-base leading-[150%]"
+                  >Alphaville Centro Industrial</span
+                >
+                <span class="text-[#FAFAF9] font-base leading-[150%]"
+                  >CEP: 06454-010</span
+                >
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
+                  >Contato</span
+                >
+                <span class="text-[#FAFAF9] font-base leading-[150%]"
+                  >(11) 1234-5678</span
+                >
+                <span class="text-[#FAFAF9] font-base leading-[150%]"
+                  >info@prospera.com</span
+                >
+              </div>
             </div>
             <div class="flex items-center gap-3">
               <img src="./assets/icons/Facebook.png" alt="" />
@@ -738,14 +860,16 @@
           </div>
         </div>
         <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
-        <div class="w-full flex justify-between items-center mt-8">
+        <div
+          class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8"
+        >
           <div>
             <span class="text-[#FAFAF9]"
               >© 2024 Prospera. Todos os direitos reservados.</span
             >
           </div>
           <div>
-            <ul class="flex gap-6 text-[#FAFAF9]">
+            <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
               <li>Política de Privacidade</li>
               <li>Termos de Serviço</li>
               <li>Configurações de Cookies</li>
