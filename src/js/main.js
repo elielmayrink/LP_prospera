@@ -22,23 +22,7 @@ let usinasButton = document.getElementById("usinas-button");
 
 let creditoCarbonoButton = document.getElementById("credito-carbono-button");
 
-// let productItemsDiv = document.getElementById("product-items");
-
-// let scrollProductRigth = document.getElementById("next-product");
-// let scrollProductLeft = document.getElementById("prev-product");
-// let scrollProduct03 = document.getElementById("scrool-product-03");
-
-// scrollProductRigth.addEventListener("click", () => {
-//   productItemsDiv.scrollLeft += 384;
-//   console.log("log");
-// });
-
-// scrollProductLeft.addEventListener("click", () => {
-//   productItemsDiv.scrollLeft -= 384;
-// });
-
 usinasButton.addEventListener("click", function () {
-  console.log("log");
   usinas.style.display = "flex";
   creditoCarbono.style.display = "none";
   usinasButton.style.color = "#24231E";
@@ -47,7 +31,6 @@ usinasButton.addEventListener("click", function () {
   creditoCarbonoButton.style.color = "#878681";
 });
 creditoCarbonoButton.addEventListener("click", function () {
-  console.log("aqui");
   usinas.style.display = "none";
   creditoCarbono.style.display = "flex";
   usinasButton.style.color = "#878681";
@@ -57,6 +40,105 @@ creditoCarbonoButton.addEventListener("click", function () {
 });
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
+
+let cearaButton = document.getElementById("ceara-button-home");
+let piauiButton = document.getElementById("piaui-button-home");
+let spButton = document.getElementById("sp-button-home");
+let cearaImagsDiv = document.getElementById("ceara-imgs-home");
+let carrosselInjectDiv = document.getElementById("carousel-home");
+
+let closeCearaImgHome = document.getElementById("close-ceara-imgs-home");
+cearaButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+  carrosselInjectDiv.innerHTML = `
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
+      </div>
+   
+   
+  
+  `;
+});
+piauiButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+
+  carrosselInjectDiv.innerHTML = `
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
+      </div>
+    
+   
+  
+  `;
+});
+spButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+  carrosselInjectDiv.innerHTML = `
+      
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 1.png" alt="Image 4" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 2.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 3.png" alt="Image 4" class="w-full" />
+      </div>
+    
+   
+  
+  `;
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("carousel-home");
+  const prevButton = document.getElementById("prev-home");
+  const nextButton = document.getElementById("next-home");
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const totalSlides = carousel.children.length;
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    showSlide(currentIndex - 1);
+    console.log("aqui");
+  });
+
+  nextButton.addEventListener("click", () => {
+    showSlide(currentIndex + 1);
+    console.log("aqui");
+  });
+
+  showSlide(currentIndex);
+});
+closeCearaImgHome.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "none";
+});
 
 menuBtn.addEventListener("click", () => {
   menu.classList.toggle("hidden");

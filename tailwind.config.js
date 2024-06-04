@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        satoshi: ["Satoshi", "sans-serif"],
+      },
       screens: {
         "brk-01": "1575px",
         "brk-2": "1530px",

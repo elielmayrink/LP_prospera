@@ -1,3 +1,72 @@
+let cearaButton = document.getElementById("ceara-button-assinatura-verde");
+let piauiButton = document.getElementById("piaui-button-assinatura-verde");
+let spButton = document.getElementById("sp-button-assinatura-verde");
+let cearaImagsDiv = document.getElementById("ceara-imgs-assinatura-verde");
+let carrosselInjectDiv = document.getElementById("carousel-assinatura-verde");
+
+let closeCearaImgAssinatura = document.getElementById(
+  "close-ceara-imgs-assinatura-verde"
+);
+cearaButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+  carrosselInjectDiv.innerHTML = `
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
+      </div>
+   
+   
+  
+  `;
+});
+piauiButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+
+  carrosselInjectDiv.innerHTML = `
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
+      </div>
+    
+   
+  
+  `;
+});
+spButton.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "flex";
+  carrosselInjectDiv.innerHTML = `
+      
+      
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 1.png" alt="Image 4" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 2.png" alt="Image 2" class="w-full" />
+      </div>
+      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 3.png" alt="Image 4" class="w-full" />
+      </div>
+    
+   
+  
+  `;
+});
+closeCearaImgAssinatura.addEventListener("click", () => {
+  cearaImagsDiv.style.display = "none";
+});
+
 const faqs = [
   {
     titulo: "Será necessário realizar alguma obra nas minhas instalações?",
@@ -71,3 +140,35 @@ function toggleAccordion(index) {
     svgElement.style.transform = "rotate(180deg)";
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("carousel-assinatura-verde");
+  const prevButton = document.getElementById("prev-assinatura-verde");
+  const nextButton = document.getElementById("next-assinatura-verde");
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const totalSlides = carousel.children.length;
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    showSlide(currentIndex - 1);
+    console.log("aqui");
+  });
+
+  nextButton.addEventListener("click", () => {
+    showSlide(currentIndex + 1);
+    console.log("aqui");
+  });
+
+  showSlide(currentIndex);
+});
