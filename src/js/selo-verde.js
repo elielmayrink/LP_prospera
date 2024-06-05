@@ -17,15 +17,18 @@ cearaButton.addEventListener("click", () => {
   cearaImagsDiv.style.display = "flex";
   carrosselInjectDiv.innerHTML = `
       
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
-      </div>
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+    <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">UFV Aracati 1 - CE</span>
+  </div>
+  <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px] relative">
+    <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">UFV Brejo Santo 1 - CE</span>
+  </div>
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+    <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2"> UFV Cedro 1 e 2 - CE</span>
+  </div>
    
    
   
@@ -36,15 +39,21 @@ piauiButton.addEventListener("click", () => {
 
   carrosselInjectDiv.innerHTML = `
       
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
-      </div>
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+    <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
+
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">UFVs Jaicós 1, 2 e 3 - PI</span>
+  </div>
+  <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px] relative">
+    <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
+
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">UFVs Jaicós 1, 2 e 3 - PI</span>
+  </div>
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+    <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
+
+    <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">UFVs Jaicós 1, 2 e 3 - PI</span>
+  </div>
     
    
   
@@ -55,15 +64,18 @@ spButton.addEventListener("click", () => {
   carrosselInjectDiv.innerHTML = `
       
       
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 1.png" alt="Image 4" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 2.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 3.png" alt="Image 4" class="w-full" />
-      </div>
+    <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+      <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 1.png" alt="Image 4" class="w-full" />
+      <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">Usina Mercurio - SP - 1</span>
+    </div>
+    <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px] relative">
+      <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 2.png" alt="Image 2" class="w-full" />
+      <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">Usina Mercurio - SP - 2</span>
+    </div>
+    <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px] relative">
+      <img src="./assets/imgs/usinas/sao-paulo/Usina Mercurio - SP - 3.png" alt="Image 4" class="w-full" />
+      <span class="text-[28px] absolute bottom-14 block z-50 text-white left-1/2 -translate-x-1/2">Usina Mercurio - SP - 3</span>
+    </div>
     
    
   
