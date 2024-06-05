@@ -7,6 +7,7 @@ hamburgerMenu.addEventListener("click", function () {
   responsiveMenu.style.display = "flex";
   closeMenu.style.display = "block";
   hamburgerMenu.style.display = "none";
+  console.log("aqui");
 });
 closeMenu.addEventListener("click", () => {
   responsiveMenu.style.display = "none";
@@ -41,16 +42,16 @@ creditoCarbonoButton.addEventListener("click", function () {
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 
-let cearaButton = document.getElementById("ceara-button-home");
-let piauiButton = document.getElementById("piaui-button-home");
-let spButton = document.getElementById("sp-button-home");
-let cearaImagsDiv = document.getElementById("ceara-imgs-home");
-let carrosselInjectDiv = document.getElementById("carousel-home");
+let cearaButtonHome = document.getElementById("ceara-button-home");
+let piauiButtonHome = document.getElementById("piaui-button-home");
+let spButtonHome = document.getElementById("sp-button-home");
+let cearaImagsDivHome = document.getElementById("ceara-imgs-home");
+let carrosselInjectDivHome = document.getElementById("carousel-home");
 
 let closeCearaImgHome = document.getElementById("close-ceara-imgs-home");
-cearaButton.addEventListener("click", () => {
-  cearaImagsDiv.style.display = "flex";
-  carrosselInjectDiv.innerHTML = `
+cearaButtonHome.addEventListener("click", () => {
+  cearaImagsDivHome.style.display = "flex";
+  carrosselInjectDivHome.innerHTML = `
       
       <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
         <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
@@ -66,28 +67,20 @@ cearaButton.addEventListener("click", () => {
   
   `;
 });
-piauiButton.addEventListener("click", () => {
-  cearaImagsDiv.style.display = "flex";
+piauiButtonHome.addEventListener("click", () => {
+  cearaImagsDivHome.style.display = "flex";
 
-  carrosselInjectDiv.innerHTML = `
+  carrosselInjectDivHome.innerHTML = `
       
       <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
         <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
       </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
-      </div>
-    
-   
   
   `;
 });
-spButton.addEventListener("click", () => {
-  cearaImagsDiv.style.display = "flex";
-  carrosselInjectDiv.innerHTML = `
+spButtonHome.addEventListener("click", () => {
+  cearaImagsDivHome.style.display = "flex";
+  carrosselInjectDivHome.innerHTML = `
       
       
       <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
@@ -137,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(currentIndex);
 });
 closeCearaImgHome.addEventListener("click", () => {
-  cearaImagsDiv.style.display = "none";
+  cearaImagsDivHome.style.display = "none";
 });
 
 menuBtn.addEventListener("click", () => {

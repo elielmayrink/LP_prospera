@@ -1,813 +1,605 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <style>
-      .fade-in {
-        animation: fadeIn 0.5s ease-in-out;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      to {
+        opacity: 1;
       }
-      .accordion-content {
-        display: none;
-      }
-      .accordion-content.open {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
-      <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
-        <img src="./assets/imgs/header-logo.svg" alt="" />
-        <button class="block" id="hamburger-menu-button">
-          <img src="./assets/icons/Hamburger-menu.svg" alt="" />
-        </button>
-        <button id="close-button" class="hidden">
-          <img
-            class="w-[40px] h-[40px]"
-            src="./assets/icons/close-icon.png"
-            alt=""
-          />
-        </button>
-      </div>
-      <div id="responsive-menu" class="w-full h-screen flex-col hidden">
-        <nav class="mt-[84px]" aria-label="Main navigation">
-          <ul class="flex flex-col gap-y-5">
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./">Inicio</a>
-            </li>
-            <li class=" text-[#24231E] font-medium text-lg leading-7">
-              <a class="flex gap-x-4 items-center" href="./assinatura-verde.html">Assinatura verde <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./credito-de-carbono.html">Créditos de carbono</a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./selo-verde.html">Selo verde</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex flex-col-reverse mt-9 gap-y-4">
-          <a
-            href=" https://meuclubeprospera.com.br/"
-            target="_blank"
-            aria-label="Entrar"
-            class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
-          >
-            Entrar
-          </a>
-          <a 
-          href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-          target="_blank"
-            aria-label="Quero fazer parte"
-            class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
-          >
-            Quero fazer parte
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex"
-      >
-        <div>
-          <a href="/" aria-label="Home">
-            <img
-              src="./assets/imgs/header-logo.svg"
-              alt="Logotipo da empresa"
-            />
-          </a>
-        </div>
-        <nav aria-label="Main navigation">
-          <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./">Inicio</a>
-            </li>
-            <li class=" text-[#24231E] font-medium text-lg leading-7">
-              <a class="flex flex-col items-center" href="./assinatura-verde.html">Assinatura verde <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./credito-de-carbono.html">Créditos de carbono</a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./selo-verde.html">Selo verde</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex xl:gap-x-6 lg:gap-x-3">
-          <a
-          href=" https://meuclubeprospera.com.br/"
-          target="_blank"
-            aria-label="Entrar"
-            class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950"
-          >
-            Entrar
-          </a>
-          <a
-          href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-          target="_blank"
-            aria-label="Quero fazer parte"
-            class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950"
-          >
-            Quero fazer parte
-          </a>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
-          <div
-            class="w-full flex flex-col items-center bg-[url('./assets/imgs/usina-pg-assinatura-verde.png')] bg-no-repeat bg-center bg-cover rounded-[48px] lg:rounded-[99px]"
-          >
-            <div
-              class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30"
-            >
-              <img
-                class="lg:w-[124px] w-16"
-                src="./assets/icons/assinatura-verde-icon.svg"
-                alt=""
-              />
-              <h1
-                class="font-medium font-satoshi sm:max-w-[490px] max-w-[200px] text-[#FAFAF9] lg:leading-[80px] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[44px] text-2xl"
-              >
-                Descubra a Assinatura Verde
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
-        >
-          <div
-            class="w-full flex flex-col lg:flex-row items-center justify-center gap-10"
-          >
-            <div class="w-full max-w-[592px]">
-              <h2
-                class="font-medium font-satoshi lg:text-[56px] md:text-4xl text-2xl text-[#24231E] lg:leading-[125%] tracking-[-2.24px]"
-              >
-                Economize até 100% na sua conta de luze aumente suas vendas
-              </h2>
-              <p class="text-lg text-[#3E3D34] leading-[150%] my-[38px]">
-                Contrate energia limpa e renovável direto em uma das usinas dos
-                nosso hub, comece a economizar, faça parte do primeiro clube de
-                benefícios sustentáveis do Brasil e comece sua jornada de
-                economia que pode zerar a sua conta de luz.
-              </p>
-              <a
-              href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-              target="_blank"
-                aria-label="Quero fazer parte"
-                class="lg:max-w-[210px] w-full px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-[#24231E]"
-              >
-                Quero fazer parte
-              </a>
-            </div>
-            <div class="">
-              <div
-                class="w-full max-w-[350px] lg:w-full lg:max-w-[492px] flex-1 lg:h-[346px] h-[264px] mt-[60px] bg-[#FFB728] rounded-[48px] lg:rounded-[99px] flex justify-center items-center relative"
-              >
-                <img class="" src="./assets/imgs/Mockup-iphone.png" alt="" />
+    }
 
-                <div
-                  class="lg:w-[152px] lg:h-[196px] w-[89px] h-[116px] rounded-[99px] bg-[#FAFAF9] flex justify-center items-center absolute lg:-bottom-10 lg:-right-4 right-2 bottom-1"
-                >
-                  <img src="./assets/imgs/club-img.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+    .accordion-content {
+      display: none;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+    <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
+      <img src="./assets/imgs/header-logo.svg" alt="" />
+      <button class="block" id="hamburger-menu-button">
+        <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+      </button>
+      <button id="close-button" class="hidden">
+        <img class="w-[40px] h-[40px]" src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+    <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+      <nav class="mt-[84px]" aria-label="Main navigation">
+        <ul class="flex flex-col gap-y-5">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class=" text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex gap-x-4 items-center" href="./assinatura-verde.html">Assinatura verde <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col-reverse mt-9 gap-y-4">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] rounded-[28px] flex justify-center bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex">
+      <div>
+        <a href="/" aria-label="Home">
+          <img src="./assets/imgs/header-logo.svg" alt="Logotipo da empresa" />
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class=" text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex flex-col items-center" href="./assinatura-verde.html">Assinatura verde <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex xl:gap-x-6 lg:gap-x-3">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
         <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[110px]"
-        >
-          <h2
-            class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]"
-          >
-            Junte-se a nós e economize na sua conta de luz enquanto ajuda o meio
-            ambiente.
-          </h2>
-          <p
-            class="max-w-[803px] text-center text-stone-600 text-xl font-normal font-satoshi leading-7 mt-6"
-          >
-            Reduza sua conta de luz com nossas soluções sustentáveis e faça
-            parte de um movimento ecológico. Economize dinheiro enquanto adota
-            práticas que beneficiam o planeta.
-          </p>
-          <div class="flex gap-x-8 mt-16 flex-wrap justify-center gap-y-10 px-10">
-            <div
-              class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 flex"
-            >
-              <img
-                class="w-14 h-14 relative"
-                src="./assets/icons/Discount.svg"
-                alt=""
-              />
-              <div
-                class="h-[212px] flex-col justify-start items-start gap-6 flex"
-              >
-                <span
-                  class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                >
-                  Economia sem precisar investir
-                </span>
-                <p
-                  class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]"
-                >
-                  Economize o equivalente a uma conta de luz por ano, sem
-                  necessidade de instalações ou obras.
-                </p>
-              </div>
-            </div>
-            <div
-              class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex"
-            >
-              <img
-                class="w-14 h-14 relative"
-                src="./assets/icons/Calendar.svg"
-                alt=""
-              />
-              <div
-                class="h-[178px] flex-col justify-start items-start gap-6 flex"
-              >
-                <span
-                  class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                >
-                  Sem fidelidade
-                </span>
-                <p
-                  class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]"
-                >
-                  Não há carência e você pode cancelar a qualquer momento com
-                  aviso prévio de 120 dias, sem taxas extras.
-                </p>
-              </div>
-            </div>
-            <div
-              class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex"
-            >
-              <img
-                class="w-14 h-14 relative"
-                src="./assets/icons/mac-laptop-notebook.svg"
-              />
-              <div
-                class="h-[148px] flex-col justify-start items-start gap-6 flex"
-              >
-                <span
-                  class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                >
-                  Rápido e digital
-                </span>
-                <p
-                  class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]"
-                >
-                  Contrate sua Assinatura Verde 100% online, sem pagar nada e
-                  sem sair de casa.
-                </p>
-              </div>
-            </div>
-          </div>
+          class="w-full flex flex-col items-center bg-[url('./assets/imgs/usina-pg-assinatura-verde.png')] bg-no-repeat bg-center bg-cover rounded-[48px] lg:rounded-[99px]">
           <div
-            class="mt-10 flex gap-x-8 flex-wrap relative justify-center gap-y-10"
-          >
-            <div
-              class="lg:w-96 w-[350px] h-[430px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex"
-            >
-              <img
-                class="w-14 h-14 relative"
-                src="./assets/icons/Earth.svg"
-                alt=""
-              />
-              <div class="h-52 flex-col justify-start items-start gap-6 flex">
-                <span
-                  class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                >
-                  Sustentabilidade
-                </span>
-                <p
-                  class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]"
-                >
-                  Contribua para um planeta mais sustentável usando energia
-                  solar, uma fonte limpa e renovável e ajude a preservar a
-                  floresta amazônica.
-                </p>
-              </div>
-            </div>
-            <div
-              class="w-full max-w-[800px] h-auto lg:h-[430px]  flex justify-center relative flex-col px-8 py-12 bg-zinc-100 rounded-[48px] lg:rounded-[56px] overflow-hidden"
-            >
-              <img
-                class="absolute top-0 right-0 lg:block z-0 hidden"
-                src="./assets/imgs/card-mask.png"
-                alt=""
-              />
-              <div
-                class="w-[53px] h-[45px] justify-start items-center gap-6 inline-flex mb-6"
-              >
-                <img src="./assets/icons/CP.png" alt="" />
-              </div>
-              <div class="flex-col justify-start items-start gap-4 inline-flex">
-                <span
-                  class="text-[#24231E] text-lg md:text-xl lg:text-2xl font-bold font-satoshi leading-snug md:leading-[33.60px] lg:leading-[33.60px] max-w-full lg:max-w-[694px] relative z-10"
-                >
-                  Vantagens extras participando do Clube Prospera
-                </span>
-                <ul
-                  class="ml-8 list-disc text-[#3E3D34] text-base md:text-lg lg:text-xl font-normal font-['Open Sans'] leading-normal md:leading-[30px] lg:leading-[30px] max-w-full lg:max-w-[736px] relative z-10"
-                >
-                  <li>
-                    <span
-                      >Zere sua conta de luz com nossos produtos e
-                      serviços.</span
-                    >
-                  </li>
-                  <li>
-                    <span>Participe de sorteios e promoções exclusivas. </span>
-                  </li>
-                  <li>
-                    <span>
-                      Use os Selos Verdes Prospera para dar descontos aos seus
-                      clientes e aumentar suas vendas.
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Destaque-se para nossos sócios na geolocalização e
-                      impulsione suas vendas.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <a
-          href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-          target="_blank"
-            aria-label="Quero fazer parte"
-            class="w-full md:w-[221px] flex justify-center px-7 py-[15px] mt-16 rounded-[28px] bg-[#FFB728] text-[#24231E]"
-          >
-            Quero fazer parte
-          </a>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[110px]"
-        >
-          <div
-            class="max-w-[1216px] flex-col justify-start items-start gap-16 flex"
-          >
-            <div class="flex-col justify-start items-start gap-4 flex">
-              <div class="flex-col justify-start items-start gap-6 flex">
-                <h2
-                  class="self-stretch text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi max-w-[500px] lg:leading-[60px]"
-                >
-                  Como funciona a Assinatura Verde?
-                </h2>
-                <p
-                  class="max-w-[768px] text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                >
-                  Faça sua adesão à Assinatura Verde e contribua para a geração
-                  de energia limpa e renovável. Ao se cadastrar no Clube
-                  Prospera, você estará fazendo a diferença no combate à
-                  urgência climática.
-                </p>
-              </div>
-            </div>
-            
-              <div class="justify-start items-start gap-12 flex flex-wrap">
-                <div
-                  class="max-w-[373px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">1</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Faça sua adesão
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    A energia contratada é gerada em uma de nossas usinas e
-                    injetada na rede elétrica da sua distribuidora.
-                  </div>
-                </div>
-                <div
-                  class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">2</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Geração da energia
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    A energia contratada é gerada em uma de nossas usinas e
-                    injetada na rede elétrica da sua distribuidora.
-                  </div>
-                </div>
-                <div
-                  class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">3</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Abatimento na fatura da sua distribuidora
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    A energia elétrica contratada deixa de ser cobrada na conta
-                    da sua distribuidora, que passa a cobrar apensa as taxas
-                    legais e o excedente de consumo.
-                  </div>
-                </div>
-                <div
-                  class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">4</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Fatura mensal Prospera
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    Receba uma fatura fixa mensal da Prospera correspondente à
-                    energia contratada. Este valor não será mais cobrado pela
-                    sua distribuidora.
-                  </div>
-                </div>
-                <div
-                  class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">5</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Receba o seu Vale Energia
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    Pague a sua Assinatura Verde e receba um Selo Verde
-                    Prospera, carregado com o Vale Energia equivalente ao
-                    percentual de desconto do seu contrato.
-                  </div>
-                </div>
-                <div
-                  class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex"
-                >
-                  <div
-                    class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-[#A17419] font-bold text-xl">6</span>
-                  </div>
-                  <div
-                    class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                    Obtenha o desconto na sua conta de luz
-                  </div>
-                  <div
-                    class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >
-                    Pague a fatura da sua distribuidora dentro do Clube Prospera
-                    e utilize o Vale Energia recebido para obter seu desconto na
-                    conta de luz.
-                  </div>
-                </div>
-              </div>
-            </div>
+            class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30">
+            <img class="lg:w-[124px] w-16" src="./assets/icons/assinatura-verde-icon.svg" alt="" />
+            <h1
+              class="font-medium font-satoshi sm:max-w-[490px] max-w-[200px] text-[#FAFAF9] lg:leading-[80px] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[44px] text-2xl">
+              Descubra a Assinatura Verde
+            </h1>
           </div>
         </div>
-      </section>
-       <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]"
-        >
-          <div class="w-full flex md:flex-row justify-center gap-x-[8%] flex-col">
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]">
+        <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-10">
+          <div class="w-full max-w-[592px]">
             <h2
-              class="text-[#24231E] lg:text-5xl  md:text-5xl text-2xl   font-medium font-satoshi leading-[60px]"
-            >
-              Conheça a Prospera
+              class="font-medium font-satoshi lg:text-[56px] md:text-4xl text-2xl text-[#24231E] lg:leading-[125%] tracking-[-2.24px]">
+              Economize até 100% na sua conta de luz e aumente suas vendas
             </h2>
-            <div class="w-full max-w-[694px]">
-              <span
-                class="text-[#3E3D34] md:text-xl text-base font-normal font-satoshi leading-7"
-                >Somos a Prospera – Green Loyaty Tech, uma empresa de impacto
-                socioambiental e a 1ª Plataforma de Benefícios Sustentáveis do
-                mundo.</span
-              >
-              <span class="text-[#3E3D34] mt-3 block md:text-xl text-base font-normal font-satoshi leading-7"> Um ecossistema digital onde pessoas e empresas
-                podem escolher produtos e serviços que estão contribuindo para
-                um planeta mais sustentável, através da descarbonização e da
-                energia limpa. Como recompensa por suas escolhas conscientes,
-                elas recebem de volta bônus que são usados para obter descontos
-                em energia, podendo até zerar a conta de luz.</span>
-              <span
-                class="text-[#24231E] block mt-3 md:text-xl text-base font-normal font-satoshi leading-7"
-                >Conheça nossas usinas clicando no mapa abaixo:</span
-              >
-            </div>
+            <p class="text-lg text-[#3E3D34] leading-[150%] my-[38px]">
+              Contrate energia limpa e renovável direto em uma das usinas dos
+              nosso hub, comece a economizar, faça parte do primeiro clube de
+              benefícios sustentáveis do Brasil e comece sua jornada de
+              economia que pode zerar a sua conta de luz.
+            </p>
+            <a href="#baixe-nosso-app" aria-label="Quero fazer parte"
+              class="lg:max-w-[210px] w-full px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-[#24231E]">
+              Quero fazer parte
+            </a>
           </div>
-          <div class="w-full max-w-[1209px] p-4 bg-[#FFE5C7] rounded-[48px] min-h-[550px] lg:rounded-[99px] mt-16 flex justify-center items-center relative">
-            <div id="ceara-imgs-assinatura-verde" class="w-full h-full absolute hidden bottom-0 left-0 bg-black z-20 items-end bg-opacity-30 rounded-[48px] lg:rounded-[99px]">
-              <button id="close-ceara-imgs-assinatura-verde" class="absolute right-10 top-10">
-                <img class="w-10 h-10" src="./assets/imgs/close-usinas-btn.svg" alt="" />
-              </button>
-              <div class="w-full rounded-[48px] lg:rounded-[99px] h-[400px] scroll-smooth flex items-end relative">
-                <div class="overflow-hidden rounded-[48px] lg:rounded-[99px] h-[400px] align-baseline absolute bottom-0">
-                  <div id="carousel-assinatura-verde" class="flex transition-transform duration-500 rounded-[48px] lg:rounded-[99px] w-full h-full">
-                    
-                  </div>
-                  <button id="prev-assinatura-verde" class="absolute left-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none rotate-180">
-                    <img src="./assets/imgs/carrossel-button.png" alt="" />
-                  </button>
-                  <button id="next-assinatura-verde" class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none">
-                    <img src="./assets/imgs/carrossel-button.png" alt="" />
-                  </button>
-                </div>
+          <div class="">
+            <div
+              class="w-full max-w-[350px] lg:w-full lg:max-w-[492px] flex-1 lg:h-[346px] h-[264px] mt-[60px] bg-[#FFB728] rounded-[48px] lg:rounded-[99px] flex justify-center items-center relative">
+              <img class="" src="./assets/imgs/Mockup-iphone.png" alt="" />
+
+              <div
+                class="lg:w-[152px] lg:h-[196px] w-[89px] h-[116px] rounded-[99px] bg-[#FAFAF9] flex justify-center items-center absolute lg:-bottom-10 lg:-right-4 right-2 bottom-1">
+                <img src="./assets/imgs/club-img.png" alt="" />
               </div>
-            </div>
-            <div class="relative">
-              <img src="./assets/imgs/Brazil.png" alt="" />
-              <button id="ceara-button-assinatura-verde" class="absolute top-[22%] left-[85%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                <img src="./assets/icons/Pin.svg" alt="" />
-              </button>
-              <button id="piaui-button-assinatura-verde" class="absolute top-[28%] left-[79%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                <img src="./assets/icons/Pin.svg" alt="" />
-              </button>
-              <button id="sp-button-assinatura-verde" class="absolute top-[65%] left-[62%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                <img src="./assets/icons/Pin.svg" alt="" />
-              </button>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]"
-        >
-          <div class="flex lg:flex-row gap-x-[20%] flex-col items-center">
-            <div>
-              <h2 style="line-height: 60px;"
-                class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi"
-              >
-                Impacto socio ambiental
-              </h2>
-              <div class="w-full max-w-[488px] lg:mt-24 lg:block hidden
-              ">
-                <span
-                  class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >Nossos créditos de carbono são provenientes da nossa parceria
-                  com a Greener Tokens. </span
-                ><span
-                  class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >Clique aqui</span
-                ><span
-                  class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                >
-                  e conheça mais sobre o projeto.</span
-                >
-              </div>
-            </div>
-            <div>
-              <img
-                class="mb-8"
-                src="./assets/imgs/onubrasil-color-horiz.png"
-                alt=""
-              />
-              <p
-                class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]"
-              >
-                A Assinatura Verde contribui para acelerar compromissos
-                assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
-                e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
-                a preservar uma área de mais de 160 mil hectares de floresta
-                nativa na Amazônia, impactando positivamente suas ODS (Objetivos
-                de Desenvolvimento Sustentável):
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[110px]">
+        <h2
+          class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]">
+          Junte-se a nós e economize na sua conta de luz enquanto ajuda o meio
+          ambiente.
+        </h2>
+        <p class="max-w-[803px] text-center text-stone-600 text-xl font-normal font-satoshi leading-7 mt-6">
+          Reduza sua conta de luz com nossas soluções sustentáveis e faça
+          parte de um movimento ecológico. Economize dinheiro enquanto adota
+          práticas que beneficiam o planeta.
+        </p>
+        <div class="flex gap-x-8 mt-16 flex-wrap justify-center gap-y-10">
+          <div
+            class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 flex">
+            <img class="w-14 h-14 relative" src="./assets/icons/Discount.svg" alt="" />
+            <div class="h-[212px] flex-col justify-start items-start gap-6 flex">
+              <span class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Economia sem precisar investir
+              </span>
+              <p class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]">
+                Economize o equivalente a uma conta de luz por ano, sem
+                necessidade de instalações ou obras.
               </p>
-
-              <div class="w-full max-w-[488px] lg:mt-24 lg-block lg:hidden mt-8
-              ">
-                <span
-                  class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >Nossos créditos de carbono são provenientes da nossa parceria
-                  com a Greener Tokens. </span
-                ><span
-                  class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >Clique aqui</span
-                ><span
-                  class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                >
-                  e conheça mais sobre o projeto.</span
-                >
-              </div>
             </div>
           </div>
           <div
-            class="w-full max-w-[1216] lg:mt-[92px] lg:py-[155px] py-[90px] mt-6 lg:gap-x-[57px] gap-x-3 min-w-[350px] min-h-[315px] bg-[#F3F3F3] rounded-[48px] lg:rounded-[99px] justify-center items-center flex"
-          >
+            class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex">
+            <img class="w-14 h-14 relative" src="./assets/icons/Calendar.svg" alt="" />
+            <div class="h-[178px] flex-col justify-start items-start gap-6 flex">
+              <span class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Sem fidelidade
+              </span>
+              <p class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]">
+                Não há carência e você pode cancelar a qualquer momento com
+                aviso prévio de 120 dias, sem taxas extras.
+              </p>
+            </div>
+          </div>
+          <div
+            class="lg:w-96 w-[350px] h-[404px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex">
+            <img class="w-14 h-14 relative" src="./assets/icons/mac-laptop-notebook.svg" />
+            <div class="h-[148px] flex-col justify-start items-start gap-6 flex">
+              <span class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Rápido e digital
+              </span>
+              <p class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]">
+                Contrate sua Assinatura Verde 100% online, sem pagar nada e
+                sem sair de casa.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="lg:w-96 w-[350px] h-[430px] px-8 py-14 bg-orange-50 rounded-[48px] lg:rounded-[56px] flex-col justify-start items-start gap-6 inline-flex">
+            <img class="w-14 h-14 relative" src="./assets/icons/Earth.svg" alt="" />
+            <div class="h-52 flex-col justify-start items-start gap-6 flex">
+              <span class="w-[317px] text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Sustentabilidade
+              </span>
+              <p class="w-[317px] text-[#3E3D34] text-xl font-normal font-['Open Sans'] leading-[30px]">
+                Contribua para um planeta mais sustentável usando energia
+                solar, uma fonte limpa e renovável e ajude a preservar a
+                floresta amazônica.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full max-w-[800px] h-auto lg:h-[430px]  flex justify-center relative flex-col px-8 py-12 bg-zinc-100 rounded-[48px] lg:rounded-[56px] overflow-hidden">
+            <img class="absolute top-0 right-0 lg:block z-0 hidden" src="./assets/imgs/card-mask.png" alt="" />
+            <div class="w-[53px] h-[45px] justify-start items-center gap-6 inline-flex mb-6">
+              <img src="./assets/icons/CP.png" alt="" />
+            </div>
+            <div class="flex-col justify-start items-start gap-4 inline-flex">
+              <span
+                class="text-[#24231E] text-lg md:text-xl lg:text-2xl font-bold font-satoshi leading-snug md:leading-[33.60px] lg:leading-[33.60px] max-w-full lg:max-w-[694px] relative z-10">
+                Vantagens extras participando do Clube Prospera
+              </span>
+              <ul
+                class="ml-8 list-disc text-[#3E3D34] text-base md:text-lg lg:text-xl font-normal font-['Open Sans'] leading-normal md:leading-[30px] lg:leading-[30px] max-w-full lg:max-w-[736px] relative z-10">
+                <li>
+                  <span>Zere sua conta de luz com nossos produtos e
+                    serviços.</span>
+                </li>
+                <li>
+                  <span>Participe de sorteios e promoções exclusivas. </span>
+                </li>
+                <li>
+                  <span>
+                    Use os Selos Verdes Prospera para dar descontos aos seus
+                    clientes e aumentar suas vendas.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Destaque-se para nossos sócios na geolocalização e
+                    impulsione suas vendas.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="w-full md:w-[221px] flex justify-center px-7 py-[15px] mt-16 rounded-[28px] bg-[#FFB728] text-[#24231E]">
+          Quero fazer parte
+        </a>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[110px]">
+        <div class="max-w-[1216px] flex-col justify-start items-start gap-16 flex">
+          <div class="flex-col justify-start items-start gap-4 flex">
+            <div class="flex-col justify-start items-start gap-6 flex">
+              <h2
+                class="self-stretch text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi max-w-[500px] lg:leading-[60px]">
+                Como funciona a Assinatura Verde?
+              </h2>
+              <p class="max-w-[768px] text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                Faça sua adesão à Assinatura Verde e contribua para a geração
+                de energia limpa e renovável. Ao se cadastrar no Clube
+                Prospera, você estará fazendo a diferença no combate à
+                urgência climática.
+              </p>
+            </div>
+          </div>
+
+          <div class="justify-start items-start gap-12 flex flex-wrap">
+            <div class="max-w-[373px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">1</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Faça sua adesão
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                A energia contratada é gerada em uma de nossas usinas e
+                injetada na rede elétrica da sua distribuidora.
+              </div>
+            </div>
+            <div class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">2</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Geração da energia
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                A energia contratada é gerada em uma de nossas usinas e
+                injetada na rede elétrica da sua distribuidora.
+              </div>
+            </div>
+            <div class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">3</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Abatimento na fatura da sua distribuidora
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                A energia elétrica contratada deixa de ser cobrada na conta
+                da sua distribuidora, que passa a cobrar apensa as taxas
+                legais e o excedente de consumo.
+              </div>
+            </div>
+            <div class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">4</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Fatura mensal Prospera
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                Receba uma fatura fixa mensal da Prospera correspondente à
+                energia contratada. Este valor não será mais cobrado pela
+                sua distribuidora.
+              </div>
+            </div>
+            <div class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">5</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Receba o seu Vale Energia
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                Pague a sua Assinatura Verde e receba um Selo Verde
+                Prospera, carregado com o Vale Energia equivalente ao
+                percentual de desconto do seu contrato.
+              </div>
+            </div>
+            <div class="max-w-[372px] flex-col justify-start items-start gap-6 inline-flex">
+              <div class="w-12 h-12 relative border-2 border-[#A17419] rounded-full flex items-center justify-center">
+                <span class="text-[#A17419] font-bold text-xl">6</span>
+              </div>
+              <div class="self-stretch text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+                Obtenha o desconto na sua conta de luz
+              </div>
+              <div class="self-stretch text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                Pague a fatura da sua distribuidora dentro do Clube Prospera
+                e utilize o Vale Energia recebido para obter seu desconto na
+                conta de luz.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]">
+        <div class="w-full flex md:flex-row justify-center gap-x-[8%] flex-col">
+          <h2 class="text-[#24231E] lg:text-5xl  md:text-5xl text-2xl   font-medium font-satoshi leading-[60px]">
+            Conheça a Prospera
+          </h2>
+          <div class="w-full max-w-[694px]">
+            <span class="text-[#3E3D34] md:text-xl text-base font-normal font-satoshi leading-7">Somos a Prospera –
+              Green Loyaty Tech, uma empresa de impacto
+              socioambiental e a 1ª Plataforma de Benefícios Sustentáveis do
+              mundo.</span>
+            <span class="text-[#3E3D34] mt-3 block md:text-xl text-base font-normal font-satoshi leading-7"> Um
+              ecossistema digital onde pessoas e empresas
+              podem escolher produtos e serviços que estão contribuindo para
+              um planeta mais sustentável, através da descarbonização e da
+              energia limpa. Como recompensa por suas escolhas conscientes,
+              elas recebem de volta bônus que são usados para obter descontos
+              em energia, podendo até zerar a conta de luz.</span>
+            <span class="text-[#24231E] block mt-3 md:text-xl text-base font-normal font-satoshi leading-7">Conheça
+              nossas usinas clicando no mapa abaixo:</span>
+          </div>
+        </div>
+        <div
+          class="w-full max-w-[1209px] p-4 bg-[#FFE5C7] rounded-[48px] min-h-[550px] lg:rounded-[99px] mt-16 flex justify-center items-center relative">
+          <div id="ceara-imgs-assinatura-verde"
+            class="w-full h-full absolute hidden bottom-0 left-0 bg-black z-20 items-end bg-opacity-30 rounded-[48px] lg:rounded-[99px]">
+            <button id="close-ceara-imgs-assinatura-verde" class="absolute right-10 top-10">
+              <img class="w-10 h-10" src="./assets/imgs/close-usinas-btn.svg" alt="" />
+            </button>
+            <div class="w-full rounded-[48px] lg:rounded-[99px] h-[400px] scroll-smooth flex items-end relative">
+              <div class="overflow-hidden rounded-[48px] lg:rounded-[99px] h-[400px] align-baseline absolute bottom-0">
+                <div id="carousel-assinatura-verde"
+                  class="flex transition-transform duration-500 rounded-[48px] lg:rounded-[99px] w-full h-full">
+
+                </div>
+                <button id="prev-assinatura-verde"
+                  class="absolute left-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none rotate-180">
+                  <img src="./assets/imgs/carrossel-button.png" alt="" />
+                </button>
+                <button id="next-assinatura-verde"
+                  class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none">
+                  <img src="./assets/imgs/carrossel-button.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="./assets/imgs/Brazil.png" alt="" />
+            <button id="ceara-button-assinatura-verde"
+              class="absolute top-[22%] left-[85%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+            <button id="piaui-button-assinatura-verde"
+              class="absolute top-[28%] left-[79%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+            <button id="sp-button-assinatura-verde"
+              class="absolute top-[65%] left-[62%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]">
+        <div class="flex lg:flex-row gap-x-[20%] flex-col items-center">
+          <div>
+            <h2 style="line-height: 60px;"
+              class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi">
+              Impacto socio ambiental
+            </h2>
+            <div class="w-full max-w-[488px] lg:mt-24 lg:block hidden
+              ">
+              <span class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">Nossos créditos de
+                carbono são provenientes da nossa parceria
+                com a Greener Tokens. </span><span
+                class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Clique aqui</span><span
+                class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                e conheça mais sobre o projeto.</span>
+            </div>
+          </div>
+          <div>
+            <img class="mb-8" src="./assets/imgs/onubrasil-color-horiz.png" alt="" />
+            <p class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]">
+              A Assinatura Verde contribui para acelerar compromissos
+              assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
+              e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
+              a preservar uma área de mais de 160 mil hectares de floresta
+              nativa na Amazônia, impactando positivamente suas ODS (Objetivos
+              de Desenvolvimento Sustentável):
+            </p>
+
+            <div class="w-full max-w-[488px] lg:mt-24 lg-block lg:hidden mt-8
+              ">
+              <span class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">Nossos créditos de
+                carbono são provenientes da nossa parceria
+                com a Greener Tokens. </span><span
+                class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Clique aqui</span><span
+                class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                e conheça mais sobre o projeto.</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full max-w-[1216] lg:mt-[92px] lg:py-[155px] py-[90px] mt-6 lg:gap-x-[57px] gap-x-3 min-w-[350px] min-h-[315px] bg-[#F3F3F3] rounded-[48px] lg:rounded-[99px] justify-center items-center flex flex-col">
+          <div class="flex items-center justify-center flex-wrap gap-y-3 gap-x-2">
+
             <div class="lg:w-[208px] w-[126px]"><img class="" src="./assets/imgs/SDG-7.png" alt="" /></div>
             <div class="lg:w-[208px] w-[126px]"><img class="" src="./assets/imgs/SDG-13.png" alt="" /></div>
           </div>
-        </div>
-      </section>
-      <section class="w-full">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16 lg:px-28 px-[10px]"
-        >
-          <div
-            class="flex flex-col items-center"
-          >
-            <div
-              class="max-w-[560px] text-center text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-            >
-              Nossos parceiros
-            </div>
-            <div class="mt-8 justify-center items-center gap-y-[32px] lg:gap-x-[72px] gap-x-[38px] flex flex-wrap">
-              <img src="./assets/icons/greener.png" alt=""><img src="./assets/icons/rs-solutions.png" alt=""><img src="./assets/icons/carpena-adv.png" alt=""><img src="./assets/icons/patla-mama.png" alt=""><img src="./assets/icons/cofema.png" alt=""><img src="./assets/icons/trix.png" alt=""><img src="./assets/icons/enel-x.png" alt=""><img src="./assets/icons/facil-pay.png" alt=""><img src="./assets/icons/sustentech.png" alt="">
-            </div>
+
+          <div class="map-02:mt-[90px] mt-5">
+            <span class="text-base text-center text-[#878681] block">Objetivos de desenvolvimento impactados pelos
+              produtos Prospera</span>
           </div>
         </div>
-      </section>
-       <section class="bg-[url('./assets/imgs/frame-elipse.png')] bg-no-repeat bg-center w-full">
-        <div
-          class="w-full max-w-[1440px] lg:mt-[175px] mt-16 m-auto flex flex-col items-center px-28"
-        >
-          <h2
-            class="font-medium font-satoshi lg:text-5xl md:text-4xl text-2xl leading-[125%] tracking-[-1.92px] max-w-[550px] mb-10 text-center"
-          >
-            Baixe nosso app e comece a economizar já!
-          </h2>
+      </div>
+    </section>
+    <section class="w-full">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16 lg:px-28 px-[10px]">
+        <div class="flex flex-col items-center">
+          <div class="max-w-[560px] text-center text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+            Nossos parceiros
+          </div>
+          <div class="mt-8 justify-center items-center gap-y-[32px] lg:gap-x-[72px] gap-x-[38px] flex flex-wrap">
+            <img src="./assets/icons/greener.png" alt=""><img src="./assets/icons/rs-solutions.png" alt=""><img
+              src="./assets/icons/carpena-adv.png" alt=""><img src="./assets/icons/patla-mama.png" alt=""><img
+              src="./assets/icons/cofema.png" alt=""><img src="./assets/icons/trix.png" alt=""><img
+              src="./assets/icons/enel-x.png" alt=""><img src="./assets/icons/facil-pay.png" alt=""><img
+              src="./assets/icons/sustentech.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="baixe-nosso-app" class="bg-[url('./assets/imgs/frame-elipse.png')] bg-no-repeat bg-center w-full">
+      <div class="w-full max-w-[1440px] lg:mt-[175px] mt-16 m-auto flex flex-col items-center px-28">
+        <h2
+          class="font-medium font-satoshi lg:text-5xl md:text-4xl text-2xl leading-[125%] tracking-[-1.92px] max-w-[550px] mb-10 text-center">
+          Baixe nosso app e comece a economizar já!
+        </h2>
 
-          <div class="lg:flex gap-[32px] hidden">
-            <a href="">
-              <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
-              "
-              target="_blank">
-                <img src="./assets/imgs/Apple.png" alt="" />
-              </a>
+        <div class="lg:flex gap-[32px] hidden">
+          <a href="">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-            target="_blank">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
+            <img src="./assets/imgs/Google.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="w-full flex items-center justify-center">
+        <img src="./assets/imgs/phones.png" alt="" />
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-10">
+        <h2 class="max-w-[768px] text-center text-[#24231E] text-[32px] font-bold font-satoshi leading-[43.20px]">
+          Perguntas frequentes
+        </h2>
+        <div id="accordion-container" class="mt-10 w-full max-w-[768px] flex flex-col items-center">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10">
+    <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      <div class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between">
+        <div>
+          <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+          <div class="flex flex-col mb-8">
+            <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">CNPJ</span>
+            <span class="text-[#FAFAF9] font-base leading-[150%]">31.648.992/0001-91</span>
+          </div>
+          <div class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start">
+            <div class="flex flex-col mb-6">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Endereço</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alameda Madeira, 162 - Sala 1104 A</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alphaville Centro Industrial</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">CEP: 06454-010</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Contato</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">(11) 1234-5678</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">info@prospera.com</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png"
+                alt="" /></a>
+            <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png"
+                alt="" /></a>
+            <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img
+                src="./assets/icons/LinkedIn.png" alt="" /></a>
+          </div>
+        </div>
+        <div>
+          <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block">
+            Acesse agora nossos aplicativos
+          </span>
+          <div class="flex gap-x-10">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
               <img src="./assets/imgs/Google.png" alt="" />
             </a>
           </div>
         </div>
-        <div
-          class="w-full flex items-center justify-center"
-        >
-          <img src="./assets/imgs/phones.png" alt="" />
+      </div>
+      <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+      <div class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8">
+        <div>
+          <span class="text-[#FAFAF9]">© 2024 Prospera. Todos os direitos reservados.</span>
         </div>
-      </section>
-     <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-10"
-        >
-          <h2 class="max-w-[768px] text-center text-[#24231E] text-[32px] font-bold font-satoshi leading-[43.20px]">
-            Perguntas frequentes
-          </h2>
-          <div id="accordion-container" class="mt-10 w-full max-w-[768px] flex flex-col items-center">
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer
-      class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10"
-    >
-      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
-        <div
-          class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between"
-        >
-          <div>
-            <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
-            <div class="flex flex-col mb-8">
-              <span
-                class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                >CNPJ</span
-              >
-              <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >31.648.992/0001-91</span
-              >
-            </div>
-            <div
-              class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start"
-            >
-              <div class="flex flex-col mb-6">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Endereço</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alameda Madeira, 162 - Sala 1104 A</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alphaville Centro Industrial</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >CEP: 06454-010</span
-                >
-              </div>
-              <div class="flex flex-col">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Contato</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >(11) 1234-5678</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >info@prospera.com</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png" alt="" /></a>
-              <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/X.png" alt="" /></a>
-              <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img src="./assets/icons/LinkedIn.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/Youtube.png" alt="" /></a>
-            </div>
-          </div>
-          <div>
-            <span
-              class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block"
-            >
-              Acesse agora nossos aplicativos
-            </span>
-            <div class="flex gap-x-10">
-              <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
-              "
-              target="_blank">
-                <img src="./assets/imgs/Apple.png" alt="" />
-              </a >
-              <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-              target="_blank">
-                <img src="./assets/imgs/Google.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
-        <div
-          class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8"
-        >
-          <div>
-            <span class="text-[#FAFAF9]"
-              >© 2024 Prospera. Todos os direitos reservados.</span
-            >
-          </div>
-          <div>
-            <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+        <div>
+          <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+            <a href="./politica-de-privacidade.html">
               <li>Política de Privacidade</li>
+            </a>
+            <a href="./termos-de-servico.html">
               <li>Termos de Serviço</li>
-              <li>Configurações de Cookies</li>
-            </ul>
-          </div>
+            </a>
+            <li>Configurações de Cookies</li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="./js/assinatura-verde.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+  <script src="./js/assinatura-verde.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

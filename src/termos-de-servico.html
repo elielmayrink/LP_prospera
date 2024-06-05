@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+    <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
+      <img src="./assets/imgs/header-logo.svg" alt="" />
+      <button class="block" id="hamburger-menu-button">
+        <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+      </button>
+      <button id="close-button" class="hidden">
+        <img class="w-[40px] h-[40px]" src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+    <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+      <nav class="mt-[84px]" aria-label="Main navigation">
+        <ul class="flex flex-col gap-y-5">
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex gap-x-4 items-center" href="./">Inicio </a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col-reverse mt-9 gap-y-4">
+        <a href="https://meuclubeprospera.com.br/" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 text-xl rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" aria-label="Quero fazer parte" class="px-7 py-[15px] rounded-[28px] flex justify-center
+           bg-[#FFB728] text-xl text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-[1440px] justify-between m-auto items-center hidden lg:flex">
+      <div>
+        <a href="/" aria-label="Home">
+          <img src="./assets/imgs/header-logo.svg" alt="Logotipo da empresa" />
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex flex-col items-center" href="./">Inicio</span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex xl:gap-x-6 lg:gap-x-3">
+        <a href="https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" type="button" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center">
+    <div class="w-full max-w-[800px]">
+      <h1 class="w-[798px] text-stone-800 md-10 text-5xl font-medium font-['Satoshi'] leading-[60px]">Termo de
+        Consentimento
+        Para Tratamento de Dados</h1>
+      <div class=" w-full max-w-[798px] flex flex-col items-center mt-10">
+        <div class="w-[798px] h-[3294px]"><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Este documento visa registrar a
+            manifestação livre, informada e inequívoca pela qual o Titular concorda e consente com o tratamento de seus
+            dados pessoais para finalidade específicas, em conformidade com a Lei nº 13.709/18 – Lei Geral de Proteção
+            de Dados Pessoais (“LGPD”).<br /><br />Ao declarar que concorda com o presente termo, o Titular consente que
+            a PROSPERA SOLUÇÕES E TECNOLOGIA S/A, CNPJ 31.648.992/0001-91, com sede na Rua Calçada das Margaridas, n.
+            163, Sala 02, Bairro Alphaville, na cidade de Barueri, Estado de São Paulo, doravante designada simplesmente
+            de Controladora, tome decisões referentes ao tratamento de seus dados pessoais, bem como realize o
+            tratamento de tais dados, envolvendo operações como as que se referem a coleta, produção, recepção,
+            classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento,
+            armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência,
+            difusão ou extração.<br /><br />Dados Pessoais: objeto de Tratamento<br /><br />A Controladora fica
+            autorizada a tomar decisões referentes ao tratamento e a realizar o tratamento dos seguintes dados pessoais
+            do Titular:<br /></span><span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">•
+            Nome completo;<br />• Data de nascimento;<br />• Número e imagem da Carteira de Identidade (RG);<br />•
+            Número e imagem da Carteira de Identidade (RG);<br />• Número e imagem da Carteira Nacional de Habilitação
+            (CNH);<br />• Estado civil;<br />• Nível de instrução ou escolaridade;<br />• Endereço completo;<br />•
+            Endereço completo;<br />• Nome de usuário e senha específicos para uso dos serviços do Controlador;<br />•
+            Comunicação, verbal e escrita, mantida entre o Titular e o Controlador.<br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br /></span><span
+            class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">Finalidades do Tratamento dos
+            Dados Pessoais<br /><br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">O tratamento dos dados do
+            Titular, realizado nos termos previstos no presente termo, tem as seguintes finalidades:<br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">• Possibilitar que a
+            Controladora identifique e entre em contato com o Titular para fins de relacionamento comercial.<br />•
+            Possibilitar que a Controladora elabore contratos comerciais e emita cobranças contra o Titular.<br />•
+            Possibilitar que a Controladora envie ou forneça ao Titular seus produtos e serviços, de forma remunerada ou
+            gratuita.<br />• Possibilitar que a Controladora estruture, teste, promova e faça propaganda de produtos e
+            serviços, personalizados ou não ao perfil do Titular.<br />• Possibilitar que a Controladora utilize tais
+            dados em Pesquisas de Mercado;<br />• Possibilitar que a Controladora utilize tais dados na inscrição,
+            divulgação, premiação dos interessados participantes de Eventos, Prêmios ou Concursos;<br />• Possibilitar
+            que a Controladora utilize tais dados na elaboração de catálogos;<br />• Possibilitar que a Controladora
+            utilize tais dados na elaboração de relatórios e emissão de produtos e serviços;<br />• Possibilitar que a
+            Controladora utilize tais dados para suas peças de Comunicação;<br />• Possibilitar que a Controladora
+            utilize tais dados emissão de Notas Fiscais e documentos financeiros correlatos;<br />• Possibilitar que a
+            Controladora utilize tais dados para facilitar a prestação de serviços diversos além dos primariamente
+            contratados, desde que o cliente também demonstre interesse em contratar novos serviços;<br />• Possibilitar
+            que a Controladora utilize tais dados para manter banco de dados de profissionais do mercado para facilitar
+            o contato em futuros convites para eventos;<br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br /></span><span
+            class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">Compartilhamento de Dados
+            Pessoais <br /></span><span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A
+            Controladora fica autorizada a compartilhar os dados do Titular com outros agentes de tratamento de dados,
+            caso seja necessário para as finalidades listadas neste termo, observados os princípios e as garantias
+            estabelecidas pela Lei nº 13.709/18.<br /><br /></span><span
+            class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">Segurança dos Dados
+            Pessoais<br /><br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Controladora
+            responsabiliza-se pela manutenção de medidas de segurança, técnicas e administrativas, aptas a proteger os
+            dados pessoais do Titular de acessos, não autorizados, e de situações acidentais ou ilícitas de destruição,
+            perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito.<br />Em conformidade ao
+            art. 48 da Lei nº 13.709/18, a Controladora comunicará ao Titular e à Autoridade Nacional de Proteção de
+            Dados (ANPD) a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante ao
+            Titular.<br /><br /></span><span
+            class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">Término do Tratamento dos
+            Dados Pessoais<br /><br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Controladora poderá manter e
+            tratar os dados pessoais do Titular durante todo o período em que os mesmos forem pertinentes ao alcance das
+            finalidades listadas neste Termo. Dados pessoais anonimizados, entendidos como dados sem possibilidade de
+            associação ao indivíduo, poderão ser mantidos por período indefinido.<br /><br />O Titular poderá solicitar,
+            a qualquer momento, via e-mail ou correspondência à Controladora, que sejam eliminados os seus dados
+            pessoais não anonimizados. Ainda, o Titular declara ciência de que, em razão da eliminação de seus dados
+            pessoais, poderá ser inviável a manutenção da relação estabelecida entre Controladora e Titular, hipótese em
+            que, respeitando os termos e condições da relação contratual firmada, o contrato poderá ser
+            rescindido.<br /><br /></span><span
+            class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">Direitos do
+            Titular<br /><br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">O Titular tem direito de obter,
+            no prazo de 15 (quinze) dias contados de sua manifestação expressa nesse sentido, as seguintes providências,
+            a serem cumpridas/fornecidas pela Controladora, em relação aos seus dados pessoais:<br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">1. confirmação da existência de
+            tratamento de dados pessoais;<br />2. acesso aos dados pessoais tratados;<br />3. correção de dados
+            pessoais, tratados pela Controladora, que estejam incompletos, inexatos ou desatualizados;<br />4.
+            anonimização, bloqueio ou eliminação de dados pessoais desnecessários, excessivos ou tratados em
+            desconformidade com o disposto na Lei nº 13.709/18;<br />5. portabilidade dos dados pessoais a outro
+            fornecedor de serviço ou produto, mediante requisição expressa e observados os segredos comercial e
+            industrial, de acordo com a regulamentação do órgão controlador;<br />6. portabilidade dos dados pessoais a
+            outro fornecedor de serviço ou produto, mediante requisição expressa, de acordo com a regulamentação da
+            autoridade nacional, observados os segredos comerciais e industriais da Controladora que não serão objeto de
+            portabilidade;<br />7. eliminação dos dados pessoais tratados com o consentimento do Titular, exceto para as
+            finalidades previstas no art. 16 da Lei nº 13.709/18, cuja conversão dos dados, pela Controladora, é
+            autorizada;<br />8. prestação de informação acerca das entidades públicas e privadas com as quais o
+            controlador realizou uso compartilhado de seus dados pessoais;<br />9. prestação de informação sobre a
+            possibilidade de não fornecer consentimento e sobre as consequências da negativa;<br />10. revogação do
+            consentimento, nos termos do § 5º do art. 8º da Lei nº 13.709/18.<br /></span><span
+            class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br />Direito de Revogação do
+            Consentimento<br />Este consentimento poderá ser revogado pelo mediante manifestação expressa do Titular,
+            mediante solicitação via e-mail ou correspondência à Controladora, na forma do § 5º do art. 8º da Lei nº
+            13.709/18.<br /><br />Para mais informações sobre como a PROSPERA SOLUÇÕES E TECNOLOGIA S/A realiza o
+            tratamento dos dados pessoais, consulte a nossa Política de Privacidade em
+            https://www.meuprospera.com.br/politica-de-privacidade<br /></span></div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10">
+    <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      <div class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between">
+        <div>
+          <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+          <div class="flex flex-col mb-8">
+            <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">CNPJ</span>
+            <span class="text-[#FAFAF9] font-base leading-[150%]">31.648.992/0001-91</span>
+          </div>
+          <div class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start">
+            <div class="flex flex-col mb-6">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Endereço</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alameda Madeira, 162 - Sala 1104 A</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alphaville Centro Industrial</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">CEP: 06454-010</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Contato</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">(11) 1234-5678</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">info@prospera.com</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png"
+                alt="" /></a>
+            <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png"
+                alt="" /></a>
+            <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img
+                src="./assets/icons/LinkedIn.png" alt="" /></a>
+          </div>
+        </div>
+        <div>
+          <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block">
+            Acesse agora nossos aplicativos
+          </span>
+          <div class="flex gap-x-10">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
+              <img src="./assets/imgs/Google.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+      <div class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8">
+        <div>
+          <span class="text-[#FAFAF9]">© 2024 Prospera. Todos os direitos reservados.</span>
+        </div>
+        <div>
+          <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+            <a href="./politica-de-privacidade.html">
+              <li>Política de Privacidade</li>
+            </a>
+            <a href="./termos-de-servico.html">
+              <li>Termos de Serviço</li>
+            </a>
+            <li>Configurações de Cookies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

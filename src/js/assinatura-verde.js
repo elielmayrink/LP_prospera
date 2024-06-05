@@ -11,15 +11,15 @@ cearaButton.addEventListener("click", () => {
   cearaImagsDiv.style.display = "flex";
   carrosselInjectDiv.innerHTML = `
       
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
-      </div>
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+  <img src="./assets/imgs/usinas/ceara/UFV Aracati 1 - CE.png" alt="Image 1" class="w-full" />
+</div>
+<div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+  <img src="./assets/imgs/usinas/ceara/UFV Brejo Santo 1 - CE.png" alt="Image 2" class="w-full" />
+</div>
+<div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+  <img src="./assets/imgs/usinas/ceara/UFV Cedro 1 e 2 - CE.png" alt="Image 4" class="w-full" />
+</div>
    
    
   
@@ -28,20 +28,16 @@ cearaButton.addEventListener("click", () => {
 piauiButton.addEventListener("click", () => {
   cearaImagsDiv.style.display = "flex";
 
-  carrosselInjectDiv.innerHTML = `
-      
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
-      </div>
-      <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
-        <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
-      </div>
-    
-   
-  
+  carrosselInjectDiv.innerHTML = ` 
+  <div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+  <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI.png" alt="Image 1" class="w-full" />
+</div>
+<div class="min-w-full h-full flex justify-end min-h-[400px] rounded-[48px] lg:rounded-[99px]">
+  <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@2x.png" alt="Image 2" class="w-full" />
+</div>
+<div class="min-w-full h-full flex justify-end rounded-[48px] lg:rounded-[99px] min-h-[400px]">
+  <img src="./assets/imgs/usinas/piaui/UFVs Jaicós 1, 2 e 3 - PI@3x.png" alt="Image 4" class="w-full" />
+</div>
   `;
 });
 spButton.addEventListener("click", () => {
@@ -112,7 +108,7 @@ faqs.forEach((faq, index) => {
   accordionItem.innerHTML = `
     <div class="w-full h-auto pt-6 flex-col justify-start items-center gap-2 flex">
       <div class="justify-between w-full items-center gap-6 flex cursor-pointer" onclick="toggleAccordion(${index})">
-        <span class="text-[#33322A] text-start text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.titulo}</span>
+        <span class="text-[#33322A] text-start md:text-xl text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.titulo}</span>
         <div id="svg-${index}" class="justify-center items-center flex rotate-180">
           <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 15.9619L12.5 8.96191L19.5 15.9619" stroke="#504F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,7 +116,7 @@ faqs.forEach((faq, index) => {
         </div>
       </div>
       <div class="pr-12 justify-start items-startflex accordion-content" id="content-${index}">
-        <p class="text-[#504F43] text-base font-normal font-['Open Sans'] leading-normal">${faq.subtitulo}</p>
+        <p class="text-[#504F43] md:text-lg text-base font-normal font-['Open Sans'] leading-normal">${faq.subtitulo}</p>
       </div>
     </div>
   `;

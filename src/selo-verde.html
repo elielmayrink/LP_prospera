@@ -1,629 +1,591 @@
-  <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="./output.css" rel="stylesheet" />
-      <link href="./styles.css
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <link href="./styles.css
       " rel="stylesheet" />
 
-      <style>
-        .fade-in {
-          animation: fadeIn 0.5s ease-in-out;
-        }
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
 
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      </style>
-    </head>
-    <body>
-      <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
-        <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
-          <img src="./assets/imgs/header-logo.svg" alt="" />
-          <button class="block" id="hamburger-menu-button">
-            <img src="./assets/icons/Hamburger-menu.svg" alt="" />
-          </button>
-          <button id="close-button" class="hidden">
-            <img
-              class="w-[40px] h-[40px]"
-              src="./assets/icons/close-icon.png"
-              alt=""
-            />
-          </button>
-        </div>
-        <div id="responsive-menu" class="w-full h-screen flex-col hidden">
-          <nav class="mt-[84px]" aria-label="Main navigation">
-            <ul class="flex flex-col gap-y-5">
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./">Inicio</a>
-              </li>
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./assinatura-verde.html">Assinatura verde</a>
-              </li>
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./credito-de-carbono.html">Créditos de carbono</a>
-              </li>
-              <li class="text-lg leading-7 font-medium text-[#24231E]">
-                <a class="flex gap-x-4 items-center" href="./selo-verde.html">Selo verde <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-              </li>
-            </ul>
-          </nav>
-          <div class="flex flex-col-reverse mt-9 gap-y-4">
-            <a
-              href=" https://meuclubeprospera.com.br/"
-              target="_blank"
-              aria-label="Entrar"
-              class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
-            >
-              Entrar
-            </a>
-            <a 
-            href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-            target="_blank"
-              aria-label="Quero fazer parte"
-              class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
-            >
-              Quero fazer parte
-            </a>
-          </div>
-        </div>
-        <div
-          class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex"
-        >
-          <div>
-            <a href="/" aria-label="Home">
-              <img
-                src="./assets/imgs/header-logo.svg"
-                alt="Logotipo da empresa"
-              />
-            </a>
-          </div>
-          <nav aria-label="Main navigation">
-            <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./">Inicio</a>
-              </li>
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./assinatura-verde.html">Assinatura verde</a>
-              </li>
-              <li class="text-[#504F43] text-lg leading-7">
-                <a href="./credito-de-carbono.html">Créditos de carbono</a>
-              </li>
-              <li class="text-[#24231E] font-medium text-lg leading-7">
-                <a class="flex flex-col items-center" href="./selo-verde.html">Selo verde <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-              </li>
-            </ul>
-          </nav>
-          <div class="flex xl:gap-x-6 lg:gap-x-3">
-            <a
-            href=" https://meuclubeprospera.com.br/"
-            target="_blank"
-              aria-label="Entrar"
-              class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950"
-            >
-              Entrar
-            </a>
-            <a
-            href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-            target="_blank"
-              aria-label="Quero fazer parte"
-              class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950"
-            >
-              Quero fazer parte
-            </a>
-          </div>
-        </div>
-      </header>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-      <main>
-        <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-          <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
-            <div
-              class="w-full md:bg-[url('./assets/imgs/selo-verde-hero-banner.png')] bg-[url('./assets/imgs/bg-hero-banner-selo-verde-02.png')] bg-no-repeat bg-top bg-cover rounded-[48px] lg:rounded-[99px]"
-            >
-              <div
-                class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30"
-              >
-                <img
-                  class="lg:w-[124px] w-16"
-                  src="./assets/icons/selo-verde-icon.svg"
-                  alt=""
-                />
-                <h1
-                  class="font-medium font-satoshi lg:max-w-[1000px] max-w-[295px] text-[#FAFAF9] leading-[125%] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[32px] text-2xl"
-                >
-                  Com o Selo Verde você tem benefícios em cada compra
-                </h1>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-          <div class="w-full max-w-[1440px] m-auto flex flex-col">
-            <div class="mt-[100px]">
-              <div class="w-full flex justify-center">
-                <button
-                  id="para-sua-empresa"
-                  class="border-b-2 border-black px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#24231E]"
-                >
-                  Para sua marca e empresa
-                </button>
-                <button
-                  id="para-seu-negocio"
-                  class="border-b-2 border-[#878681] px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#878681]"
-                >
-                  Para seu negócio
-                </button>
-                <button
-                  id="para-voce"
-                  class="border-b-2 border-[#878681] px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#878681]"
-                >
-                  Para você
-                </button>
-              </div>
-              <div
-                id="zip-bags"
-                class="brk-4:mt-[100px] mt-10 fade-in flex brk-4:flex-row flex-col gap-x-[30px] gap-y-6 items-center justify-center"
-              >
-                <div>
-                  <h2
-                    class="lg:text-[56px] font-satoshi text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10"
-                  >
-                    Fidelize seus clientese acelere sua agenda de
-                    sustentabilidade.
-                  </h2>
-                  <p
-                    class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]"
-                  >
-                    O Selo Verde Prospera é um programa de incentivo
-                    socioambiental. Empresas promovem vendas sustentáveis e
-                    fidelizam clientes. Consumidores ganham bônus para abater na
-                    conta de luz e ajudam a preservar a Amazônia com energia limpa
-                    e descarbonizada.
-                  </p>
-                  <a
-                  href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-                  target="_blank"
-                    aria-label="Quero fazer parte"
-                    class="px-7 py-[15px] mt-10 rounded-[28px] brk-4:max-w-[190px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
-                  >
-                    Comece agora
-                  </a>
-                </div>
-                <div
-                  class="w-full max-w-[696px] rounded-[99px] flex justify-center items-center relative"
-                >
-                  <div
-                    class="brk-4:w-[692px] w-full max-w-[692px] lg:h-[446px] h-[264px] bg-zinc-100 lg:rounded-[99px] rounded-[48px] justify-center items-center flex flex-none"
-                  >
-                    <img
-                      class="lg:block hidden w-full rounded-[99px]"
-                      src="./assets/imgs/zip-bags.png"
-                      alt=""
-                    />
-                    <img
-                      class="rounded-[48px] lg:hidden block"
-                      src="./assets/imgs/mobile-zip-bag.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                id="bag-of-coffee"
-                class="brk-4:mt-[100px] mt-10 fade-in hidden brk-4:flex-row flex-col gap-y-6 items-center justify-center"
-              >
-                <div class="pr-8">
-                  <h2
-                    class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10"
-                  >
-                    Zere sua conta de luz e aumente as suas vendas.
-                  </h2>
-                  <p
-                    class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]"
-                  >
-                    O Selo Verde Prospera é um programa de incentivo
-                    socioambiental. Empresas promovem vendas sustentáveis e
-                    fidelizam clientes. Consumidores ganham bônus para abater na
-                    conta de luz e ajudam a preservar a Amazônia com energia limpa
-                    e descarbonizada.
-                  </p>
-                  <a
-                  href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-                  target="_blank"
-                    aria-label="Quero fazer parte"
-                    class="px-7 py-[15px] mt-10 rounded-[28px] brk-4::max-w-[230px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
-                  >
-                    Comece agora
-                  </a>
-                </div>
-                <div
-                  class="w-full max-w-[696px] lg:rounded-[99px] rounded-[48px] flex justify-center items-center relative"
-                >
-                  <div
-                    class="brk-4:w-[692px] w-full lg:mt-[140px] max-w-[692px] map-01:mt-0 lg:h-[446px] overflow-hidden h-[264px] bg-zinc-100 rounded-[48px] lg:rounded-[99px] justify-center items-center flex flex-none"
-                  >
-                    <img
-                      class="lg:block hidden"
-                      src="./assets/imgs/bag-of-coffee.png"
-                      alt=""
-                    />
-                    <img
-                      class="lg:hidden block"
-                      src="./assets/imgs/mobile-coffee-bag.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                id="cup-of-coffee"
-                class="brk-4:mt-[100px] mt-10 fade-in hidden brk-4:flex-row flex-col gap-y-6 items-center justify-center"
-              >
-                <div class="pr-8">
-                  <h2
-                    class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10"
-                  >
-                    Zere sua conta de luz e ajude a preservar a floresta Amazônica
-                  </h2>
-                  <p
-                    class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]"
-                  >
-                    O Selo Verde Prospera é um programa de incentivo
-                    socioambiental. Empresas promovem vendas sustentáveis e
-                    fidelizam clientes. Consumidores ganham bônus para abater na
-                    conta de luz e ajudam a preservar a Amazônia com energia limpa
-                    e descarbonizada.
-                  </p>
-                  <a
-                  href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-                  target="_blank"
-                    aria-label="Quero fazer parte"
-                    class="px-7 py-[15px] mt-10 rounded-[28px] brk-4::max-w-[230px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950"
-                  >
-                    Comece agora
-                  </a>
-                </div>
-                <div
-                  class="w-full max-w-[696px] lg:rounded-[99px] rounded-[48px] flex justify-center items-center relative"
-                >
-                  <div
-                    class="brk-4:w-[692px] w-full lg:mt-[140px] max-w-[692px] map-01:mt-0 lg:h-[446px] overflow-hidden h-[264px] bg-zinc-100 lg:rounded-[99px] rounded-[48px] justify-center items-center flex flex-none"
-                  >
-                    <img
-                      class="rounded-[99px] absolute left-0 hidden lg:block"
-                      src="./assets/imgs/cup-of-coofee.png"
-                      alt=""
-                    /><img
-                      class="rounded-[48px] absolute left-0 block lg:hidden"
-                      src="./assets/imgs/mobile-cup-of-coffee.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-          <div
-            class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[176px]"
-          >
-            <h2
-              class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]"
-            >
-              Benefícios para você
-            </h2>
-            <div
-              class="flex w-full gap-x-8 lg:mt-16 mt-8 flex-wrap justify-center gap-y-10"
-            >
-              <div
-                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 flex"
-              >
-              <img
-              class="w-14 h-14 relative"
-              src="./assets/icons/wallet-love.svg"
-              alt=""
-            />
-                <div
-                  class="flex-col justify-start items-start lg:gap-6 flex gap-4"
-                >
-                  <span
-                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                  Aumente suas Vendas
-                  </span>
-                  <p
-                    class="max-w-[417px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]"
-                  >
-                  Fidelize clientes e consumidores com o Selo Verde Prospera
-                  </p>
-                </div>
-              </div>
-              <div
-                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex"
-              >
-                <img
-                  class="w-14 h-14 relative"
-                  src="./assets/icons/Chainlink.svg"
-                  alt=""
-                />
-                <div
-                  class="flex-col justify-start items-start lg:gap-6 flex gap-4"
-                >
-                  <span
-                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]"
-                  >
-                  Acelere sua Agenda ESG
-                  </span>
-                  <p
-                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]"
-                  >
-                  Conecte sustentabilidade aos negócios e receba Créditos de Carbono que podem ser usados no seu Relatório Ambiental no escopo 3 (CVM).
-                  </p>
-                </div>
-              </div>
-              <div
-                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex"
-              >
-                <img
-                  class="w-14 h-14 relative"
-                  src="./assets/icons/User-gem.svg"
-                  alt=""
-                />
-                <div
-                  class="flex-col justify-start items-start lg:gap-6 flex gap-4"
-                >
-                  <span
-                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi lg:leading-[33.60px]"
-                  >
-                  Conecte sua marca e melhore sua reputação
-                  </span>
-                  <p
-                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]"
-                  >
-                  Ofereça essa vantagem aos seus clientes e fortaleça a conexão da sua marca com um público consciente.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-full max-w-[1008px] map-02:h-[446px] h-[153px] lg:mt-44 mt-16 bg-[#F3F3F3] z-20 rounded-[99px] relative justify-center items-center flex"
-            >
-              <img
-                class="map-02:block hidden"
-                src="./assets/imgs/cards-and-sheets.png"
-                alt=""
-              />
-              <img
-                class="map-02:hidden block z-0 w-full max-w-[319px]"
-                src="./assets/imgs/mobile-cards-and-sheets.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-        <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-          <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]">
-            <div class="w-full flex md:flex-row justify-center gap-x-[8%] flex-col">
-              <h2 class="text-[#24231E] lg:text-5xl md:text-5xl text-2xl font-medium font-satoshi leading-[60px]">
-                Conheça a Prospera
-              </h2>
-              <div class="w-full max-w-[694px]">
-                <span class="text-[#3E3D34] md:text-xl text-base font-normal font-satoshi leading-7">
-                  Somos a Prospera – Green Loyalty Tech, uma empresa de impacto socioambiental e a 1ª Plataforma de Benefícios Sustentáveis do mundo.<br /><br />
-                  Um ecossistema digital onde pessoas e empresas podem escolher produtos e serviços que estão contribuindo para um planeta mais sustentável, através da descarbonização e da energia limpa. Como recompensa por suas escolhas conscientes, elas recebem de volta bônus que são usados para obter descontos em energia, podendo até zerar a conta de luz.<br /><br />
-                </span>
-                <span class="text-[#3E3D34] mt-3 block md:text-xl text-base font-normal font-satoshi leading-7">
-                  Conheça nossas usinas clicando no mapa abaixo:
-                </span>
-              </div>
-            </div>
-            <div class="w-full max-w-[1209px] p-4 bg-[#FFE5C7] rounded-[48px] min-h-[550px] lg:rounded-[99px] mt-16 flex justify-center items-center relative">
-              <div id="ceara-imgs" class="w-full h-full absolute hidden bottom-0 left-0 bg-black z-20 items-end bg-opacity-30 rounded-[48px] lg:rounded-[99px]">
-                <button id="close-ceara-imgs" class="absolute right-10 top-10">
-                  <img class="w-10 h-10" src="./assets/imgs/close-usinas-btn.svg" alt="" />
-                </button>
-                <div class="w-full rounded-[48px] lg:rounded-[99px] h-[400px] scroll-smooth flex items-end relative">
-                  <div class="overflow-hidden rounded-[48px] lg:rounded-[99px] h-[400px] align-baseline absolute bottom-0">
-                    <div id="carousel" class="flex transition-transform duration-500 rounded-[48px] lg:rounded-[99px] w-full h-full">
-                      
-                    </div>
-                    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none rotate-180">
-                      <img src="./assets/imgs/carrossel-button.png" alt="" />
-                    </button>
-                    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none">
-                      <img src="./assets/imgs/carrossel-button.png" alt="" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="relative">
-                <img src="./assets/imgs/Brazil.png" alt="" />
-                <button id="ceara-button" class="absolute top-[22%] left-[85%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                  <img src="./assets/icons/Pin.svg" alt="" />
-                </button>
-                <button id="piaui-button" class="absolute top-[28%] left-[79%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                  <img src="./assets/icons/Pin.svg" alt="" />
-                </button>
-                <button id="sp-button" class="absolute top-[65%] left-[62%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
-                  <img src="./assets/icons/Pin.svg" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="w-full xl:px-28 lg:px-12 px-[20px]">
-          <div
-            class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16"
-          >
-            <div class="flex lg:flex-row gap-x-[20%] flex-col">
-              <div>
-                <h2
-                  class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi subtitle"
-                >
-                  Impacto socioambiental
-                </h2>
-                <span class="max-w-[488px] text-[#878681] mt-9 block text-lg font-normal font-['Open Sans'] leading-[27px]">
-                  São 17 iniciativas criadas pela ONU, com metas bem definidas que norteiam os compromissos assumidos por todos os signatários do Pacto Global da ONU. A Prospera impacta positivamente 5 ODS:
-                </span>
-              </div>
-              <div>
-                <img
-                  class="mb-8"
-                  src="./assets/imgs/onubrasil-color-horiz.png"
-                  alt=""
-                />
-                <p
-                  class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]"
-                >
-                  A Assinatura Verde contribui para acelerar compromissos
-                  assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
-                  e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
-                  a preservar uma área de mais de 160 mil hectares de floresta
-                  nativa na Amazônia, impactando positivamente suas ODS (Objetivos
-                  de Desenvolvimento Sustentável):
-                </p>
-              </div>
-            </div>
-            <div
-              class="lg:py-[180px] py-[57px] px-5 flex items-center flex-wrap justify-center gap-y-[22px] gap-x-3 mt-16 lg:mt-[92px] lg:rounded-[99px] rounded-[48px] bg-[#F3F3F3]"
-            >
-              <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-7.png" alt="" />
-              <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-10.png" alt="" />
-              <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]"
-                src="./assets/imgs/SDG-11.png"
-                alt=""
-              />
-              <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]"
-                src="./assets/imgs/SDG-12.png"
-                alt=""
-              />
-              <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-13.png" alt="" />
-            </div>
-        </section>
-        <section class="w-full xl:px-28 lg:px-12 px-[20px]">
-          <div
-            class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16 lg:px-28 px-[10px]"
-          >
-            <div
-              class="flex flex-col items-center"
-            >
-              <div
-                class="max-w-[560px] text-center text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]"
-              >
-                Nossos parceiros
-              </div>
-              <div class="mt-8 justify-center max-w-[1000px] items-center gap-y-[32px] lg:gap-x-[72px] gap-x-[38px] flex flex-wrap">
-                <img src="./assets/icons/greener.png" alt=""><img src="./assets/icons/rs-solutions.png" alt=""><img src="./assets/icons/carpena-adv.png" alt=""><img src="./assets/icons/patla-mama.png" alt=""><img src="./assets/icons/cofema.png" alt=""><img src="./assets/icons/trix.png" alt=""><img src="./assets/icons/enel-x.png" alt=""><img src="./assets/icons/facil-pay.png" alt=""><img src="./assets/icons/sustentech.png" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer
-      class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10"
-    >
-      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+    <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
+      <img src="./assets/imgs/header-logo.svg" alt="" />
+      <button class="block" id="hamburger-menu-button">
+        <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+      </button>
+      <button id="close-button" class="hidden">
+        <img class="w-[40px] h-[40px]" src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+    <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+      <nav class="mt-[84px]" aria-label="Main navigation">
+        <ul class="flex flex-col gap-y-5">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-lg leading-7 font-medium text-[#24231E]">
+            <a class="flex gap-x-4 items-center" href="./selo-verde.html">Selo verde <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col-reverse mt-9 gap-y-4">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex">
+      <div>
+        <a href="/" aria-label="Home">
+          <img src="./assets/imgs/header-logo.svg" alt="Logotipo da empresa" />
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex flex-col items-center" href="./selo-verde.html">Selo verde <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex xl:gap-x-6 lg:gap-x-3">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
         <div
-          class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between"
-        >
-          <div>
-            <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
-            <div class="flex flex-col mb-8">
-              <span
-                class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                >CNPJ</span
-              >
-              <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >31.648.992/0001-91</span
-              >
-            </div>
-            <div
-              class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start"
-            >
-              <div class="flex flex-col mb-6">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Endereço</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alameda Madeira, 162 - Sala 1104 A</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alphaville Centro Industrial</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >CEP: 06454-010</span
-                >
-              </div>
-              <div class="flex flex-col">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Contato</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >(11) 1234-5678</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >info@prospera.com</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png" alt="" /></a>
-              <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/X.png" alt="" /></a>
-              <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img src="./assets/icons/LinkedIn.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/Youtube.png" alt="" /></a>
-            </div>
-          </div>
-          <div>
-            <span
-              class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block"
-            >
-              Acesse agora nossos aplicativos
-            </span>
-            <div class="flex gap-x-10">
-              <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
-              "
-              target="_blank">
-                <img src="./assets/imgs/Apple.png" alt="" />
-              </a >
-              <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-              target="_blank">
-                <img src="./assets/imgs/Google.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
-        <div
-          class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8"
-        >
-          <div>
-            <span class="text-[#FAFAF9]"
-              >© 2024 Prospera. Todos os direitos reservados.</span
-            >
-          </div>
-          <div>
-            <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
-              <li>Política de Privacidade</li>
-              <li>Termos de Serviço</li>
-              <li>Configurações de Cookies</li>
-            </ul>
+          class="w-full md:bg-[url('./assets/imgs/selo-verde-hero-banner.png')] bg-[url('./assets/imgs/bg-hero-banner-selo-verde-02.png')] bg-no-repeat bg-top bg-cover rounded-[48px] lg:rounded-[99px]">
+          <div
+            class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30">
+            <img class="lg:w-[124px] w-16" src="./assets/icons/selo-verde-icon.svg" alt="" />
+            <h1
+              class="font-medium font-satoshi lg:max-w-[1000px] max-w-[295px] text-[#FAFAF9] leading-[125%] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[32px] text-2xl">
+              Com o Selo Verde você tem benefícios em cada compra
+            </h1>
           </div>
         </div>
       </div>
-    </footer>
-      <script src="./js/selo-verde.js"></script>
-      <script src="./js/main.js"></script>
-    </body>
-  </html>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col">
+        <div class="mt-[100px]">
+          <div class="w-full flex justify-center">
+            <button id="para-sua-empresa"
+              class="border-b-2 border-black px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#24231E]">
+              Para sua marca e empresa
+            </button>
+            <button id="para-seu-negocio"
+              class="border-b-2 border-[#878681] px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#878681]">
+              Para seu negócio
+            </button>
+            <button id="para-voce"
+              class="border-b-2 border-[#878681] px-10 brk-4:pb-12 md:pb-10 pb-5 w-[33%] text-sm md:text-base lg:text-xl font-medium brk-4:text-2xl leading-[130%] text-[#878681]">
+              Para você
+            </button>
+          </div>
+          <div id="zip-bags"
+            class="brk-4:mt-[100px] mt-10 fade-in flex flex-col gap-x-[30px] gap-y-6 items-center justify-center">
+            <div
+              class="brk-4:mt-[100px] mt-10 fade-in flex brk-4:flex-row flex-col gap-x-[30px] gap-y-6 items-center justify-center">
+              <div>
+                <h2
+                  class="lg:text-[56px] font-satoshi text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10">
+                  Fidelize seus clientes e acelere sua agenda de
+                  sustentabilidade.
+                </h2>
+                <p class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]">
+                  O Selo Verde Prospera é um programa de incentivo
+                  socioambiental. Empresas promovem vendas sustentáveis e
+                  fidelizam clientes. Consumidores ganham bônus para abater na
+                  conta de luz e ajudam a preservar a Amazônia com energia limpa
+                  e descarbonizada.
+                </p>
+                <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+                  class="px-7 py-[15px] mt-10 rounded-[28px] brk-4:max-w-[190px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950">
+                  Comece agora
+                </a>
+              </div>
+              <div class="w-full max-w-[696px] rounded-[99px] flex justify-center items-center relative">
+                <div
+                  class="brk-4:w-[692px] w-full max-w-[692px] lg:h-[446px] h-[264px] bg-zinc-100 lg:rounded-[99px] rounded-[48px] justify-center items-center flex flex-none">
+                  <img class="lg:block hidden w-full rounded-[99px]" src="./assets/imgs/zip-bags.png" alt="" />
+                  <img class="rounded-[48px] lg:hidden block" src="./assets/imgs/mobile-zip-bag.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div id="zip-bags-beneficios" class="flex flex-col items-center mt-16">
+              <h2
+                class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]">
+                Benefícios para você
+              </h2>
+              <div class="flex w-full gap-x-8 lg:mt-16 mt-8 flex-wrap justify-center gap-y-10">
+                <div
+                  class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 flex">
+                  <img class="w-14 h-14 relative" src="./assets/icons/wallet-love.svg" alt="" />
+                  <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                    <span
+                      class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                      Aumente suas Vendas
+                    </span>
+                    <p
+                      class="max-w-[417px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                      Fidelize clientes e consumidores com o Selo Verde Prospera
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                  <img class="w-14 h-14 relative" src="./assets/icons/Chainlink.svg" alt="" />
+                  <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                    <span
+                      class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                      Acelere sua Agenda ESG
+                    </span>
+                    <p
+                      class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                      Conecte sustentabilidade aos negócios e receba Créditos de Carbono que podem ser usados no seu
+                      Relatório Ambiental no escopo 3 (CVM).
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                  <img class="w-14 h-14 relative" src="./assets/icons/User-gem.svg" alt="" />
+                  <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                    <span
+                      class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi lg:leading-[33.60px]">
+                      Conecte sua marca e melhore sua reputação
+                    </span>
+                    <p
+                      class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                      Ofereça essa vantagem aos seus clientes e fortaleça a conexão da sua marca com um público
+                      consciente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bag-of-coffee"
+          class="brk-4:mt-[100px] mt-10 fade-in hidden flex-col gap-y-6 items-center justify-center">
+          <div class="flex brk-4:flex-row flex-col gap-y-6 items-center justify-center">
+            <div class="pr-8">
+              <h2 class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10">
+                Zere sua conta de luz e aumente as suas vendas.
+              </h2>
+              <p class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]">
+                O Selo Verde Prospera é um programa de incentivo
+                socioambiental. Empresas promovem vendas sustentáveis e
+                fidelizam clientes. Consumidores ganham bônus para abater na
+                conta de luz e ajudam a preservar a Amazônia com energia limpa
+                e descarbonizada.
+              </p>
+              <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+                class="px-7 py-[15px] mt-10 rounded-[28px] brk-4::max-w-[230px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950">
+                Comece agora
+              </a>
+            </div>
+            <div
+              class="w-full max-w-[696px] lg:rounded-[99px] rounded-[48px] flex justify-center items-center relative">
+              <div
+                class="brk-4:w-[692px] w-full lg:mt-[140px] max-w-[692px] map-01:mt-0 lg:h-[446px] overflow-hidden h-[264px] bg-zinc-100 rounded-[48px] lg:rounded-[99px] justify-center items-center flex flex-none">
+                <img class="lg:block hidden" src="./assets/imgs/bag-of-coffee.png" alt="" />
+                <img class="lg:hidden block" src="./assets/imgs/mobile-coffee-bag.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="bags-of-coffee-beneficios" class="flex flex-col items-center mt-16">
+            <h2
+              class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]">
+              Benefícios para você
+            </h2>
+            <div class="flex w-full gap-x-8 lg:mt-16 mt-8 flex-wrap justify-center gap-y-10">
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/bolt-circle.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                    Zere sua conta de luz
+                  </span>
+                  <p
+                    class="max-w-[417px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Faça escolhas conscientes por produtos e serviços com Selo Verde Prospera e acumule bônus que podem
+                    zerar a sua conta de luz. 
+                  </p>
+                </div>
+              </div>
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/wallet-love.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                    Aumente suas vendas
+                  </span>
+                  <p
+                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Fidelize clientes e consumidores oferecendo Selo Verde Prospera em compras de produto ou serviço no
+                    seu estabelecimento.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/christmas-party.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi lg:leading-[33.60px]">
+                    Concorra a prêmios
+                  </span>
+                  <p
+                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Os Selos Verde Prospera são colecionáveis e cada Selo é uma chance a mais para você ganhar prêmios
+                    em sorteios e promoções.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="cup-of-coffee"
+          class="brk-4:mt-[100px] mt-10 fade-in hidden flex-col gap-y-6 items-center justify-center">
+          <div class="flex brk-4:flex-row flex-col gap-y-6 items-center justify-center">
+            <div class="pr-8">
+              <h2 class="lg:text-[56px] text-[32px] max-w-[592px] text-[#24231E] font-medium leading-[125%] mt-10">
+                Zere sua conta de luz e ajude a preservar a floresta Amazônica
+              </h2>
+              <p class="text-lg text-[#504F43] mt-6 leading-[150%] max-w-[489px]">
+                O Selo Verde Prospera é um programa de incentivo socioambiental.
+                Empresas promovem vendas sustentáveis e fidelizam clientes. Consumidores
+                ganham bônus para abater na conta de luz e ajudam a preservar a Amazônia
+                com energia limpa e descarbonizada.
+              </p>
+              <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+                class="px-7 py-[15px] mt-10 rounded-[28px] brk-4::max-w-[230px] w-full justify-center text-lg flex bg-[#FFB728] items-center gap-x-1 text-neutral-950">
+                Comece agora
+              </a>
+            </div>
+            <div
+              class="w-full max-w-[696px] lg:rounded-[99px] rounded-[48px] flex justify-center items-center relative">
+              <div
+                class="brk-4:w-[692px] w-full lg:mt-[140px] max-w-[692px] map-01:mt-0 lg:h-[446px] overflow-hidden h-[264px] bg-zinc-100 lg:rounded-[99px] rounded-[48px] justify-center items-center flex flex-none">
+                <img class="rounded-[99px] absolute left-0 hidden lg:block" src="./assets/imgs/cup-of-coofee.png"
+                  alt="" /><img class="rounded-[48px] absolute left-0 block lg:hidden"
+                  src="./assets/imgs/mobile-cup-of-coffee.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="cup-of-coffee-beneficios" class="flex flex-col items-center mt-16">
+            <h2
+              class="max-w-[802px] text-center text-[#24231E] lg:text-5xl md:text-4xl text-2xl font-medium font-satoshi lg:leading-[60px]">
+              Benefícios para você
+            </h2>
+            <div class="flex w-full gap-x-8 lg:mt-16 mt-8 flex-wrap justify-center gap-y-10">
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/bolt-circle.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                    Zere sua conta de luz
+                  </span>
+                  <p
+                    class="max-w-[417px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Faça escolhas conscientes por produtos e serviços com Selo Verde Prospera e acumule bônus que podem
+                    zerar a sua conta de luz. 
+                  </p>
+                </div>
+              </div>
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/Leaves-02.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi leading-[33.60px]">
+                    Preserve a Amazônia
+                  </span>
+                  <p
+                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Suas escolhas conscientes reduzem sua pegada de carbono e ajudam a preservar uma área de mais de 160
+                    mil hectares de floresta nativa na Amazônia.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="lg:w-96 lg:h-[404px] w-full max-w-[349px] h-[320px] px-8 py-14 bg-orange-50 lg:rounded-[56px] rounded-[48px] flex-col justify-start items-start lg:gap-6 inline-flex">
+                <img class="w-14 h-14 relative" src="./assets/icons/christmas-party.svg" alt="" />
+                <div class="flex-col justify-start items-start lg:gap-6 flex gap-4">
+                  <span
+                    class="max-w-[317px] text-[#24231E] lg:text-2xl text-xl font-bold font-satoshi lg:leading-[33.60px]">
+                    Concorra a Prêmios
+                  </span>
+                  <p
+                    class="max-w-[317px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] lg:leading-[30px]">
+                    Os Selos Verde Prospera são colecionáveis e cada Selo é uma chance a mais para você ganhar prêmios
+                    em sorteios e promoções.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[176px]">
+
+        <div
+          class="w-full max-w-[1008px] map-02:h-[446px] h-[153px] lg:mt-44 mt-16 bg-[#F3F3F3] z-20 rounded-[99px] relative justify-center items-center flex">
+          <img class="map-02:block hidden" src="./assets/imgs/cards-and-sheets.png" alt="" />
+          <img class="map-02:hidden block z-0 w-full max-w-[319px]" src="./assets/imgs/mobile-cards-and-sheets.png"
+            alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-16 lg:mt-[240px]">
+        <div class="w-full flex md:flex-row justify-center gap-x-[8%] flex-col">
+          <h2 class="text-[#24231E] lg:text-5xl md:text-5xl text-2xl font-medium font-satoshi leading-[60px]">
+            Conheça a Prospera
+          </h2>
+          <div class="w-full max-w-[694px]">
+            <span class="text-[#3E3D34] md:text-xl text-base font-normal font-satoshi leading-7">
+              Somos a Prospera – Green Loyalty Tech, uma empresa de impacto socioambiental e a 1ª Plataforma de
+              Benefícios Sustentáveis do mundo.<br /><br />
+              Um ecossistema digital onde pessoas e empresas podem escolher produtos e serviços que estão contribuindo
+              para um planeta mais sustentável, através da descarbonização e da energia limpa. Como recompensa por suas
+              escolhas conscientes, elas recebem de volta bônus que são usados para obter descontos em energia, podendo
+              até zerar a conta de luz.<br /><br />
+            </span>
+            <span class="text-[#3E3D34] mt-3 block md:text-xl text-base font-normal font-satoshi leading-7">
+              Conheça nossas usinas clicando no mapa abaixo:
+            </span>
+          </div>
+        </div>
+        <div
+          class="w-full max-w-[1209px] p-4 bg-[#FFE5C7] rounded-[48px] min-h-[550px] lg:rounded-[99px] mt-16 flex justify-center items-center relative">
+          <div id="ceara-imgs"
+            class="w-full h-full absolute hidden bottom-0 left-0 bg-black z-20 items-end bg-opacity-30 rounded-[48px] lg:rounded-[99px]">
+            <button id="close-ceara-imgs" class="absolute right-10 top-10">
+              <img class="w-10 h-10" src="./assets/imgs/close-usinas-btn.svg" alt="" />
+            </button>
+            <div class="w-full rounded-[48px] lg:rounded-[99px] h-[400px] scroll-smooth flex items-end relative">
+              <div class="overflow-hidden rounded-[48px] lg:rounded-[99px] h-[400px] align-baseline absolute bottom-0">
+                <div id="carousel"
+                  class="flex transition-transform duration-500 rounded-[48px] lg:rounded-[99px] w-full h-full">
+
+                </div>
+                <button id="prev"
+                  class="absolute left-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none rotate-180">
+                  <img src="./assets/imgs/carrossel-button.png" alt="" />
+                </button>
+                <button id="next"
+                  class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-60 hover:opacity-80 text-white p-2 rounded-full focus:outline-none">
+                  <img src="./assets/imgs/carrossel-button.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="./assets/imgs/Brazil.png" alt="" />
+            <button id="ceara-button"
+              class="absolute top-[22%] left-[85%] sm:w-7 sm:h-7 w-5 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+            <button id="piaui-button"
+              class="absolute top-[28%] left-[79%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+            <button id="sp-button"
+              class="absolute top-[65%] left-[62%] sm:w-7 w-5 sm:h-7 h-5 bg-white rounded-full flex items-center justify-center hover:animate-bounce p-1">
+              <img src="./assets/icons/Pin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full xl:px-28 lg:px-12 px-[20px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16">
+        <div class="flex lg:flex-row gap-x-[20%] flex-col">
+          <div>
+            <h2 class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi subtitle">
+              Impacto socioambiental
+            </h2>
+            <span class="max-w-[488px] text-[#878681] mt-9 block text-lg font-normal font-['Open Sans'] leading-[27px]">
+              São 17 iniciativas criadas pela ONU, com metas bem definidas que norteiam os compromissos assumidos por
+              todos os signatários do Pacto Global da ONU. A Prospera impacta positivamente 5 ODS:
+            </span>
+          </div>
+          <div>
+            <img class="mb-8" src="./assets/imgs/onubrasil-color-horiz.png" alt="" />
+            <p class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]">
+              A Assinatura Verde contribui para acelerar compromissos
+              assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
+              e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
+              a preservar uma área de mais de 160 mil hectares de floresta
+              nativa na Amazônia, impactando positivamente suas ODS (Objetivos
+              de Desenvolvimento Sustentável):
+            </p>
+          </div>
+        </div>
+        <div
+          class="map-02:py-[180px] map-02:px-14 py-[60px] px-[32px] flex flex-col items-center justify-between  mt-[92px] map-02:rounded-[99px] rounded-[48px] bg-[#F3F3F3]">
+          <div class="flex items-center justify-center flex-wrap gap-y-3 gap-x-2">
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-7.png" alt="" />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-10.png" alt="" />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-11.png" alt="" />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-12.png" alt="" />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-13.png" alt="" />
+          </div>
+          <div class="map-02:mt-[90px] mt-5">
+            <span class="text-base text-center text-[#878681] block">Objetivos de desenvolvimento impactados pelos
+              produtos Prospera</span>
+          </div>
+        </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[20px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16 lg:px-28 px-[10px]">
+        <div class="flex flex-col items-center">
+          <div class="max-w-[560px] text-center text-[#24231E] text-2xl font-bold font-satoshi leading-[33.60px]">
+            Nossos parceiros
+          </div>
+          <div
+            class="mt-8 justify-center max-w-[1000px] items-center gap-y-[32px] lg:gap-x-[72px] gap-x-[38px] flex flex-wrap">
+            <img src="./assets/icons/greener.png" alt=""><img src="./assets/icons/rs-solutions.png" alt=""><img
+              src="./assets/icons/carpena-adv.png" alt=""><img src="./assets/icons/patla-mama.png" alt=""><img
+              src="./assets/icons/cofema.png" alt=""><img src="./assets/icons/trix.png" alt=""><img
+              src="./assets/icons/enel-x.png" alt=""><img src="./assets/icons/facil-pay.png" alt=""><img
+              src="./assets/icons/sustentech.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10">
+    <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      <div class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between">
+        <div>
+          <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+          <div class="flex flex-col mb-8">
+            <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">CNPJ</span>
+            <span class="text-[#FAFAF9] font-base leading-[150%]">31.648.992/0001-91</span>
+          </div>
+          <div class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start">
+            <div class="flex flex-col mb-6">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Endereço</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alameda Madeira, 162 - Sala 1104 A</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alphaville Centro Industrial</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">CEP: 06454-010</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Contato</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">(11) 1234-5678</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">info@prospera.com</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png"
+                alt="" /></a>
+            <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png"
+                alt="" /></a>
+            <a href="#"><img src="./assets/icons/X.png" alt="" /></a>
+            <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img
+                src="./assets/icons/LinkedIn.png" alt="" /></a>
+            <a href="#"><img src="./assets/icons/Youtube.png" alt="" /></a>
+          </div>
+        </div>
+        <div>
+          <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block">
+            Acesse agora nossos aplicativos
+          </span>
+          <div class="flex gap-x-10">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
+              <img src="./assets/imgs/Google.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+      <div class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8">
+        <div>
+          <span class="text-[#FAFAF9]">© 2024 Prospera. Todos os direitos reservados.</span>
+        </div>
+        <div>
+          <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+            <a href="./politica-de-privacidade.html">
+              <li>Política de Privacidade</li>
+            </a>
+            <a href="./termos-de-servico.html">
+              <li>Termos de Serviço</li>
+            </a>
+            <li>Configurações de Cookies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/selo-verde.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

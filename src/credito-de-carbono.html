@@ -1,394 +1,331 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <style>
-      .fade-in {
-        animation: fadeIn 0.5s ease-in-out;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      to {
+        opacity: 1;
       }
-      .accordion-content {
-        display: none;
-      }
-      .accordion-content.open {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
-      <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
-        <img src="./assets/imgs/header-logo.svg" alt="" />
-        <button class="block" id="hamburger-menu-button">
-          <img src="./assets/icons/Hamburger-menu.svg" alt="" />
-        </button>
-        <button id="close-button" class="hidden">
-          <img
-            class="w-[40px] h-[40px]"
-            src="./assets/icons/close-icon.png"
-            alt=""
-          />
-        </button>
+    }
+
+    .accordion-content {
+      display: none;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+    <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
+      <img src="./assets/imgs/header-logo.svg" alt="" />
+      <button class="block" id="hamburger-menu-button">
+        <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+      </button>
+      <button id="close-button" class="hidden">
+        <img class="w-[40px] h-[40px]" src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+    <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+      <nav class="mt-[84px]" aria-label="Main navigation">
+        <ul class="flex flex-col gap-y-5">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex gap-x-4 items-center" href="./credito-de-carbono.html">Créditos de carbono <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col-reverse mt-9 gap-y-4">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] rounded-[28px] flex justify-center bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
       </div>
-      <div id="responsive-menu" class="w-full h-screen flex-col hidden">
-        <nav class="mt-[84px]" aria-label="Main navigation">
-          <ul class="flex flex-col gap-y-5">
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./">Inicio</a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./assinatura-verde.html">Assinatura verde</a>
-            </li>
-            <li class="text-[#24231E] font-medium text-lg leading-7">
-              <a class="flex gap-x-4 items-center" href="./credito-de-carbono.html">Créditos de carbono <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./selo-verde.html">Selo verde</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex flex-col-reverse mt-9 gap-y-4">
-          <a
-            href=" https://meuclubeprospera.com.br/"
-            target="_blank"
-            aria-label="Entrar"
-            class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950"
-          >
-            Entrar
-          </a>
-          <a 
-          href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-          target="_blank"
-            aria-label="Quero fazer parte"
-            class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950"
-          >
-            Quero fazer parte
-          </a>
+    </div>
+    <div class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex">
+      <div>
+        <a href="/" aria-label="Home">
+          <img src="./assets/imgs/header-logo.svg" alt="Logotipo da empresa" />
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./">Inicio</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex flex-col items-center" href="./credito-de-carbono.html">Créditos de carbono <span
+                class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex xl:gap-x-6 lg:gap-x-3">
+        <a href=" https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="./index.html#baixe-nosso-app" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
+        <div
+          class="w-full lg:h-auto bg-[url('./assets/imgs/credito-carbonao-hero-banner.png')] bg-no-repeat bg-center bg-cover rounded-[48px] lg:rounded-[99px]">
+          <div
+            class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] px-6 pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30">
+            <img class="lg:w-[124px] w-16" src="./assets/icons/credito-de-carbono-icon.svg" alt="" />
+            <h1
+              class="font-medium sm:max-w-[590px] font-satoshi max-w-[230px] text-[#FAFAF9] leading-[125%] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[44px] text-2xl">
+              O poder dos <span>Créditos de Carbono</span>
+            </h1>
+          </div>
         </div>
       </div>
+    </section>
+    <div id="form-div" class="w-full px-3 h-screen hidden fixed top-0 left-0 z-50 bg-opacity-70 bg-black fade-in">
       <div
-        class="w-full max-w-[1800px] justify-between m-auto items-center hidden lg:flex"
-      >
-        <div>
-          <a href="/" aria-label="Home">
-            <img
-              src="./assets/imgs/header-logo.svg"
-              alt="Logotipo da empresa"
-            />
-          </a>
-        </div>
-        <nav aria-label="Main navigation">
-          <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./">Inicio</a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./assinatura-verde.html">Assinatura verde</a>
-            </li>
-            <li class="text-[#24231E] font-medium text-lg leading-7">
-              <a class="flex flex-col items-center" href="./credito-de-carbono.html">Créditos de carbono <span class="block w-2 h-2 rounded-full bg-[#E4A424]"></span></a>
-            </li>
-            <li class="text-[#504F43] text-lg leading-7">
-              <a href="./selo-verde.html">Selo verde</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex xl:gap-x-6 lg:gap-x-3">
-          <a
-          href=" https://meuclubeprospera.com.br/"
-          target="_blank"
-            aria-label="Entrar"
-            class="px-7 py-[15px] text-lg border border-neutral-400 rounded-[28px] text-neutral-950"
-          >
-            Entrar
-          </a>
-          <a
-          href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-          target="_blank"
-            aria-label="Quero fazer parte"
-            class="px-7 py-[15px] text-lg rounded-[28px] bg-[#FFB728] text-neutral-950"
-          >
-            Quero fazer parte
-          </a>
+        class="w-full max-w-[589px] flex flex-col rounded-[32px] items-start px-12 py-12 bg-[#FAFAF9] absolute top-1/2 left-1/2 h-[641  px] -translate-y-1/2 -translate-x-1/2">
+        <div class="relative w-full h-full">
+          <button id="close-form" class="w-10 h-10 absolute -top-5 -right-5"><img src="./assets/icons/close-icon.png"
+              alt=""></button>
+          <h2 class="mb-10 text-2xl font-semibold font-satoshi">Formulário Crédito de Carbono</h2>
+          <form class="w-full flex flex-col gap-6" action="">
+            <input placeholder="CNPJ" class="p-y-2 px-4 outline-none w-full bg-[#F3F3F3] rounded-lg min-h-14"
+              type="text" name="cnpj" id="cnpj">
+            <input placeholder="Nome Completp" class="p-y-2 px-4 outline-none w-full bg-[#F3F3F3] rounded-lg min-h-14"
+              type="text" name="noome" id="nome">
+
+            <input placeholder="E-mail" class="p-y-2 px-4 outline-none w-full bg-[#F3F3F3] rounded-lg min-h-14"
+              type="email" name="email" id="email">
+            <div class="flex gap-x-1">
+              <input placeholder="+55"
+                class="p-y-2 px-4 outline-none w-full bg-[#F3F3F3] max-w-[145px] rounded-lg min-h-14" type="number"
+                name="codigo-do-pais" id="codigo-do-pais">
+              <input placeholder="Telefone" class="p-y-2 px-4 outline-none w-full bg-[#F3F3F3] rounded-lg min-h-14"
+                type="tel" name="telefone" id="telefone">
+            </div>
+            <label class="mt-6 flex gap-5 items-center text-sm text-[#2B2F32]" for="autorizar">
+              <input type="radio" name="autorizar" id="autorizar">
+              Eu aceito receber novidades Prospera
+            </label>
+            <button id="submit-button"
+              class="w-full max-w-[503px] mt-6 h-14 px-7 py-[15.50px] bg-green-600 rounded-[28px] justify-center items-center gap-2 inline-flex">
+              <span class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]">Enviar
+                formulário</span>
+            </button>
+          </form>
         </div>
       </div>
-    </header>
-    <main>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div class="w-full max-w-[1800px] m-auto flex flex-col items-center">
-          <div
-            class="w-full lg:h-auto bg-[url('./assets/imgs/credito-carbonao-hero-banner.png')] bg-no-repeat bg-center bg-cover rounded-[48px] lg:rounded-[99px]"
-          >
-            <div
-              class="bg-black w-full h-full flex flex-col items-center lg:pt-[65px] lg:pb-[113px] px-6 pt-[46px] pb-[46px] rounded-[48px] lg:rounded-[99px] bg-opacity-30"
-            >
-              <img
-                class="lg:w-[124px] w-16"
-                src="./assets/icons/credito-de-carbono-icon.svg"
-                alt=""
-              />
-              <h1
-                class="font-medium sm:max-w-[590px] font-satoshi max-w-[230px] text-[#FAFAF9] leading-[125%] sm:tracking-[-2.56px] text-center lg:text-[64px] sm:text-[44px] text-2xl"
-              >
-                O poder dos <span>Créditos de Carbono</span>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[90px] mt-16"
-        >
-          <div
-            class="w-full flex flex-col items-center lg:flex-row justify-center gap-x-10"
-          >
-            <div class="w-full flex flex-col items-center">
-              <h2
-                class="max-w-[592px] text-[#24231E] lg:text-[56px] md:text-4xl text-3xl mb-[38px] tracking-[-1.25px] font-medium font-satoshi lg:leading-[70px]"
-              >
-                Invista na sustentabilidade com Créditos de Carbono
-              </h2>
-              <div class="max-w-[592px] flex flex-col items-start
-              ]">
-                <p
-                  class="text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                  >Nosso crédito de carbono, em parceria com a 
-                <span
-                  class="text-[#3E3D34] text-lg font-bold font-['Open Sans'] leading-[27px]"
-                  >GREENER</span
-                >,
-                  vem da conservação de 145.198 hectares de floresta na
-                  Fazenda Floresta Amazônica, em Apuí, Amazonas. Este projeto
-                  desempenha um papel crucial na preservação da biodiversidade
-                  da Amazônia.</p
-                  >
-                  <img class="mt-6 lg:mt-[50px]" src="./assets/icons/check-circle.svg" alt="">
-                  <p
-                    class="max-w-[557px] text-[#504F43] text-sm font-normal font-['Open Sans'] leading-[21px]"
-                  >
-                    Desenvolvido com a metodologia da UNESP de “Levantamento de
-                    Serviços Ambientais” e validado pela KPMG, este projeto visa
-                    manter o estoque de carbono da floresta. Ao reduzir as emissões
-                    do desmatamento, contribuímos para mitigaros efeitos das
-                    mudanças climáticas.
-                  </p>
-                  <button
-                    class="lg:w-[186px] w-full max-w-[592px] lg:mt-[38px] mt-6 h-14 px-7 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex"
-                  >
-                    <span
-                      class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]"
-                      >Eu quero agora</span
-                    >
-                  </button>
-              </div>
-            </div>
-            <div class="w-full max-w-[739px] flex justify-center">
-              <div
-                class="w-full lg:max-w-[592px] max-w-[350px] lg:h-[446px] h-[264px] pl-[57px] pt-[17px] pb-[18px] bg-[#2CAB66] rounded-[48px] lg:rounded-[99px] justify-end items-center inline-flex relative mt-14 lg:mt-[82px]"
-              >
-                <img
-                  class="absolute left-0 top-0 lg:-top-8 rounded-l-[99px] lg:h-[600px] h-[290px]"
-                  src="./assets/imgs/tree.png"
-                />
-                <img
-                  
-                  class="absolute lg:-right-[250px] bg-transparent -right-14 top-16 lg:h-auto h-[180px] shadow-inner"
-                  src="./assets/imgs/letter-paper.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="w-full bg-[url('./assets/imgs/bg-section-credito.png')] bg-no-repeat bg-center xl:px-28 lg:px-12 px-[22px]"
-      >
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
-        >
-          <div class="flex flex-col-reverse lg:flex-row items-center gap-x-20">
-            <div class="w-full max-w-[382px] rounded-[48px]  lg:rounded-[99px] hidden lg:block">
-              <img class="rounded-[48px] lg:rounded-[99px]" src="./assets/imgs/forest.png" />
-            </div>
-            <div
-              class="w-full max-w-[696px] rounded-[48px] h-[225px] block lg:hidden mb-10"
-            >
-              <img
-                class="rounded-[48px] w-full object-contain"
-                src="./assets/imgs/forest-2.png"
-              />
-            </div>
-            <div class="w-full mb-3">
-              <h2
-                class="max-w-[696px] mb-4 lg:mb-10 flex flex-col md:text-4xl text-3xl text-[#24231E] lg:text-5xl font-medium font-satoshi lg:leading-[60px]"
-              >
-                Como funciona <span>o Crédito de Carbono?</span>
-              </h2>
-              <p
-                class="max-w-[596px] text-[#3E3D34] text-base lg:text-lg font-normal font-['Open Sans'] leading-[27px]"
-              >
-                O projeto visa à proteção da fauna, flora e dos corpos hídricos
-                que atravessam a área. Ao fazê-lo, contribuirá
-                significativamente para a proteção da biodiversidade, em uma
-                região que enfrenta grande pressão de uso da terra no Estado do
-                Amazonas. A riqueza da biodiversidade na Fazenda Floresta
-                Amazônica é notável, com mais de 60 espécies arbóreas e uma
-                fauna silvestre diversificada.
-              </p>
-              <p
-                class="max-w-[596px] text-[#3E3D34] text-base lg:text-lg font-normal font-['Open Sans'] leading-[27px] mt-4"
-              >
-                Além disso, a área apresenta um importante estoque de carbono,
-                com mais de 1.100 toneladas estocadas por hectare, tanto no solo
-                quanto na biomassa vegetal.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]"
-        >
-          <div
-            class="w-full max-w-[1209px] h-auto map-01:min-h-[999px] map-02:min-h-[800px] min-h-[680px] bg-[#2CAB66] px-10 md:rounded-[99px] rounded-[48px] relative mt-10 flex flex-col map-03:items-center items-start"
-          >
+    </div>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px] overflow-hidden">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[90px] mt-16">
+        <div class="w-full flex flex-col items-center lg:flex-row justify-center gap-x-10">
+          <div class="w-full flex flex-col items-center">
             <h2
-              class="map-02:max-w-[902px] map-03:max-w-[500px] max-w-[300px] map-03:text-center text-start text-[#FAFAF9] map-03:mt-[80px] mt-6 map-01:text-5xl md:text-4xl text-2xl font-medium font-satoshi map-02:leading-[60px]"
-            >
-              Empoderamento e sustentabilidade para Comunidades Ribeirinhas
+              class="max-w-[592px] text-[#24231E] lg:text-[56px] md:text-4xl text-3xl mb-[38px] tracking-[-1.25px] font-medium font-satoshi lg:leading-[70px]">
+              Invista na sustentabilidade com Créditos de Carbono
             </h2>
-            <p
-              class="map-03:max-w-[803px] max-w-[270px] map-03:text-center text-start map-03:mt-6 mt-2 text-[#FAFAF9] map-03:text-xl text-sm font-medium font-satoshi map-03::leading-7"
-            >
-              Nosso projeto beneficia sete vilas ribeirinhas, melhorando a
-              qualidade de vida de mais de 140 pessoas. Com ações de educação
-              ambiental, saúde, infraestrutura e capacitação, em parceria com
-              entidades públicas e privadas, promovemos a participação ativa das
-              comunidades e asseguramos a sustentabilidade a longo prazo.
-            </p>
-
-            <div class="absolute bottom-0 right-0">
-              <img
-                class="map-01:w-full map-02:w-[866px] w-[616px] map-03:block hidden"
-                src="./assets/imgs/green-map.png"
-                alt=""
-              />
-              <img
-                class="map-03:hidden rounded-e-[48px]"
-                src="./assets/imgs/partial-map-02.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center brk-2:mt-[90px] mt-16"
-        >
-          <div
-            class="flex items-center brk-3:flex-row flex-col w-full brk-3:px-28 gap-x-[10%]"
-          >
-            <div
-              class="w-full flex flex-col map-03:items-center items-start brk-3:items-start"
-            >
-              <h2
-                class="max-w-[588px] text-[#24231E] brk-3:mb-16 mb-6 brk-2:text-5xl md:text-4xl text-2xl md:text-center text-start brk-3:text-start font-medium font-satoshi brk-2:leading-[60px] md:leading-[50px]"
-              >
-                Calculadora de Emissões: Seu primeiro passo para a
-                sustentabilidade
-              </h2>
-              <div class="relative brk-2:max-w-[382px] map-03:max-w-[300px]">
-                <img
-                  class="rounded-[48px] lg:rounded-[99px] brk-2:w-full w-[300px] flex-none"
-                  src="./assets/imgs/mulher-calculando.png"
-                  alt=""
-                />
-                <div
-                  class="brk-01:w-[215px] brk-01:h-[268px] brk-2:w-[200px] brk-2:h-[253px] w-[130px] h-[183px] bg-[#EEF6F1] rounded-[99px] flex-col justify-center items-center flex absolute brk-01:-right-[150px] brk-2:-right-[110px] -right-[70px] bottom-[76px]"
-                >
-                  <img class="w-1/2" src="./assets/icons/Leaves.svg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="mt-6 w-full flex flex-col brk-3::items-start items-center">
-              <p
-                class="max-w-[590px] mt-200 text-[#3E3D34] brk-2:mb-8 mb-5 brk-2:text-xl text-lg font-normal font-satoshi leading-7"
-              >
-                Com o objetivo de auxiliar nesta etapa e seguindo as rígidas
-                diretrizes do protocolo GHG, a Greener elaborou uma calculadora
-                de emissões automatizada em parceria com a Compensa.eco, empresa
-                especializada em consultoria para cálculo de emissões e
-                inventários de gases de efeito estufa (GEE).
+            <div class="max-w-[592px] flex flex-col items-start
+              ]">
+              <p class="text-[#3E3D34] text-lg font-normal font-['Open Sans'] leading-[27px]">Nosso crédito de carbono,
+                em parceria com a
+                <span class="text-[#3E3D34] text-lg font-bold font-['Open Sans'] leading-[27px]">GREENER</span>,
+                vem da conservação de 145.198 hectares de floresta na
+                Fazenda Floresta Amazônica, em Apuí, Amazonas. Este projeto
+                desempenha um papel crucial na preservação da biodiversidade
+                da Amazônia.
               </p>
-              <p
-                class="max-w-[590px] text-[#3E3D34] brk-2:mb-8 mb-5 brk-2:text-xl text-lg font-normal font-satoshi leading-7"
-              >
-                Nossa calculadora é o primeiro passo para as empresas que buscam
-                iniciar a sua jornada de redução e compensação das emissões rumo
-                a sustentabilidade.
+              <img class="mt-6 lg:mt-[50px]" src="./assets/icons/check-circle.svg" alt="">
+              <p class="max-w-[557px] text-[#504F43] text-sm font-normal font-['Open Sans'] leading-[21px]">
+                Desenvolvido com a metodologia da UNESP de “Levantamento de
+                Serviços Ambientais” e validado pela KPMG, este projeto visa
+                manter o estoque de carbono da floresta. Ao reduzir as emissões
+                do desmatamento, contribuímos para mitigaros efeitos das
+                mudanças climáticas.
               </p>
-              <p
-                class="max-w-[590px] text-[#3E3D34] mb-8 text-xl font-normal font-satoshi leading-7"
-              >
-                De forma simples, prática e rápida, nossa calculadora permite
-                obter um resultado na hora e o inventário das emissões de GEE
-                dos escopos 1 e 2 de empresas e eventos, possibilitando que
-                sejam compensadas as emissões geradas.
-              </p>
-              <p
-                class="max-w-[590px] text-[#3E3D34] text-xl font-normal font-satoshi leading-7"
-              >
-                Para realização de cálculos mais complexos e incluindo o escopo
-                3, recomendamos a consultoria personalizada, onde indicamos
-                empresas parcerias e confiáveis para a realização da consultoria
-                especializada com base na demanda de cada cliente.
-              </p>
-              <button
-                class="brk-3::max-w-[200px] max-w-[590px] w-full h-14 px-7 mt-12 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex"
-              >
-                <span
-                  class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]"
-                  >Usar calculadora</span
-                >
+              <button id="open-form-01"
+                class="lg:w-[210px] w-full max-w-[592px] lg:mt-[38px] mt-6 h-14 px-7 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex">
+                <span class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]">Fale com um
+                  consultor</span>
               </button>
             </div>
           </div>
+          <div class="w-full max-w-[739px] flex justify-center">
+            <div
+              class="w-full lg:max-w-[592px] max-w-[350px] lg:h-[446px] h-[264px] pl-[57px] pt-[17px] pb-[18px] bg-[#2CAB66] rounded-[48px] lg:rounded-[99px] justify-end items-center inline-flex relative mt-14 lg:mt-[82px]">
+              <img class="absolute left-0 top-0 lg:-top-8 rounded-l-[99px] lg:h-[600px] h-[290px]"
+                src="./assets/imgs/tree.png" />
+              <img class="absolute lg:-right-[250px] bg-transparent -right-14 top-16 lg:h-auto h-[180px]"
+                src="./assets/imgs/letter-paper-02.png" />
+            </div>
+          </div>
         </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      </div>
+    </section>
+    <section
+      class="w-full bg-[url('./assets/imgs/bg-section-credito.png')] bg-no-repeat bg-center xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center mt-[90px]">
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-x-20">
+          <div class="w-full max-w-[382px] rounded-[48px]  lg:rounded-[99px] hidden lg:block">
+            <img class="rounded-[48px] lg:rounded-[99px]" src="./assets/imgs/forest.png" />
+          </div>
+          <div class="w-full max-w-[696px] rounded-[48px] h-[225px] block lg:hidden mb-10">
+            <img class="rounded-[48px] w-full object-contain" src="./assets/imgs/forest-2.png" />
+          </div>
+          <div class="w-full mb-3">
+            <h2
+              class="max-w-[696px] mb-4 lg:mb-10 flex flex-col md:text-4xl text-3xl text-[#24231E] lg:text-5xl font-medium font-satoshi lg:leading-[60px]">
+              Como funciona <span>o Crédito de Carbono?</span>
+            </h2>
+            <p class="max-w-[596px] text-[#3E3D34] text-base lg:text-lg font-normal font-['Open Sans'] leading-[27px]">
+              O projeto visa à proteção da fauna, flora e dos corpos hídricos
+              que atravessam a área. Ao fazê-lo, contribuirá
+              significativamente para a proteção da biodiversidade, em uma
+              região que enfrenta grande pressão de uso da terra no Estado do
+              Amazonas. A riqueza da biodiversidade na Fazenda Floresta
+              Amazônica é notável, com mais de 60 espécies arbóreas e uma
+              fauna silvestre diversificada.
+            </p>
+            <p
+              class="max-w-[596px] text-[#3E3D34] text-base lg:text-lg font-normal font-['Open Sans'] leading-[27px] mt-4">
+              Além disso, a área apresenta um importante estoque de carbono,
+              com mais de 1.100 toneladas estocadas por hectare, tanto no solo
+              quanto na biomassa vegetal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center justify-center mt-[90px]">
         <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16"
-        >
+          class="w-full max-w-[1209px] h-auto map-01:min-h-[999px] m-auto map-02:min-h-[800px] min-h-[680px] bg-[#2CAB66] px-10 md:rounded-[99px] rounded-[48px] relative mt-10 flex flex-col map-03:items-center items-start">
+          <h2
+            class="map-02:max-w-[902px] map-03:max-w-[500px] max-w-[300px] map-03:text-center text-start text-[#FAFAF9] map-03:mt-[80px] mt-6 map-01:text-5xl md:text-4xl text-2xl font-medium font-satoshi map-02:leading-[60px]">
+            Empoderamento e sustentabilidade para Comunidades Ribeirinhas
+          </h2>
+          <p
+            class="map-03:max-w-[803px] max-w-[270px] map-03:text-center text-start map-03:mt-6 mt-2 text-[#FAFAF9] map-03:text-xl text-sm font-medium font-satoshi map-03::leading-7">
+            Nosso projeto beneficia sete vilas ribeirinhas, melhorando a
+            qualidade de vida de mais de 140 pessoas. Com ações de educação
+            ambiental, saúde, infraestrutura e capacitação, em parceria com
+            entidades públicas e privadas, promovemos a participação ativa das
+            comunidades e asseguramos a sustentabilidade a longo prazo.
+          </p>
+
+          <img class="w-full absolute bottom-0 map-01:max-w-[811px] max-w-[611px]  map-02:block hidden"
+            src="./assets/imgs/green-map.png" alt="" />
+          <img class="map-02:hidden rounded-e-[48px] absolute right-0 bottom-0" src="./assets/imgs/partial-map-02.png"
+            alt="" />
+
+        </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px] overflow-x-hidden">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center brk-2:mt-[90px] mt-16">
+        <div class="flex items-center brk-3:flex-row flex-col w-full brk-3:px-28 gap-x-[10%]">
+          <div class="w-full flex flex-col map-03:items-center items-start brk-3:items-start">
+            <h2
+              class="max-w-[588px] text-[#24231E] brk-3:mb-16 mb-6 brk-2:text-5xl md:text-4xl text-2xl md:text-center text-start brk-3:text-start font-medium font-satoshi brk-2:leading-[60px] md:leading-[50px]">
+              Calculadora de Emissões: Seu primeiro passo para a
+              sustentabilidade
+            </h2>
+            <div class="relative brk-2:max-w-[382px] map-03:max-w-[300px]">
+              <img class="rounded-[48px] lg:rounded-[99px] brk-2:w-full w-[300px] flex-none"
+                src="./assets/imgs/mulher-calculando.png" alt="" />
+              <div
+                class="brk-01:w-[215px] brk-01:h-[268px] brk-2:w-[200px] brk-2:h-[253px] w-[110px] h-[183px] bg-[#EEF6F1] rounded-[99px] flex-col justify-center items-center flex absolute brk-01:-right-[150px] brk-2:-right-[110px] -right-[36px] bottom-[76px]">
+                <img class="w-1/2" src="./assets/icons/Leaves.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 w-full flex flex-col brk-3::items-start items-center">
+            <p
+              class="max-w-[590px] mt-200 text-[#3E3D34] brk-2:mb-8 mb-5 brk-2:text-xl text-lg font-normal font-satoshi leading-7">
+              Com o objetivo de auxiliar nesta etapa e seguindo as rígidas
+              diretrizes do protocolo GHG, a Greener elaborou uma calculadora
+              de emissões automatizada em parceria com a Compensa.eco, empresa
+              especializada em consultoria para cálculo de emissões e
+              inventários de gases de efeito estufa (GEE).
+            </p>
+            <p
+              class="max-w-[590px] text-[#3E3D34] brk-2:mb-8 mb-5 brk-2:text-xl text-lg font-normal font-satoshi leading-7">
+              Nossa calculadora é o primeiro passo para as empresas que buscam
+              iniciar a sua jornada de redução e compensação das emissões rumo
+              a sustentabilidade.
+            </p>
+            <p class="max-w-[590px] text-[#3E3D34] mb-8 text-xl font-normal font-satoshi leading-7">
+              De forma simples, prática e rápida, nossa calculadora permite
+              obter um resultado na hora e o inventário das emissões de GEE
+              dos escopos 1 e 2 de empresas e eventos, possibilitando que
+              sejam compensadas as emissões geradas.
+            </p>
+            <p class="max-w-[590px] text-[#3E3D34] text-xl font-normal font-satoshi leading-7">
+              Para realização de cálculos mais complexos e incluindo o escopo
+              3, recomendamos a consultoria personalizada, onde indicamos
+              empresas parcerias e confiáveis para a realização da consultoria
+              especializada com base na demanda de cada cliente.
+            </p>
+            <button id="open-form-02"
+              class="brk-3::max-w-[200px] max-w-[590px] w-full h-14 px-7 mt-12 py-[15.50px] bg-[#2CAB66] rounded-[28px] justify-center items-center gap-2 inline-flex">
+              <span class="text-stone-50 text-lg font-semibold font-['Open Sans'] leading-[27px]">fale com um
+                consultor</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-16">
         <div class="flex lg:flex-row gap-x-[20%] flex-col">
           <div>
             <h2 style="line-height: 60px;"
-              class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi leading-[30px]"
-            >
+              class="mb-6 text-[#24231E] lg:text-[56px] md:text-4xl text-2xl font-medium font-satoshi leading-[30px]">
               Impacto socioambiental
             </h2>
           </div>
           <div>
-            <img
-              class="mb-8"
-              src="./assets/imgs/onubrasil-color-horiz.png"
-              alt=""
-            />
-            <p
-              class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]"
-            >
+            <img class="mb-8" src="./assets/imgs/onubrasil-color-horiz.png" alt="" />
+            <p class="max-w-[588px] text-[#3E3D34] lg:text-xl text-base font-normal font-['Open Sans'] leading-[30px]">
               A Assinatura Verde contribui para acelerar compromissos
               assumidos no Pacto Global da ONU, pois aumenta a disponibilidade
               e acesso da energia limpa e renovável, ao mesmo tempo que ajuda
@@ -399,215 +336,109 @@
 
             <div class="w-full max-w-[488px] lg:mt-24 lg-block lg:hidden mt-8
             ">
-              <span
-                class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-                >Nossos créditos de carbono são provenientes da nossa parceria
-                com a Greener Tokens. </span
-              ><span
-                class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]"
-                >Clique aqui</span
-              ><span
-                class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]"
-              >
-                e conheça mais sobre o projeto.</span
-              >
+              <span class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">Nossos créditos de
+                carbono são provenientes da nossa parceria
+                com a Greener Tokens. </span><span
+                class="text-green-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Clique aqui</span><span
+                class="text-[#878681] text-lg font-normal font-['Open Sans'] leading-[27px]">
+                e conheça mais sobre o projeto.</span>
             </div>
           </div>
         </div>
-          <div
-            class="lg:py-[180px] py-[57px] px-14 flex items-center flex-wrap justify-center gap-y-[22px] gap-x-3 mt-[92px] lg:rounded-[99px] rounded-[48px] bg-[#F3F3F3]"
-          >
+        <div
+          class="lg:py-[180px] py-[57px] px-14 flex items-center flex-col justify-center  mt-[92px] lg:rounded-[99px] rounded-[48px] bg-[#F3F3F3]">
+          <div class="flex items-center justify-center flex-wrap gap-y-[22px] gap-x-3">
             <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-2.svg" alt="" />
-            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]"
-              src="./assets/imgs/SDG-3.svg"
-              alt=""
-            />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-3.svg" alt="" />
             <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-4.svg" alt="" />
-            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]"
-              src="./assets/imgs/SDG-8.svg"
-              alt=""
-            />
+            <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-8.svg" alt="" />
             <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-11.png" alt="" />
             <img class="lg:w-[165px] lg:h-[165px] w-[90px] h-[90px]" src="./assets/imgs/SDG-15.svg" alt="" />
           </div>
-      </section>
-      <section class="w-full xl:px-28 lg:px-12 px-[22px]">
-        <div
-          class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-10"
-        >
-          <h2 class="max-w-[768px] text-center text-[#24231E] text-[32px] font-bold font-satoshi leading-[43.20px]">
-            Perguntas frequentes
-          </h2>
-          <div id="accordion-container" class="mt-10 w-full max-w-[768px] flex flex-col items-center">
+          <div class="map-02:mt-[90px] mt-5">
+            <span class="text-base text-center text-[#878681] block">Objetivos de desenvolvimento impactados pelos
+              produtos Prospera</span>
           </div>
         </div>
-      </section>
-    </main>
-    </main>
-    <footer
-      class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10"
-    >
-      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
-        <div
-          class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between"
-        >
-          <div>
-            <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
-            <div class="flex flex-col mb-8">
-              <span
-                class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                >CNPJ</span
-              >
-              <span class="text-[#FAFAF9] font-base leading-[150%]"
-                >31.648.992/0001-91</span
-              >
+    </section>
+    <section class="w-full xl:px-28 lg:px-12 px-[22px]">
+      <div class="w-full max-w-[1440px] m-auto flex flex-col items-center lg:mt-[240px] mt-10">
+        <h2 class="max-w-[768px] text-center text-[#24231E] text-[32px] font-bold font-satoshi leading-[43.20px]">
+          Perguntas frequentes
+        </h2>
+        <div id="accordion-container" class="mt-10 w-full max-w-[768px] flex flex-col items-center">
+        </div>
+      </div>
+    </section>
+  </main>
+  </main>
+  <footer class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10">
+    <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      <div class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between">
+        <div>
+          <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+          <div class="flex flex-col mb-8">
+            <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">CNPJ</span>
+            <span class="text-[#FAFAF9] font-base leading-[150%]">31.648.992/0001-91</span>
+          </div>
+          <div class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start">
+            <div class="flex flex-col mb-6">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Endereço</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alameda Madeira, 162 - Sala 1104 A</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alphaville Centro Industrial</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">CEP: 06454-010</span>
             </div>
-            <div
-              class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start"
-            >
-              <div class="flex flex-col mb-6">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Endereço</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alameda Madeira, 162 - Sala 1104 A</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >Alphaville Centro Industrial</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >CEP: 06454-010</span
-                >
-              </div>
-              <div class="flex flex-col">
-                <span
-                  class="text-[#FAFAF9] font-base leading-[150%] font-semibold"
-                  >Contato</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >(11) 1234-5678</span
-                >
-                <span class="text-[#FAFAF9] font-base leading-[150%]"
-                  >info@prospera.com</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png" alt="" /></a>
-              <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/X.png" alt="" /></a>
-              <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img src="./assets/icons/LinkedIn.png" alt="" /></a>
-              <a href="#"><img src="./assets/icons/Youtube.png" alt="" /></a>
+            <div class="flex flex-col">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Contato</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">(11) 1234-5678</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">info@prospera.com</span>
             </div>
           </div>
-          <div>
-            <span
-              class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block"
-            >
-              Acesse agora nossos aplicativos
-            </span>
-            <div class="flex gap-x-10">
-              <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
-              "
-              target="_blank">
-                <img src="./assets/imgs/Apple.png" alt="" />
-              </a >
-              <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera"
-              target="_blank">
-                <img src="./assets/imgs/Google.png" alt="" />
-              </a>
-            </div>
+          <div class="flex items-center gap-3">
+            <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png"
+                alt="" /></a>
+            <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png"
+                alt="" /></a>
+            <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img
+                src="./assets/icons/LinkedIn.png" alt="" /></a>
           </div>
         </div>
-        <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
-        <div
-          class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8"
-        >
-          <div>
-            <span class="text-[#FAFAF9]"
-              >© 2024 Prospera. Todos os direitos reservados.</span
-            >
-          </div>
-          <div>
-            <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
-              <li>Política de Privacidade</li>
-              <li>Termos de Serviço</li>
-              <li>Configurações de Cookies</li>
-            </ul>
+        <div>
+          <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block">
+            Acesse agora nossos aplicativos
+          </span>
+          <div class="flex gap-x-10">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
+              <img src="./assets/imgs/Google.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <script>
-      const faqs = [
-        {
-          title: "O que é o mercado de carbono?",
-          content:
-            "O mercado de carbono é um sistema onde são comercializados créditos de carbono, que representam uma tonelada de dióxido de carbono (CO2) ou equivalente que foi removida ou evitada da atmosfera. Empresas e governos utilizam esses créditos para compensar suas emissões de gases de efeito estufa, promovendo ações sustentáveis e ajudando a combater as mudanças climáticas.",
-        },
-        {
-          title: "Como funciona o mercado de carbono?",
-          content:
-            "O mercado de carbono opera através de um sistema de comércio de emissões onde entidades que emitem gases de efeito estufa acima de seus limites podem comprar créditos de carbono de entidades que emitem abaixo de seus limites ou que implementaram projetos de redução de emissões. Existem dois tipos principais de mercados de carbono: os mercados regulamentados, estabelecidos por políticas governamentais, e os mercados voluntários, onde empresas e indivíduos compram créditos para atingir metas próprias de sustentabilidade.",
-        },
-        {
-          title: "Quem pode participar do mercado de carbono?",
-          content:
-            "Qualquer empresa, governo ou indivíduo pode participar do mercado de carbono. No mercado regulamentado, a participação é obrigatória para determinadas indústrias e setores que precisam cumprir metas de emissão estabelecidas por leis e regulamentos. No mercado voluntário, qualquer entidade pode adquirir créditos de carbono para compensar suas emissões por razões de responsabilidade ambiental ou para melhorar sua imagem perante os consumidores.",
-        },
-        {
-          title:
-            "Qual é a importância da regulamentação no mercado de carbono?",
-          content:
-            "A regulamentação é crucial para garantir a integridade, transparência e eficácia do mercado de carbono. Leis e regulamentos estabelecem as regras para a quantificação, monitoramento, verificação e comercialização dos créditos de carbono. A regulamentação também ajuda a evitar fraudes e garantir que os créditos representem reduções reais e verificáveis de emissões. Exemplo de regulamentações incluem o Protocolo de Quioto e o Acordo de Paris, além de legislações específicas de cada país.",
-        },
-        {
-          title: "Quais são os benefícios do mercado de carbono?",
-          content:
-            "Redução das emissões de gases de efeito estufa: Incentiva empresas e governos a adotarem práticas mais sustentáveis.\nInovação tecnológica: Estimula o desenvolvimento de novas tecnologias para redução de emissões.\nBenefícios econômicos: Cria novas oportunidades de negócios e empregos no setor de sustentabilidade.\nPreservação ambiental: Contribui para a proteção de florestas e outros ecossistemas.\nResponsabilidade social: Ajuda empresas a atenderem expectativas de consumidores conscientes e cumprirem metas de sustentabilidade corporativa.",
-        },
-      ];
-
-      const accordionContainer = document.getElementById("accordion-container");
-
-      faqs.forEach((faq, index) => {
-        const accordionItem = document.createElement("div");
-        accordionItem.className =
-          "w-full max-w-[768px] h-auto flex-col justify-start items-center inline-flex my-2";
-
-        accordionItem.innerHTML = `
-        <div class="w-full h-auto pt-6 flex-col justify-start items-center gap-2 flex">
-          <div class="justify-between w-full items-center gap-6 flex cursor-pointer" onclick="toggleAccordion(${index})">
-            <span class="text-[#33322A] text-start text-lg font-medium font-['Open Sans'] leading-[27px]">${faq.title}</span>
-            <div id="svg-${index}" class="justify-center items-center flex rotate-180">
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 15.9619L12.5 8.96191L19.5 15.9619" stroke="#504F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg> 
-            </div>
-          </div>
-          <div class="pr-12 justify-start items-startflex accordion-content" id="content-${index}">
-            <p class="text-[#504F43] text-base font-normal font-['Open Sans'] leading-normal">${faq.content}</p>
-          </div>
+      <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+      <div class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8">
+        <div>
+          <span class="text-[#FAFAF9]">© 2024 Prospera. Todos os direitos reservados.</span>
         </div>
-        `;
+        <div>
+          <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+            <a href="./politica-de-privacidade.html">
+              <li>Política de Privacidade</li>
+            </a>
+            <a href="./termos-de-servico.html">
+              <li>Termos de Serviço</li>
+            </a>
+            <li>Configurações de Cookies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/credito-de-carbono.js"></script>
+  <script src="./js/main.js"></script>
+</body>
 
-        accordionContainer.appendChild(accordionItem);
-      });
-
-      function toggleAccordion(index) {
-        const svgElement = document.getElementById(`svg-${index}`);
-        const content = document.getElementById(`content-${index}`);
-        content.classList.toggle("open");
-        if (content.style.display === "none" || content.style.display === "") {
-          content.style.display = "block";
-          svgElement.style.transform = "rotate(0deg)";
-        } else {
-          content.style.display = "none";
-          svgElement.style.transform = "rotate(180deg)";
-        }
-      }
-    </script>
-    <script src="./js/main.js"></script>
-  </body>
 </html>

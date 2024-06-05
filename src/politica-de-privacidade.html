@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full py-8 xl:px-28 lg:px-12 px-[22px]">
+    <div id="hamburger-menu" class="w-full justify-between lg:hidden flex">
+      <img src="./assets/imgs/header-logo.svg" alt="" />
+      <button class="block" id="hamburger-menu-button">
+        <img src="./assets/icons/Hamburger-menu.svg" alt="" />
+      </button>
+      <button id="close-button" class="hidden">
+        <img class="w-[40px] h-[40px]" src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+    <div id="responsive-menu" class="w-full h-screen flex-col hidden">
+      <nav class="mt-[84px]" aria-label="Main navigation">
+        <ul class="flex flex-col gap-y-5">
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex gap-x-4 items-center" href="./">Inicio </a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col-reverse mt-9 gap-y-4">
+        <a href="https://meuclubeprospera.com.br/" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 text-xl rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" aria-label="Quero fazer parte" class="px-7 py-[15px] rounded-[28px] flex justify-center
+           bg-[#FFB728] text-xl text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-[1440px] justify-between m-auto items-center hidden lg:flex">
+      <div>
+        <a href="/" aria-label="Home">
+          <img src="./assets/imgs/header-logo.svg" alt="Logotipo da empresa" />
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="flex xl:gap-x-8 lg:gap-x-4 flex-wrap">
+          <li class="text-[#24231E] font-medium text-lg leading-7">
+            <a class="flex flex-col items-center" href="./">Inicio</span></a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./assinatura-verde.html">Assinatura verde</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./credito-de-carbono.html">Créditos de carbono</a>
+          </li>
+          <li class="text-[#504F43] text-lg leading-7">
+            <a href="./selo-verde.html">Selo verde</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex xl:gap-x-6 lg:gap-x-3">
+        <a href="https://meuclubeprospera.com.br/" target="_blank" aria-label="Entrar"
+          class="px-7 py-[15px] border border-neutral-400 rounded-[28px] text-neutral-950">
+          Entrar
+        </a>
+        <a href="#baixe-nosso-app" type="button" aria-label="Quero fazer parte"
+          class="px-7 py-[15px] rounded-[28px] bg-[#FFB728] text-neutral-950">
+          Quero fazer parte
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col items-center">
+    <div class="w-full max-w-[800px]">
+      <h1 class="text-stone-800 text-5xl font-medium font-['Satoshi'] leading-[60px]">Política de Privacidade</h1>
+      <div class=" w-full max-w-[798px] flex mt-10 flex-col items-center">
+        <span class="text-stone-800 text-xl font-semibold font-['Open Sans'] leading-[30px]">
+          1.INTRODUÇÃO<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A
+          PROSPERA SOLUÇÕES E TECNOLOGIA S/A, pessoa jurídica de direito privado, inscrita no CNPJ sob o n.
+          31.648.992/0001-91 (“Prospera”), com sede na cidade de Barueri/SP, tem como compromisso o respeito pela
+          privacidade de seus usuários e clientes, bem como a proteção e segurança dos seus dados pessoais.<br />Esta
+          Política de Privacidade é o documento pelo qual a Prospera evidencia aos titulares dos dados pessoais todas as
+          práticas adotadas para tornar transparente a relação, informando os direitos, garantias, formas de uso, dados
+          coletados, processamento e descarte de todas as informações pessoais, atendendo às normas legais da legislação
+          brasileira, em especial a Lei 13.709/2018 (“LGPD”).<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">2. DIRETRIZES E
+          DEFINIÇÕES<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Lei Geral de Proteção de
+          Dados
+          (Lei 13.709/2018), também conhecida como LGPD, entrou em vigor no Brasil no ano de 2020. A lei possui o
+          intuito
+          de estabelecer o tratamento de Dados Pessoais com propósitos transparentes, legítimos, explícitos e informados
+          ao titular, respeitando aos princípios da compatibilidade do tratamento com as finalidades informadas e a
+          limitação do tratamento ao necessário.<br />Diante deste conceito, a Prospera elaborou a presente política
+          para
+          que você, titular, possa compreender como é realizado o tratamento dos seus dados pessoais, quais os tipos de
+          dados pessoais são coletados, as finalidades para as quais coletamos os dados pessoais, os terceiros com os
+          quais poderemos compartilhar as informações, bem como as medidas que adotamos para proteger a segurança das
+          informações disponibilizadas.<br />Assim, quaisquer informações e/ou dados encaminhados por nossos
+          colaboradores
+          serão protegidos de acordo com os padrões de confidencialidade e apenas utilizados para as finalidades pelas
+          quais foram coletados.Para melhor concepção da presente Política de Privacidade, destacam-se algumas
+          definições,
+          cuja base foi extraída do artigo 5º da LGPD:<br /><br />Dado (s) pessoal (is): toda e qualquer informação
+          relacionada a pessoa natural identificada ou identificável. Resumidamente, é toda a informação que permite
+          identificar, direta ou indiretamente, um indivíduo, é considerado dado pessoal.<br />Dado (s) pessoal (is)
+          sensíveis: todo dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a
+          sindicato ou organização de caráter religioso, filosófico ou político. Ainda, dados relacionar à saúde, vida
+          sexual, dados genéticos ou biométricos.<br />Agentes de tratamento: são aqueles responsáveis pela tomada de
+          decisão referente ao tratamento de dados e pelo seu efetivo Tratamento: toda e qualquer operação, como a
+          coleta,
+          produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento,
+          arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação,
+          transferência, difusão ou extração, realizada com dados pessoais.<br />Titular(es): pessoa natural a quem se
+          referem os dados pessoais que são objeto de tratamento; Controlador: pessoa natural ou jurídica, de direito
+          público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais;<br />Operador:
+          pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome
+          do
+          controlador;<br />Encarregado: pessoa indicada pelo controlador e operador para atuar como canal de
+          comunicação
+          entre o controlador, os titulares dos dados e a ANPD;<br />Autoridade Nacional de Proteção de Dados/ANPD: é o
+          Órgão da administração pública responsável por zelar, implementar e fiscalizar o cumprimento da referida Lei
+          em
+          todo o território nacional.<br />Incidente de Segurança: compreendem acessos não autorizados e de situações
+          acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão, bem como qualquer outro evento
+          que resulte no Tratamento ilegal ou abusivo que os Dados Pessoais e/ou Dado(s) Pessoal(is) Sensível(is) possam
+          estar envolvidos;<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">3. DADOS PESSOAIS COLETADOS
+          E
+          PROCESSADOS PELA PROSPERA<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Quando você utiliza a
+          plataforma
+          Prospera, realizamos a coleta, uso e processamento dos seus dados pessoais a fim de lhe fornecer serviços
+          relacionados ao programa de benefícios desenvolvido, bem como oferecer informações do seu interesse. A coleta
+          sempre será realizada de forma totalmente transparente e você, titular, poderá decidir se a fornecerá ou
+          não.<br />Caso o titular tenha contratado o serviço de energia, também serão tratados os dados referentes a
+          estas operações, tais como: valores, resgates, consumo de energia, faturas, medição, dados das unidades
+          consumidoras (com ou sem geração distribuída), da rede de distribuição local. Os dados pessoais tratados
+          variam
+          de acordo com as finalidades de uso indicadas nesta Política de Privacidade, conforme as atividades
+          realizadas.
+          Quando aplicável, a Prospera poderá solicitar o seu consentimento por meio do “Termo de
+          Consentimento”.<br />Caso opte por não fornecer nenhum dado solicitado, a Prospera não será capaz de concluir
+          sua transação ou de fornecer as informações sobre serviços solicitados. Além disso, a Prospera poderá coletar
+          informações e dados pessoais, quando você envia um formulário ou solicitação, tais como: nome completo, estado
+          civil, profissão, data de nascimento, número e imagem da carteira de identidade (RG), Cadastro de Pessoas
+          Físicas (CPF) ou Carteira Nacional de Habilitação (CNH), telefones para contato, endereços de e-mails,
+          endereço
+          completo, bem como quaisquer outros dados pessoais que você fornecer à Prospera.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">4. DA FINALIDADE DA COLETA
+          DOS
+          DADOS PESSOAIS PELA PROSPERA<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Os dados pessoais coletados
+          pela
+          Prospera possuem a finalidade de (i) incluir o titular no programa de adesão à plataforma de benefícios, (ii)
+          realizar o cadastramento de pessoas interessadas em receber informações sobre os serviços disponibilizados
+          pela
+          empresa e (iii) enviar conteúdo sobre os serviços, cuja coleta se dará através do fornecimento pelo titular
+          dos
+          dados pessoais espontaneamente. Em outras palavras, a finalidade da coleta de dados pessoais tem o propósito
+          de
+          fornecer serviços personalizados e conteúdo relevante para suas necessidades e interesses específicos. É
+          importante elucidar que as suas informações podem ser usadas pela Prospera para cumprir nossas obrigações
+          contratuais, autenticá-lo como um usuário e permitir que você acesse certas áreas de nosso Website, aplicativo
+          e
+          sites de mídia social.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">5. FUNDAMENTO JURÍDICO PARA
+          TRATAMENTO DOS DADOS PESSOAIS COLETADOS<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Segundo disposição do artigo
+          7º
+          da
+          Lei 13.709/2018, a Prospera realiza o tratamento de dados pessoais para as seguintes
+          finalidades:<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">I -
+          mediante o fornecimento de consentimento pelo titular;<br />II – para o cumprimento de obrigação legal ou
+          regulatória pelo controlador;<br />III – pela administração pública, para o tratamento e uso compartilhado de
+          dados necessários à execução de políticas públicas previstas em leis e regulamentos ou respaldadas em
+          contratos,
+          convênios ou instrumentos congêneres, observadas as disposições do Capítulo IV desta Lei;<br />IV – para a
+          realização de estudos por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados
+          pessoais;<br />V – quando necessário para a execução de contrato ou de procedimentos preliminares relacionados
+          a
+          contrato do qual seja parte o titular, a pedido do titular dos dados;<br />VI – para o exercício regular de
+          direitos em processo judicial, administrativo ou arbitral, esse último nos termos da Lei nº 9.307, de 23 de
+          setembro de 1996 (Lei de Arbitragem);<br />VII – para a proteção da vida ou da incolumidade física do titular
+          ou
+          de terceiros;<br />VIII – para a tutela da saúde, exclusivamente, em procedimento realizado por profissionais
+          de
+          saúde, serviços de saúde ou autoridade sanitária;<br />IX – quando necessário para atender aos interesses
+          legítimos do controlador ou de terceiros, exceto no caso de prevalecerem direitos e liberdades fundamentais do
+          titular que exijam a proteção dos dados pessoais; ou<br />X – para a proteção do crédito, inclusive quanto ao
+          disposto na legislação pertinente. Todos os processos operacionais que realizam o devido tratamento de dados
+          da
+          Prospera atendem ao menos um requisito legal acima referido.<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">6. DIREITOS DOS
+          TITULARES<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A
+          Prospera tem como prioridade a transparência sobre o tratamento dos seus dados pessoais. Afora as informações
+          dispostas nesta Política de Privacidade, o titular também poderá exercer os direitos previstos na Lei Geral de
+          Proteção de Dados, descritas no artigo 18, sendo eles:<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">a) Direito de confirmação e
+          acesso:
+          se refere a confirmação sobre a posse de dados do titular, indicando a existência ou ausência destas
+          informações
+          no tratamento e, se for o caso, o direito de acessar os seus dados pessoais;<br />b) Direito à retificação de
+          seus dados: compete na correção de dados pessoais incompletos, inexatos ou desatualizados;<br />c) Direito à
+          eliminação ou descarte dos dados: direito do titular de ter seus dados apagados da base de dados do
+          controlador;<br />d) Direito à portabilidade dos dados: o titular poderá solicitar para que o controlador
+          transfira os dados para um novo controlador, se este, desejar.<br />e) Direito de oposição: o titular do dado
+          poderá, a qualquer momento, se opor por motivos relacionados com a sua situação particular, ao tratamento de
+          dados pessoais que lhe digam respeito. Ainda, o titular poderá se opor quando seus dados forem utilizados para
+          os efeitos da referida comercialização.<br />f) Direito à limitação do tratamento dos dados: o titular possui
+          o
+          direito de limitar o tratamento de seus dados pessoais, podendo obtê-la quando consta a exatidão dos dados,
+          quando o tratamento for ilícito, quando o controlador não precisar mais dos dados para as finalidades
+          propostas
+          e quando tiver se oposto ao tratamento dos dados e em caso de tratamento de dados desnecessários;<br />g)
+          Direito de revisão de decisões automatizadas: o titular possuí direito de não ficar sujeito a nenhuma decisão
+          tomada exclusivamente com base no tratamento autorizado, incluindo a definição de perfis, que produza os
+          efeitos
+          na esfera jurídica ou que o afete significativamente de forma similar. Em geral, possui o direito de obter
+          intervenção humana, de obter justificativa da decisão obtida após uma avaliação e contestar a decisão. O
+          titular
+          poderá exercer seus direitos, por meio de comunicação escrita em nossos canais de atendimento, especificando
+          os
+          direitos que deseja exercer perante o controlador.<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br /></span><span
+          class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">7. SEGURANÇA DOS DADOS
+          PESSOAIS<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A
+          Prospera está empenhada em proteger todas as informações coletadas, prezando pela máxima segurança dos seus
+          dados pessoais. Aplicamos adequadas medidas administrativas, técnicas e organizativas que visam proteger
+          exclusivamente os dados pessoais que você fornece ou que coletamos contra destruição, perda, alteração,
+          acesso,
+          divulgação ou uso acidental, ilícito ou não autorizado.<br />No intuito de garantir a segurança dos dados
+          pessoais tratados, adotamos soluções que levam em consideração técnicas adequadas, custos de aplicação,
+          natureza, o âmbito, o contexto, as finalidades do tratamento e os riscos para os direitos e liberdades do
+          titular. No entanto, diante da natureza das comunicações da internet, não podemos garantir que sua transmissão
+          para nós seja totalmente segura.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">8. POLÍTICA DE
+          COOKIES<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Cookies são arquivos
+          temporários
+          salvos em seu computador, tablet ou telefone quando o usuário visita um site. São utilizados com o objetivo de
+          melhorar as funcionalidades de navegação e facilitar o acesso de usuários, sempre visando o aprimoramento do
+          conteúdo e dos serviços, tais como:<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">• Possibilitar o início de
+          sessão
+          segura<br />• Memorizar o ponto onde se encontra durante uma encomenda<br />• Memorizar os seus detalhes de
+          início da sessão<br />• Memorizar o que está no seu carrinho de compras<br />• Assegurar que o website tenha
+          um
+          aspecto consistente<br />• Permitir a partilha de páginas em redes sociais<br />• Permitir o envio e a
+          divulgação de comentários<br />• Disponibilizar publicidades relevantes para os seus
+          interesses<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br />Se você não deseja que
+          os
+          cookies sejam acessíveis, você pode, a qualquer momento, ajustar as configurações em seu navegador para negar
+          ou
+          desabilitar o uso de cookies. Contudo, negar ou desabilitar cookies ou tecnologias similares pode impedir que
+          você acesse alguns de nossos conteúdos ou use alguns dos recursos no website. É importante destacar que os
+          cookies não são utilizados para determinar a identidade pessoal dos usuários que estão visitando o nosso
+          site.<br />Cookies obrigatórios<br />Estes cookies são necessários para ativar a funcionalidade do
+          site.<br />Cookies funcionais<br />Estes cookies são utilizados com o objetivo de melhorar as funcionalidades
+          de
+          navegação e facilitar o acesso de usuários, sempre visando o aprimoramento do conteúdo e dos serviços. Cookies
+          de publicidade<br />Estes cookies são usados para publicar anúncios relevantes para os seus interesses.
+          Informações de redes sociais Informações de redes sociais são quaisquer informações que você permita que uma
+          rede social de terceiro compartilhe com desenvolvedores de aplicativos.<br />Para saber como suas informações
+          de
+          uma rede social podem ser obtidas pela Prospera, acesse a página de configurações da rede
+          social.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">9. DO COMPARTILHAMENTO DE
+          DADOS
+          COM TERCEIROS<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Prospera poderá
+          compartilhar
+          dados pessoais dentro do seu grupo de trabalho ou com terceiros parceiros e autoridades de órgãos reguladores,
+          dependendo da finalidade e necessidade. Poderemos compartilhar seus dados com:<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">• Parceiros responsáveis
+          pelas
+          transações realizadas pela Prospera, a fim de que seja identificado o crédito do usuário.<br />• Prestadores
+          de
+          serviços terceirizados, como empresas que processam dados para a Prospera;<br />• Órgãos de fiscalização ou
+          órgãos públicos, quando estes seguiram os devidos processos legais para solicitar que disponibilizássemos as
+          informações.<br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]"><br />A Prospera também pode
+          compartilhar os seus dados pessoais com empresas, organizações ou pessoas físicas, se acreditar que este
+          compartilhamento é necessário por motivos legais, tais como, (i) fazer valer os termos de uso aplicáveis dos
+          Sites ou Aplicativos; (ii) investigar possíveis violações das leis aplicáveis; (iii) detectar, prevenir e dar
+          proteção contra fraude e qualquer vulnerabilidade técnica ou de segurança; e (iv) cumprir leis e regulamentos
+          aplicáveis, cooperar em eventuais investigações lícitas e atender a ordens de órgãos
+          públicos.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">10. DA TRANSFERÊNCIA
+          INTERNACIONAL DE DADOS<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Prospera poderá transferir
+          seus
+          dados para outros países para fins de tratamento de dados pessoais com coligadas ou entidades parceiras. Além
+          disso, alguns de seus dados pessoais poderão ser transferidos para outros países, quando utilizarmos serviços
+          computacionais em nuvem para processamento ou armazenamento de dados, localizados fora do Brasil, por exemplo.
+          Para a realização da transferência internacional de dados, a Prospera verificará se há restrição legal da
+          empresa parceira realizar o tratamento, bem como se o país de destino oferece nível adequado de proteção de
+          dados. Caso o país de destino não o ofereça, a Prospera estabelecerá contratualmente que a companhia receptora
+          deverá possuir um padrão proporcional de proteção de dados e segurança da informação compatível com esta
+          Política e a Lei Geral de Proteção de Dados - Lei nº 13.709/2018.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">11. DA RETENÇÃO, CORREÇÃO E
+          EXCLUSÃO DOS DADOS PESSOAIS<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Os seus dados pessoais
+          ficarão
+          registrados em ambiente seguro e protegido durante o período necessário para a realização dos fins indicados
+          no
+          item 4. Contudo, a qualquer tempo você pode fazer uma solicitação de correção, atualização ou de exclusão dos
+          seus dados pessoais contidos em nossos bancos de dados através de nossos canais de atendimento. Caso você faça
+          uma solicitação de exclusão, a Prospera ressalta que poderá armazenar os seus dados pessoais por um período
+          adicional para fins de obrigações legais ou regulatórias, exercício regular de direitos ou pelo prazo que
+          esteja
+          de acordo com a base legal que justifique tal retenção.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">12. DAS ALTERAÇÕES E
+          ATUALIZAÇÕES
+          DESTA POLITICA DE PRIVACIDADE<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">A Prospera poderá modificar
+          esta
+          Política de acordo com a legislação aplicável, a qualquer tempo. Caso seja realizada uma nova versão, será
+          publicada neste website, indicando sua data de atualização. Caso o titular não concorde com as alterações,
+          poderá interromper imediatamente o uso, mediante a utilização dos canais de contato para apresentar pedidos do
+          seu interesse e exercer seus direitos.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">13. DO ENCARREGADO DE
+          PROTEÇÃO DE
+          DADOS (DATA PROTECTION OFFICER – “DPO”)<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Consoante previsão do artigo
+          41
+          da
+          Lei 13.709/2018, a Prospera Soluções e Tecnologia S/A indica como encarregado de dados, o Sr. Roberto Galera,
+          que poderá ser contatado através do e-mail encarregado@meuprospera.com.br.<br /></span><span
+          class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]"><br />14. LEGISLAÇÃO E
+          FORO<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Esta
+          Política será regida, interpretada e executada de acordo com a legislação brasileira, especialmente a Lei n.
+          13.709/2018, sendo o competente o foro da comarca de Barueri/SP, para dirimir qualquer dúvida decorrente este
+          documento.<br /><br />
+        </span>
+        <span class="text-stone-600 text-xl font-semibold font-['Open Sans'] leading-[30px]">15. INFORMAÇÕES DE
+          CONTATO<br /><br />
+        </span>
+        <span class="text-stone-600 text-lg font-normal font-['Open Sans'] leading-[27px]">Caso você tenha alguma
+          dúvida,
+          comentário, sugestões sobre a nossa política de privacidade, ou se você deseja acessar, corrigir, atualizar ou
+          eliminar seus dados pessoais, por favor nos contate através dos endereços de e-mails abaixo
+          mencionados:<br />Controlador: prospera@meuprospera.com.br<br />DPO:
+          encarregado@meuprospera.com.br<br /><br />Última atualização: 18 de Novembro de 2021.<br /><br />Barueri -SP,
+          18
+          de Novembro de 2021.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#1F1E1C] mt-16 lg:mt-[190px] w-full xl:px-28 lg:px-12 px-[22px] py-20 z-10">
+    <div class="w-full max-w-[1440px] m-auto flex flex-col items-center">
+      <div class="w-full flex map-02:flex-row flex-col lg:items-center items-start justify-between">
+        <div>
+          <img class="mb-8" src="./assets/imgs/logo-footer.svg" alt="" />
+          <div class="flex flex-col mb-8">
+            <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">CNPJ</span>
+            <span class="text-[#FAFAF9] font-base leading-[150%]">31.648.992/0001-91</span>
+          </div>
+          <div class="flex map-02:flex-row flex-col gap-x-8 lg:items-center items-start">
+            <div class="flex flex-col mb-6">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Endereço</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alameda Madeira, 162 - Sala 1104 A</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">Alphaville Centro Industrial</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">CEP: 06454-010</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold">Contato</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">(11) 1234-5678</span>
+              <span class="text-[#FAFAF9] font-base leading-[150%]">info@prospera.com</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href=" https://www.facebook.com/prosperaesg" target="_blank"><img src="./assets/icons/Facebook.png"
+                alt="" /></a>
+            <a href=" https://www.instagram.com/prosperaesg/" target="_blank"><img src="./assets/icons/Instagram.png"
+                alt="" /></a>
+            <a href=" https://www.linkedin.com/company/prosperaesg/" target="_blank"><img
+                src="./assets/icons/LinkedIn.png" alt="" /></a>
+          </div>
+        </div>
+        <div>
+          <span class="text-[#FAFAF9] font-base leading-[150%] font-semibold mb-10 block">
+            Acesse agora nossos aplicativos
+          </span>
+          <div class="flex gap-x-10">
+            <a href="https://apps.apple.com/br/app/meu-clube-prospera/id6480055258
+              " target="_blank">
+              <img src="./assets/imgs/Apple.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.meuclubeprospera" target="_blank">
+              <img src="./assets/imgs/Google.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full border-b border-[#FAFAF9] mt-20"></div>
+      <div class="w-full flex map-02:flex-row flex-col-reverse justify-between items-start lg:items-center mt-8">
+        <div>
+          <span class="text-[#FAFAF9]">© 2024 Prospera. Todos os direitos reservados.</span>
+        </div>
+        <div>
+          <ul class="flex map-02:flex-row flex-col gap-6 text-[#FAFAF9]">
+            <a href="./politica-de-privacidade.html">
+              <li>Política de Privacidade</li>
+            </a>
+            <a href="./termos-de-servico.html">
+              <li>Termos de Serviço</li>
+            </a>
+            <li>Configurações de Cookies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
